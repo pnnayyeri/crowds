@@ -146,9 +146,11 @@ a:hover{
 	background-size: 100% auto;
 	position: relative;
 	top: 3px;
+	transform: rotate(180deg);
 }
+
 .darr{
-	transform: rotate(90deg);
+	transform: rotate(180deg);
 }
 
 /* Sim UI */
