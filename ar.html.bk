@@ -35,18 +35,18 @@ Good luck, and thanks again!
 -->
 
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="ar" dir="rtl">
 <head>
 
 	<!-- Meta Info -->
-	<title>خرد و/یا جنون جمعی</title> <!-- <title>(TRANSLATE this part only)</title> -->
-	<meta name="description" content="راهنمای تعاملی برای شبکه های انسانی"/> <!-- content="(TRANSLATE this part only)" -->
-	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<title>حكمة أو جنون الحشود</title> <!-- <title>(TRANSLATE this part only)</title> -->
+	<meta name="description" content="دليل تفاعلي عن الشبكات الاجتماعية!"/> <!-- content="(TRANSLATE this part only)" -->
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
 	<meta charset="utf-8">
 	<link rel="icon" type="image/png" href="favicon.png">
 
-
+	
 	<link rel="alternate" href="http://ncase.me/crowds/"           hreflang="en">
 	<link rel="alternate" href="http://ncase.me/crowds/es.html"    hreflang="es-ES">
 	<link rel="alternate" href="http://ncase.me/crowds/fr.html"    hreflang="fr">
@@ -58,25 +58,25 @@ Good luck, and thanks again!
 	<link rel="alternate" href="http://ncase.me/crowds/vi.html"    hreflang="vi">
 	<link rel="alternate" href="http://ncase.me/crowds/zh-CN.html" hreflang="zh-CN">
 	<link rel="alternate" href="http://ncase.me/crowds/zh-TW.html" hreflang="zh-TW">
-	<link rel="alternate" href="https://alexanderclay.github.io/crowds/ar.html" hreflang="fa">
+	<link rel="alternate" href="https://alexanderclay.github.io/crowds/ar.html" hreflang="ar">
 
 
 	<!-- Sharing -->
-	<meta itemprop="name" content="خرد و/یا جنون جمعی"> <!-- content="(TRANSLATE this part only)" -->
-	<meta itemprop="description" content="راهنمای تعاملی برای شبکه های انسانی"> <!-- content="(TRANSLATE this part only)" -->
+	<meta itemprop="name" content="حكمة أو جنون الحشود"> <!-- content="(TRANSLATE this part only)" -->
+	<meta itemprop="description" content="دليل تفاعلي عن الشبكات الاجتماعية!"> <!-- content="(TRANSLATE this part only)" -->
 	<meta itemprop="image" content="http://ncase.me/crowds/social/thumb.png">
 
-	<meta name="twitter:title" content="خرد و/یا جنون جمعی"> <!-- content="(TRANSLATE this part only)" -->
-	<meta name="twitter:description" content="راهنمای تعاملی برای شبکه های انسانی"> <!-- content="(TRANSLATE this part only)" -->
+	<meta name="twitter:title" content="حكمة أو جنون الحشود"> <!-- content="(TRANSLATE this part only)" -->
+	<meta name="twitter:description" content="دليل تفاعلي عن الشبكات الاجتماعية!"> <!-- content="(TRANSLATE this part only)" -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@ncasenmare">
 	<meta name="twitter:creator" content="@ncasenmare">
 	<meta name="twitter:image" content="http://ncase.me/crowds/social/thumb.png">
 
-	<meta property="og:title" content="خرد و/یا جنون جمعی"> <!-- content="(TRANSLATE this part only)" -->
-	<meta property="og:description" content="راهنمای تعاملی برای شبکه های انسانی"> <!-- content="(TRANSLATE this part only)" -->
+	<meta property="og:title" content="حكمة أو جنون الحشود"> <!-- content="(TRANSLATE this part only)" -->
+	<meta property="og:description" content="دليل تفاعلي عن الشبكات الاجتماعية!"> <!-- content="(TRANSLATE this part only)" -->
 	<meta property="og:type" content="website">
-	<meta property="og:url" content="http://ncase.me/crowds/">
+	<meta property="og:url" content="https://alexanderclay.github.io/crowds/ar.html">
 	<meta property="og:image" content="http://ncase.me/crowds/social/thumb.png">
 
 	<!-- Styles -->
@@ -84,13 +84,13 @@ Good luck, and thanks again!
 	<style>
 		/* font: Noto Sans Arabic https://www.google.com/get/noto/ */
 		@font-face {
-			font-family: "Vazir-Light";
+			font-family: "NotoSansArabic-CondensedLight";
 			font-style: normal;
 			font-weight: 400;
-			src: url(css/Vazir-Light.ttf) format('truetype');
+			src: url(css/NotoSansArabic-CondensedLight.ttf) format('truetype');
 		}
 			body{
-			font-family: "PatrickHand", "Vazir-Light", Helvetica, Arial;
+			font-family: "PatrickHand", "NotoSansArabic-CondensedLight", Helvetica, Arial;
 		}
 	</style>
 </head>
@@ -113,7 +113,7 @@ Good luck, and thanks again!
 		<canvas id="scratch" width="711" height="400"></canvas>
 
 		<!-- Skip -->
-		<div id="skip">رد کردن &gt;</div> <!-- TRANSLATE -->
+		<div id="skip" style= "height:33px;">&lt; تخطي</div> <!-- TRANSLATE -->
 
 		<!-- Modal -->
 		<div id="modal_container">
@@ -127,26 +127,26 @@ Good luck, and thanks again!
 		</div>
 
 	</div>
-
+	
 	<!-- Navigation: Audio, Contents, Share, Translations -->
 	<div id="navigation_container">
 		<div id="sound" mute="no">
 			<div id="sound_icon"></div>
 			<span id="sound_on" style="margin-left: -30px; margin-top: -2px; letter-spacing: 0px;">
-
-				روشن</span> <!-- TRANSLATE -->
-			<span id="sound_off" style="margin-left: -34px; margin-top: -2px; letter-spacing: 0px;">خاموش</span> <!-- TRANSLATE -->
+				
+				مفعّل</span> <!-- TRANSLATE -->
+			<span id="sound_off" style="margin-left: -26px; margin-top: -2px; letter-spacing: 0px;">مطفأ</span> <!-- TRANSLATE -->
 		</div>
 		<div id="sharing">
 			<a id="fb" target="_blank" href="TODO"></a>
 			<a id="tw" target="_blank" href="TODO"></a>
 			<a id="em" target="_blank" href="TODO"></a>
 			<span id="share_title">
-			خرد و/یا جنون جمعی <!-- TRANSLATE -->
+			حكمة أو جنون الحشود <!-- TRANSLATE -->
 			</span>
 			<span id="share_desc">
 			<!-- TRANSLATOR: keep this on ONE LINE or the social sharing will break! -->
-			چرا گروه های انسانی رفتار هوشمندانه، احمقانه، محبت آمیز، ظالمانه نشان میدهند؟ راهنمای تعاملی برای شبکه های انسانی: <!-- TRANSLATE -->
+			لماذا تقوم جماعات من البشر بتصرفات ذكية أو حمقاء، طيّبة أو وحشية؟ هذا دليل تفاعلي حول الشبكات الاجتماعية:
 			</span>
 		</div>
 		<div id="navigation">
@@ -154,49 +154,49 @@ Good luck, and thanks again!
 			<!-- The chapters -->
 			<!-- TRANSLATE all the Chapter names! -->
 			<div chapter="Introduction">
-				<span>0</span>
-				<span>0. مقدمه</span>
+				<span>٠</span>
+				<span>٠- المقدمة</span>
 			</div>
 			<div chapter="Networks">
-				<span>1</span>
-				<span>1. ارتباطات</span>
+				<span>١</span>
+				<span>١- الروابط</span>
 			</div>
 			<div chapter="Simple">
-				<span>2</span>
-				<span>2. سرایت</span>
+				<span>٢</span>
+				<span>٢- العدوى</span>
 			</div>
 			<div chapter="Complex">
-				<span>3</span>
-				<span>3. سرایت پیچیده</span>
+				<span>٣</span>
+				<span>٣- العدوى المعقدة</span>
 			</div>
 			<div chapter="BB">
-				<span>4</span>
-				<span>4. پیوند و اتصال</span> <!-- note: &amp; is html for the "and" sign -->
+				<span>٤</span>
+				<span>٤- الترابط وجسور التواصل</span> <!-- note: &amp; is html for the "and" sign -->
 			</div>
 			<div chapter="SmallWorld">
-				<span>5</span>
-				<span>5. دنیا کوچیکه</span>
+				<span>٥</span>
+				<span>٥- إنه لعالم صغير</span>
 			</div>
 			<div chapter="Conclusion">
-				<span>6</span>
-				<span>6. ختم کلام...</span>
+				<span>٦</span>
+				<span>٦- في الختام...</span>
 			</div>
 			<div chapter="Credits">
-				<span>7</span>
-				<span>7. تیتراژ</span>
+				<span>٧</span>
+				<span>٧- صانعوا اللعبة</span>
 			</div>
 			<div chapter="Sandbox">
 				<span>★</span>
-				<span>★ فضای تمرینی ★</span>
+				<span>★ وضع اللعب الحر! ★</span>
 			</div>
 
 			<!-- A divider -->
 			<span class="nav_divider"></span>
-
+			
 			<!-- Bonus Notes & References -->
 			<div modal="bonus">
 				<span>?</span>
-				<span>جعبه های جایزه!</span> <!-- TRANSLATE -->
+				<span>الصناديق الإضافية!</span> <!-- TRANSLATE -->
 			</div>
 			<div modal="references">
 				<span style="margin-top: 7px; font-size: 35px;">*</span>
@@ -213,17 +213,17 @@ Good luck, and thanks again!
 				    top: -1px;
 				    left: 16px;
 				">あ</span></span>
-				<span>ترجمه ها</span> <!-- TRANSLATE -->
+				<span>الترجمات</span> <!-- TRANSLATE -->
 			</div>
 
 			<!-- The hover bubble -->
 			<span id="nav_bubble"></span>
-
+			
 		</div>
 		<div id="translations"></div>
 		<div id="social"></div>
 	</div>
-
+	
 	<!-- The Pencil -->
 	<div id="pencil_container">
 		<canvas id="pencil"></canvas>
@@ -231,7 +231,7 @@ Good luck, and thanks again!
 
 	<!-- Preloader -->
 	<div id="pre_preloader">
-		<div>بارگذاری...</div> <!-- TRANSLATE -->
+		<div>تحميل...</div> <!-- TRANSLATE -->
 	</div>
 
 </body>
@@ -282,7 +282,7 @@ Good luck, and thanks again!
 <!-- THE SLIDESHOW'S WORDS -->
 <!-- - - - - - - - - - - - -->
 
-<!--
+<!-- 
 
 This is the bulk of what you need to TRANSLATE!
 Translate just the text that's within the <tag></tags>
@@ -300,32 +300,29 @@ it should automatically highlight what the text is (usually in white).
 	<div style="font-size: 30px;">
 		<!--<span>the</span>-->
 		<!--<br>-->
-		<span style="font-size: 60px;letter-spacing: 4px;">خرد</span>
-		<span style="position:relative;top: -10px;">و/یا</span>
-		<span style="font-size: 60px;">جنون</span>
-		<br>
-		<span style="font-size: 100px;line-height: 80px;position: relative;top: -15px; display:block;">جمعی</span>
-		<br>
+
 		<!--
 		<span style="font-size: 60px;letter-spacing: 4px;">حكمة</span>
 		<span style="position:relative;top: -10px;">أو</span>
 		-->
 
-		<!-- <span style="font-size: 60px;position: relative; top: -30px;">حكمة أو جنون</span> -->
+		<span style="font-size: 60px;position: relative; top: -30px;">حكمة أو جنون</span>
 		<!--<br>-->
 		<!--<span style="position: relative;top: -11px;">of</span>-->
-		<!--<br>
+		<br>
 		<span style="font-size: 100px;line-height: 80px;top: -21px;position: relative; display:block;">الحــشــود</span>
-		-->
 	</div>
 
 	<div style="color:#999">
 		<!-- TRANSLATE note: comment out the line below... -->
 		<!-- playing time: 30 min • by nicky case, april 2018 -->
 		<!-- ...and UN-comment + TRANSLATE this line! -->
-		سازنده:
-		nicky case
-		 • مترجم: پویان نیّری <br>
+		ترجمت للعربية من قبل 
+		Alex Clay
+		•
+		لعبة من قبل
+		Nicky Case
+		<br>
 		<a href='http://ncase.me/crowds/'>original game in English</a>
 	</div>
 
@@ -336,12 +333,12 @@ it should automatically highlight what the text is (usually in white).
 </words>
 
 <words id="preloader_loading">
-	بارگذاری...
+	تحميل...
 </words>
 
 <words id="preloader_play">
-	شروع کن!
-	<div class="larr"></div>
+	لنلعب!
+	<div class="larr"></div> 
 </words>
 
 <!-- Introduction -->
@@ -359,33 +356,30 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 	<br><br>
 
-	سر آیزاک نیوتن خودش رو کاملا یه فرد
+	السير (إسحاق نيوتن) كان متأكداً أنه ولد ذكي،
 	<br>
-	باهوش می‌دونست. منظورم اینه که اون بعد از
+	ومن يلومه بعد أن اخترع علم التفاضل والتكامل الرياضي ونظرية
 	<br>
-	اینکه حساب دیفرانسیل و نظریه گرانش رو اختراع کرد،
+	الجاذبية؟ لابد أن يكون ذكياً بما يكفي ليقوم باستثمار أمواله، أليس كذلك؟
 	<br>
-	حتـما به انـدازه کافـی باهـوش بوده کـه یه سرمایـه‌گذاری
+	لنختصر السيرة، خسر السير (نيوتن) ٤,٦٠٠,٠٠٠$ حسب قيمة الدولار اليوم
 	<br>
-	اقتـصادی انجام بـده، نـه؟ به هر حـال سرتـونو درد نیـارم،
+	في هلع المضارية الوطنية المعروفة باسم
+	("فقاعة البحر الجنوبي")
 	<br>
-	اون توی آشفتگی سراسری بورس معروف به
-	<br>
-	«حباب دریای جنوب سال 1720»،
-	<br>
-	4,600,000 دلار (به پول امروز) ضرر کرد. همونطور که
-	<br>
-	آقای نیوتن بعدا گفت:
-	<br>
+	South Sea Bubble of 1720.
+
+	<br><br>
+
+	ولهكذا قال السير (نيوتن) لاحقاً: 
 	<i>
-		«من می‌توانم حرکت اجسام آسمانی را محاسبه کنم،
-		<br>
-		ولی از محاسبه‌ی حماقت مردم عاجزم.»
+	"أستطيع حساب حركة الأجسام الكونية
+	<br>
+	لكني لا أستطيع حساب جنون الناس".
 	</i>
 
-
 	<next>
-		واقعا، بیچاره نیوتن
+		جيد أني لست بمكانه
 		<div class="larr"></div>
 		 </next>
 
@@ -395,52 +389,67 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 	<div style="height:0.5em"></div>
 
-	البته اون اولین بار نبوده که
+	ذلك بالطبع ليس الحين الوحيد حيث انهارت
 	<br>
-	بازارها، موسسات یا کل دموکراسی‌ها
-	<br>
-	از کنترل خارج شدن&mdash;
+	أسواق أو مؤسسات أو ديمقراطيات بأكملها - 
+	أي،
 	<i>
-		جنون
-	</i>
-	جمعی. با این وجود،
+	جنون
+	الحشود.
+</i>
 	<br>
-	درست موقعی که از بشریت ناامید میشی، مردمی رو
+	ومع ذلك، عندما نفقد الأمل في البشرية نرى المواطنين يتعاونون لإنقاذ
 	<br>
-	می‌بینی که توی زلزله‌ها به همدیگه کمک می‌کنن، جوامعی
+	بعضهم في العواصف، ونرى مجتمعات تبني الحلول لمشاكلهم،
 	<br>
-	که برای مشکلات راه حل درست می‌کنن، مردمی که برای ساختن
-	<br>
-	دنیای بهتر می‌جنگن&mdash; <i>خرد</i> جمعی!
+	ونرى أناساً تحارب في سبيل كوكب أفضل -
+	أي، 
+	<i>
+	حكمة
+	الحشود!
+</i>
 
+<!--
+	Of course, that's not the only
+	time markets, institutions, or entire
+	democracies went haywire &mdash; the <i>madness</i> of
+	crowds. And yet, just when you lose hope in humanity,
+	<br>
+	you see citizens coordinating to rescue each other in
+	<br>
+	hurricanes, communities creating solutions to problems,
+	<br>
+	people fighting for a better world &mdash; the <i>wisdom</i> of crowds!
+-->
 	<div style="height:0.9em"></div>
 
-	<b>اما
-		<i>
-			چرا
-		</i>
-		بعضی از جوامع رفتار جنون‌آمیز یا خردمندانه نشون می‌دن؟
-	</b>
-	<br>
-	هیچ نظریه‌ای نیست که بتونه همه چیز رو توضیح بده، اما فکر
-	<br>
-	می‌کنم یک زمینه‌ی مطالعاتی جدید به نام
 	<b>
-		علم شبکه
+		<i>
+	ولكن
+	لماذا
+	</i>
+	تنقلب بعض الحشود إلى الجنون أو إلى الحكمة؟
 	</b>
-	،
+	لا يوجد نظرية
 	<br>
-	می‌تونه به ما کمک کنه! ایده‌ی کلیدی این علم
+	تفسر كل شي لكن أعتقد أنه هنالك حقلاً جديداً من الدراسة يستطيع أن يساعدنا:
 	<br>
-	اینه: برای شناخت جوامع، ما نباید
+	<b>
+	("علم الشبكات")
+	network science
+	</b>
 	<br>
-	به تک تک افراد جامعه بپردازیم.
+	والفكرة الأساسية منه هو التالي: علينا ألا ننظر
 	<br>
-	بلکه باید به...
+
+	<i>
+	إلى الأشخاص منفردين
+	</i>
+
+	لنفهم الحشود،
+	بل ننظر إلى...
 	<next>
-		<span  style="font-size: 18px">
-			<i>ارتباطات</i> بین اونا بپردازیم.
-		</span>
+		<i>...الروبط بينهم</i>  
 		<div class="larr"></div>
 	</next>
 
@@ -449,69 +458,82 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 <!-- Networks -->
 
 <words id="networks_tutorial_start">
-	<b>بیاین یه شبکه رسم کنیم!</b>
-	هر ارتباط نشون دهنده‌ی دوستی بین دو نفره:
+	<b>لنرسم شبكة!</b>
+	كل رابطة تمثل صداقة بين فردين:
 </words>
 
 <words id="networks_tutorial_connect">
-	بکش تا وصل بشن
+	ارسم لتوصل الفردين
 </words>
 
 <words id="networks_tutorial_disconnect">
-		خط بزن تا
-	&nbsp;&nbsp;&nbsp;
-	قطع بشن
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+	اشطب
+	&nbsp;
+	&nbsp;
+	لتقطع الوصلة
 </words>
 
 <words id="networks_tutorial_end">
 
-	هروقت نقاشی و بازی کردنت تموم شد،
-	<next wiggle>ادامه بدیم <div class="larr"></div> </next>
+	عندما تنتهي من اللعب والرسم... 
+	<next wiggle>
+		...اضغط هنا لنتابع
+		<div class="larr"></div>
+	
+	</next>
 
 </words>
 
 <words id="networks_threshold">
 
-
-	ارتباطات اجتماعی چیزی بیشتر از فقط کشیدن نقاشی‌های بامزه است.
-	مردم به ارتباطات اجتماعیشون
+	تفيدنا الروابط الاجتماعية لأسباب قيّمة أكثر من صنع الرسمات الجميلة،
+	لأن الأفراد
 	<i>
-		رجوع می‌کنن
+	ينظرون إلى
 	</i>
-	 تا دنیاشونو بشناسن.
-	برای مثال، مردم به امثال خودشون نگاه می‌کنن
-	تا ببینن <b>چند درصد از دوستاشون (به جز خودشون)</b>، مثلا، اهل مشروبن.<icon name="yellow"></icon>
-
+	روابطهم الاجتماعية لفهم عالمهم.
+	على سبيل المثال، الناس تتأمل نظائرهم
+	<b>
+	لمعرفة الإجابة عن النسبة المئوية من أصدقائهم
+	الذين يدمنون على الشرب
+	<icon name="yellow"></icon>
+</b>
+(دون عد أنفسهم).
 
 </words>
 
 <words id="networks_threshold_instruction">
 	<b>
 			<div class="rarr"></div>
-		ارتباطات رو قطع/وصل کن و ببین چه اتفاقی می‌افته.
+		ارسم وامحي الروابط على اليمين، ثم لاحظ ما يحدث!
 		 </b>
 </words>
 
 <words id="networks_threshold_end">
 	<next>
-			باحاله، گرفتم
+		حسناً، فهمت السابق
 		</next>
 </words>
 
 <words id="networks_pre_puzzle">
-	هرچند، ارتباطات میتونه مردم رو
+	ولكن الشبكات قد
 	<i>
-		گمراه
-	</i>
-	 کنه.
+	تخدع
+</i>
+	الناس.
 	<br>
-	درست همونطور که زمین صاف به نظر می‌رسه چون ما روش هستیم،
-	مردم هم ممکنه تفکرات اشتباهی رو از جامعه بدست بیارن چون
+	الأفراد قد يأخذون أفكاراً خاطئة عن المجتمع
 	<i>
-		درونش
+	لأنهم
+	داخل البيئة
 	</i>
-	 هستن.
-	<br>
+	كما وأن الأرض تبدو مسطحة لأننا نمشي عليها.
+	
 </words>
 
 <words id="optional_reading">
@@ -527,7 +549,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 </words>
 
 <words id="networks_pre_puzzle_2">
-
+	
 	<bon id="books"></bon>
 
 	<br>
@@ -574,7 +596,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 <words id="networks_puzzle_end">
 	تهانينا! لقد تلاعبت بعقل مجموعة من الطلاب وجعلتهم
 	يؤمنون بوجود انتشار مسيطر لعادة بالغة الضرر على الصحة! ثابر يا بطل!
-	<next wiggle>خواهش می‌کنم؟!</next>
+	<next wiggle>ش... شكراً؟</next>
 </words>
 
 <words id="networks_post_puzzle">
@@ -614,7 +636,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 		في الأسفل: لدينا شخص
 		<icon name="red"></icon>
 		يملك بعض المعلومات
-
+		
 		(أو بالأحرى بعض المعلومات
 		<i>
 		المغلوطة
@@ -622,7 +644,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 		أو "الأخبار الزائفة"
 		Fake news
 		كما هو المصطلح منتشر حالياً)،
-
+		
 		وكل يوم يقوم ذلك الشخص بنشر تلك الإدعائات لأصدقائه مثل الفيروس،
 		ومن بعدها يقوم أصدقائه بنشر تلك الإدعائات
 		<i>
@@ -641,7 +663,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 </words>
 
 <words id="simple_simple_2">
-	<div style="text-align:right;
+	<div style="text-align:right; 
 	position:relative;
 	right: 300px;">
 
@@ -684,7 +706,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	"بالعدوى"،
 	ثم ابدأ المحاكاة.
 	<br>
-	(قاعدة جديدة: لا يمكنك محي
+	(قاعدة جديدة: لا يمكنك محي 
 		<i>
 		الروابط الثخينة)
 	</i>
@@ -717,7 +739,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	للعدوى لأكثر من مرة حتى تصبح
 	"معديين".
 	لذا ابتكر علماء الشبكات طريقة أفضل وأحدث لوصف كيفية انتشار الأفكار والتصرفات، وسمّوها...
-
+	
 	<next wiggle>
 		<i>
 		...
@@ -730,11 +752,11 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 <words id="complex_complex">
 
-
-		<span style="direction:rtl;
+	
+		<span style="direction:rtl; 
 		position:relative;
 		right: 470px;">
-
+		
 		لنقم بإعادة فكرة
 		"الحدود الدنيا"
 		ومثال الشره في الشرب
@@ -746,7 +768,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 		الآن سنحاكي ما يحدث إذا بدأ الأفراد بالشرب
 		<i>
 			عندما يشرب أكثر من ٥٠% من أصدقائهم.
-		</i>
+		</i> 
 		<b>
 			قبل أن تبدأ المحاكاة، اسأل نفسك ما
 			<i>
@@ -756,9 +778,9 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 		</b>
 
 		<br><br>
-
+		
 		<b>
-				<div class="rarr"></div>
+				<div class="rarr"></div> 
 			الآن، ابدأ المحاكاة وراقب ما سيحدث فعلاً!
 		</b>
 	</span>
@@ -768,7 +790,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	<span style="
 		direction:rtl; position:relative; right: 470px;
 		line-height:1.3em; display:block;">
-
+		
 			على غير مثال "الأخبار الزائفة"
 			<icon name="red"></icon>
 			هذه العدوى
@@ -776,7 +798,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 			<b>
 			لا تنتشر للجميع.
 		</b>
-
+		
 			أول الأفراد يصابون بالعدوى على الرغم من أنهم معرضون لشخص وحيدٍ فقط، لأن
 			ذلك الشخص يمثل ٥٠% من أصدقائهم (كم هم وحيدون...).
 
@@ -786,10 +808,10 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 			<div style="height:0.75em"></div>
 			<i>
-			النسبة المئوية %
+			النسبة المئوية % 
 			</i>
 			للأصدقاء المصابين مهم في النتيجة.
-
+			
 			<i>
 			ذلك
 		</i>
@@ -798,7 +820,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 			العدوى المعقدة
 			</b>
 			<ref id="complex"></ref>
-			ونظرية
+			ونظرية 
 			<b>
 			العدوى البسيطة
 		</b>
@@ -812,7 +834,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 			ولكن، العدوى ليست شيئاً سيئاً بالضرورة
 			&mdash;
-			لذا سنكتفي
+			لذا سنكتفي 
 			<i>
 			بجنون
 			</i>
@@ -853,15 +875,15 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	<span style="line-height:1.3em; display:block;">
 
 		<b>ملاحظة:</b>
-
+		
 		التطوع هو
 		<i>
 		فقط أحد
 	</i>
 		الأمثلة العديدة للعدوى المعقدة!
 		أمثلة أخرى تتضمن: حضور الانتخابات أو العادات الحياتية أو تغيير المعتقدات أو الانفتاح على القضايا العميقة
-		 &mdash;
-
+		 &mdash; 
+		 
 		فهو أي فعل بحاجة لأكثر من موقف وحيد لنقله.
 		العداوى المعقدة ليست
 		<i>
@@ -874,7 +896,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 		(لنأخذ مثال واقعي عن العدوى البسيطة:
 		عادة تنتشر أي حقيقة من نموذج "هل تعلم" على هذا النمط، كمثال: "هل تعلم أن حيوان الأبسوم لديه ١٣ حلمة ثدي؟")
 		<ref id="possum"></ref>
-
+		
 
 		<bon id="contagions"></bon>
 
@@ -892,7 +914,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	أتتذكر هذا المثال؟ سنزوره مجدداً لكن هذه المرة بنمط
 	<i>العدوى المعقدة</i>
 	<icon name="blue"></icon>،
-
+	
 	وذلك سيجعله أصعب قليلاً...
 	<br>
 	<b>
@@ -931,15 +953,15 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 	<i>
 		بعكس
-	</i>
+	</i> 
 	كل ما قمنا به إلى هذه المرحلة:
 	<br>
 	<b>
 		ارسم شبكة
-
+		
 		<i>
 			تمنع
-		</i>
+		</i> 
 		الوباء عن الانتشار للجميع!
 		<div class="darr"></div>
 	</b>
@@ -958,7 +980,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 				البسيطة،
 
 			</i>
-
+			
 			<b>
 				إلا أنّ الروابط الكثيرة قد تضر نشر الأفكار
 				<i>المعقدة!</i>
@@ -983,7 +1005,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	أولاد أذكياء.
 	ومن ينقض ذلك؟ لقد استخدموا نظريات نيوتن لإيصالنا إلى القمر.
 	لنتختصر السيرة، أطلقوا في عام ١٩٨٦
-
+	
 	مركبة
 	(تشالنجر)
 	<i>Challenger</i>
@@ -995,12 +1017,12 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	وذلك أدى لانفجار المركبة الفضائية وقتل ٧ أشخاص.
 	السبب المباشر:
 	برودة الطقس ذلك الصباح...
-
+	
 	<div style="height:0.9em"></div>
 
 	السبب الأقل مباشرة:
 	تجاهل المدراء لتحذيرات المهندسين.
-
+	
 	لماذا تجاهلوهم؟ بسبب
 	<b>
 	("التفكير الجماعي")
@@ -1018,7 +1040,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	"تصميم"
 	أي جماعة لنزيد من
 	<b>حكمة الحشد؟</b>
-
+	
 	باختصار، يمكننا عن طريق عبارتين:
 
 	<next>
@@ -1032,9 +1054,9 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 <words id="bonding_1">
 	قليل من التروابط، ولن تستطيع الفكرة بالانتشار.
-	<div class="larr"></div>
+	<div class="larr"></div> 
 	<br>
-	<div class="rarr"></div>
+	<div class="rarr"></div> 
 	كثير من الترابط، وتميل الفكرة إلى الفكر الجماعي
 	Groupthink.
 </words>
@@ -1042,7 +1064,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 <words id="bonding_2">
 	<b>
 	ارسم مجموعة تملك القيمة الموازنة الصحيحة من الروابط:
-
+		
 	يكتفي أن تربط القليل لتنشر فكرة معقدة!
 	<div class="darr"></div>
 	</b>
@@ -1069,16 +1091,16 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 </words>
 
 <words id="bridging_1">
-	كما حزرت، فإن عدد الروابط
-
+	كما حزرت، فإن عدد الروابط 
+	
 
 	<b>
 		بين
 	</b>
-
+	
 	مجموعات من الناس
 	نسميه
-
+	
 	<b>
 
 	("جسور تواصل رأس المال الاجتماعي")
@@ -1086,7 +1108,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	</b>
 	هذه الموضوع مهم لأنه يساعد المجموعات على كسر جدران رد الصدى لأفكارهم
 	("Echo Chambers")!
-
+	
 	<br>
 	<b>
 		مهمتك أن تبني جسراً يعدي الجميع بالحكمة المعقدة:
@@ -1132,12 +1154,12 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 <words id="bb_2">
 
 	<div style= "width: 290px; height: 230px;  direction: rtl;right: 660px;position: absolute; opacity: 1;">
-
+		
 	تهانينا، لقد رسمت شبكة مميزة للغاية!
 	الشبكات التي تملك المزيج المناسب من الترابط وجسور التواصل هن في غاية الأهمية، وندعوها...
 
 		<next wiggle>
-
+				
 			("شبكات العالم الصغير")
 			<div class="larr"></div>
 		</next>
@@ -1155,14 +1177,14 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	</i>
 	<br>
 	مهما صيغت العبارة إلا أن الناس عبر الأزمان والثقافات توصلوا لنفس الحكمة:
-
+	
 	<b>
 		المجتمع السليم بحاجة إلى قيمة موازنة من الروابط
 		<i>
 		داخل
 		</i>
 		 مجموعاته،
-		وجسور روابط
+		وجسور روابط 
 		<i>
 		بين
 		</i>
@@ -1187,10 +1209,10 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	</div>
 </words>
 <words id="bb_small_world_5">
-
+	
 	<div style="position:absolute; width:650px; right: 310px;">
 	علماء الشبكات اليوم لديهم تعريف رياضي لهذه الحكمة التاريخية:
-
+	
 	<b>("شبكة العالم الصغير")
 		Small World Network</b><ref id="small_world"></ref>.
 		المزيج المناسب من الترابط وجسور التواصل يمثّل الطريقة التي تشتبك بها العصبونات
@@ -1265,10 +1287,10 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 		[1]
 		ضف فرداً
-
+		
 		[2]
 		ضف فرداً مصاباً
-
+		
 		<br>
 		[Space فراغ]
 		حرّك مكان فرد
@@ -1281,9 +1303,9 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 <!-- Conclusion -->
 
 <words id="conclusion_1">
-
+	
 	<div style="font-size: 30px;
-
+	
 	direction: rtl;">
 		في الختام:
 		يمكن اختصار حديثنا بكلمتين...
@@ -1331,7 +1353,7 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	</i>
 		من الروابط يجعل الأفكار المعقدة تنهار تحت قدم التفكير الجماعي.
 		الحل هو بناء شبكة عالم صغير تملك المزيج المناسب من الروابط وجسور التواصل:
-
+		
 		<i>
 			"الواحد من الكثرة"
 			E Pluribus Unum.</i>
@@ -1387,14 +1409,14 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 		(نيوتن)
 		إلى
 		(ناسا)
-		إلى
+		إلى 
 		<br>
 		علم الشبكات، لقد غطينا الكثير
 		<br>
 		اليوم. باختصار، جنون الحشود
 		<br>
 		ليس بالضرورة مسبَّباً من
-		<i>أفراد محددين</i>،
+		<i>أفراد محددين</i>، 
 		بل قد يكون سببه
 		<br>
 		لزاقة الشبكة التي تعلقنا.
@@ -1407,22 +1429,22 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 			أنه علينا التخلي عن المسؤولية الشخصية
 		<br>
 		لأننا أيضاً من يحيك الشبكة. لذا، هنا بعض النصائح الشخصية حتى تحسّن عداواتك:
-
+		
 		<br>
 		كن شاكّاً بالأفكار التي تعجبك مباشرة
 		<ref id="flatter"></ref>،
 		وخصص وقتاً لتفهم
-
+		
 		<br>
 		الأفكار المعقدة، وحسن روابطك: ارتبط مع أفراد
-
+		
 		<br>
 		مماثلين لك، لكن ابني جسور تواصل عبر الفروق السياسية والثقافية.
-
+		
 
 		<div style="height:0.9em"></div>
 		يمكننا أن نحيك شبكة واعية. بلى، الأمر أصعب من مجرد رسم
-
+		
 		<br>
 		خطوط على شاشة...
 
@@ -1447,22 +1469,22 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	<next small>&lt;3</next>
 </words>
 
-<!-- Credits -->
+<!-- Credits --> 
 
 <words id="credits">
 
 	<div style="text-align:center; color:#fff; letter-spacing: 1px; font-size: 24px; line-height: 27px;">
-
+	
 		<span style="color:#777; position:relative; top:5px;">
 			لعبة صنعت من قبل</span>
 		<div style="font-size: 3em; line-height: 1.0em;">
 			NICKY CASE</div>
 		<a target="_blank" href="http://ncase.me" style="text-decoration:none">
-		العبْ تجاربي الأخرى
+		العبْ تجاربي الأخرى	
 		</a> ·
 		<a target="_blank" href="https://twitter.com/ncasenmare" style="text-decoration:none">
 			تابعني على تويتر</a>
-
+		
 		<br><br>
 
 		<span style="color:#777; position:relative; top:5px; display: inline-block; margin-top: 15px;">
@@ -1555,19 +1577,19 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 	<div>
 
 	<img src="sprites/bonus/surowieki.jpg" width="200" height="300" style="float:right; margin-left:1em"/>
-
+	
 	أولاً، أنا لا أريد أن أقلل من شأن
 	<a target="_blank" href="https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds">
 	هذا الكتاب.</a>
 	إنه كتاب جيد، و(سوروكي) يحاول الإجابة عن نفس السؤال الذي أسأله أنا:
-
+	
 	<b>“لماذا تنقلب بعض الحشود إلى الجنون أو إلى الحكمة”</b>
 
 	<br><br>
 
 	جواب (سوروكي): تقوم الحشود باختيارات جيدة عندما يكون جميع الأفراد منفردين بأكبر قدر ممكن.
 	يلقي (سوروكي) قصة عن مهرجان بلدي: دعي سكان بلدة للتخمين عن وزن ثور،
-	المفاجئ أن
+	المفاجئ أن 
 	<i>
 	متوسط جميع
 </i>
@@ -1580,13 +1602,13 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 	مستقلين
 	</i>
 	عن بعضهم وإلا فيتأثروا بالتخمينات السابقة الخاطئة، ومنه ينحاز متوسط الجواب بشدة.
-
+	
 	<br><br>
 
 	ولكن... لا أعتقد أن نصيحة
 	"اجعل جميع الأفراد مستقلين قدر الإمكان"
 	هي الجواب الكامل.
-
+	
 	العباقرة يتأثرون بشدة بالأخرين، من ضمنهم العباقة الذين يوصفون على خطأ بأنهم شديدوا التفكير الاستقلالي. كما
 	قال السير (إسحاق نيوتن):
 
@@ -1597,11 +1619,11 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 	إذاً، أي فكرة هي الصحيحة؟
 	أترجع الحكمة إلى التفكير مع النفس؟ أم إلى التفكير مع الآخرين؟
 	واضح أي منهم هو الجواب الأفضل.
-
+	
 
 	<br><br>
 
-
+	
 	وهذا ما سأحاول شرحه في هذه
 	<i>
 	"المحاكية المفسرة":
@@ -1616,21 +1638,21 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 <bonus id="connections">
 
 	<h3>
-
+		
 	<div style="text-align: right;">
 		ما هي أنواع الأخرى للروابط؟
 	</div>
 	</h3>
 
 	<div>
-
+	
 		من أجل التبسيط، محاكياتي تفترض أن الأفراد يمكنها فقط الارتباط عبر الصداقة، وأن جميع الصداقات متساوية القيمة.
 		ولكن علماء الشبكات
 		<i>
 		يأخذون بعين الاعتبار
 	</i>
 		أشكالاً أخرى لارتباط الأفراد، مثل:
-
+		
 	<div style="clear:both"></div>
 	<br>
 
@@ -1679,7 +1701,7 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 	<b>
 		("الرابطة الموزونة")
 		Weighted connections</b>
-
+	
 		<br>
 	(آلاء)
 	و
@@ -1812,10 +1834,10 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 		عدوى يمكنها التغير والتطور:
 	</b>
 	الأفكار لا تنتقل بين فرد وآخر بشكل تام مثل الفيروس. فمثل لعبة "الهاتف" الرسالة تتغير كل مرة يتم إعادة إلقائها
-
+	
 	&mdash;
 	وأحياناً التغير يجعلها أكثر إعدائاً من الصورة الأصلية!
-	لذا الأفكار
+	لذا الأفكار 
 	"تتطور"
 	لتصبح أكثر إطلاقاً وأسهل نسخاً وإعدائاً عبر الزمن.
 
@@ -1825,14 +1847,14 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 
 </bonus>
 <bonus id="further_reading">
-
+	
 	<h3>
-
+		
 	<div style="text-align: right;">
 	أريد تعلم المزيد! ما تنصحني بقرائته أو لعبه؟
 	</div>
 	</h3>
-
+	
 	<div>
 	هذه
 	"المحاكية المفسرة"
@@ -1847,9 +1869,9 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 	"مرتبطون"</a>
 	من قبل Nicholas Christakis و James Fowler (٢٠٠٩).
 	جولة بسيطة حول الطرق التي تؤثر الشبكات بحياتنا، سيئة كانت أم جيدة.
-
+	
 	<a target="_blank" href="http://www.connectedthebook.com/pdf/excerpt.pdf">
-		هنا نبذة من الكتاب:
+		هنا نبذة من الكتاب: 
 	Preface &amp; Chapter 1 (English)
 	</a>
 
@@ -1862,7 +1884,7 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 	<a target="_blank" href="http://ncase.me/trust/">
 		"تطور الثقة والأمانة"
 	The Evolution of Trust</a> من قبل نفس كاتب هذه اللعبة Nicky Case (٢٠١٧).
-	لعبة عن
+	لعبة عن 
 	("نظرية الألعاب")
 	Game Theory
 	وعن كيفية نشوء التعاون... أو إنهياره.
@@ -1940,7 +1962,7 @@ Final thing! These references also need you to TRANSLATE:
 
 	<div>
 	<a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147617">
-
+	
 	"وهم الأكثرية في الشبكات الاجتماعية"</a> من قبل Lerman
 	ومعاونيه
 	(٢٠١٦).
@@ -1950,38 +1972,38 @@ Final thing! These references also need you to TRANSLATE:
 	</div>
 </reference>
 <reference id="contagion">
-
+	
 	<h3>
 	"تشير أدلة احصائية قوية أن التدخين والصحة والسعادة وحضور الانتخابات ومعدلات التعاون بين الناس جميعهم معديين"
 	</h3>
 
 	<div>
-
+	
 	من الكتاب البليغ وسهل الفهم الذي كتبه
-	Nicholas Christakis
+	Nicholas Christakis 
 	و
 	James Fowler،
-
+	
 	<a target="_blank" href="http://www.connectedthebook.com/">
 	"مرتبطون"</a>
-	(٢٠٠٩).
+	(٢٠٠٩). 
 
 	</div>
 </reference>
 <reference id="suicides">
 
 	<h3>
-
+		
 	"يوجد أدلة تشير أن الانتحارات معدية أيضاً"
-
+	
 	</h3>
 
 	<div>
 	<a target="_blank" href="http://www.jstor.org/stable/42000514?seq=4#page_scan_tab_contents">
-
+		
 	"عدوى الانتحار والتقرير عن الانتحار: توصيات من ورشة وطنية"</a>
 	من قبل
-	O'Carroll
+	O'Carroll 
 	ومعاونيه
 	(١٩٩٤)،
 
@@ -1992,24 +2014,24 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="shootings">
 
 	<h3>
-
+		
 	"بعض الأدلة تشير إلى أن عمليات القتل الجماعي بإطلاق النار هي عدوى أيضاً"
-
+	
 	</h3>
 
 	<div>
 
 	<a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117259">
-
+		
 	"العدوى في القتل الجماعي واطلاق النار في المدارس"</a> من قبل
 	Towers
 	ومعاونيه
 	(٢٠١٥).
 
 	<br><br>
-
+	
 	أيضاً، ارجع إلى حملة
-
+	
 	<a target="_blank" href="http://www.dontnamethem.org/">
 	"لا تسمّيهم"</a>
 	التي تلح وكالات الإعلام
@@ -2020,7 +2042,7 @@ Final thing! These references also need you to TRANSLATE:
 	لأن ذلك ينشر العدوى.
 	بدلاً من ذلك فيجب على وكالات الإعلام التركيز على الضحايا وأعضاء الشرطة
 	المستجيبين الأوائل والأبطال المدنيين والمجتمع المحلي الألم والمتعافي.
-
+	
 	</div>
 
 </reference>
@@ -2038,23 +2060,23 @@ Final thing! These references also need you to TRANSLATE:
 	مقالة من كتابة
 	Cass Sunstein
 	هي نبذة سريعة غير تقنية،
-	نشرت في ربيع الأزمة، أكتوبر ٢٠٠٨.
-
+	نشرت في ربيع الأزمة، أكتوبر ٢٠٠٨. 
+	
 	</div>
 
 </reference>
 <reference id="complex">
 
 	<h3>
-
+		
 	"نظرية العدوى المعقدة"
-
+		
 	</h3>
 
 	<div>
 
 	<a target="_blank" href="https://www.unc.edu/~fbaum/teaching/articles/Granovetter_AJS_1978.pdf">
-
+		
 	"نمط الحد الأدنى للتصرف الجماعي"</a>
 	من كتابة Granovetter
 	عام
@@ -2066,26 +2088,26 @@ Final thing! These references also need you to TRANSLATE:
 	<br><br>
 
 	<a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0180802">
-
+		
 	"أدلة لنمط العدوى المعقدة في العدوى الاجتماعية من منظور البيانات المراقبة"</a>
 	من قبل Sprague
 	و
 	House (٢٠١٧)
 	يشير أن العدوى المعقدة موجودة بالفعل
 	(على الأقل، ضمن بيانات وسائل الإعلام المراقبة).
-
+	
 	<br><br>
 
 	وأخيراً،
 	<a target="_blank" href="https://arxiv.org/pdf/cond-mat/0403699.pdf">
-
+		
 	"التصرف العام في نماذج معمّمة للعدوى"</a> من كتابة
-	 Dodds
+	 Dodds 
 	 و
 	  Watts (٢٠٠٤).
 	يقترح نموذج يعمم
-
-	 <i>جميع</i>
+	
+	 <i>جميع</i> 
 	 أنواع العدوى:
 	 البسيطة ومعقدة، البيلوجية والاجتماعية!
 
@@ -2094,9 +2116,9 @@ Final thing! These references also need you to TRANSLATE:
 </reference>
 <reference id="possum">
 	<h3>
-
+		
 		"حيوان الأبسوم لديه ١٣ مهبل ثدي"
-
+		
 	</h3>
 	<div>
 		موزعين في حلقة من ١٢ مهبل، وواحد إضافي في المنتصف.
@@ -2106,10 +2128,10 @@ Final thing! These references also need you to TRANSLATE:
 
 	<h3>
 
-
+		
 	"التفكير الجماعي
 	(groupthink)"
-
+	
 	</h3>
 
 	<div>
@@ -2137,26 +2159,26 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="social_capital">
 
 	<h3>
-
+		
 	"ترابط وجسور رأس المال الاجتماعي"
-
+	
 	</h3>
 
 	<div>
 	نوعا رأس المال الاجتماعي
-	 &mdash;
-
-	"الترابط"
+	 &mdash; 
+	 
+	"الترابط" 
 	و
 	"جسور التواصل"
 	&mdash;
-
+	
 	سماهما
 	Robert Putnam
 	في كتابه المبصر
 	<a target="_blank" href="http://bowlingalone.com/">
 	"لعب البولينغ منفرداً"</a>
-	(٢٠٠٠).
+	(٢٠٠٠). 
 	اكتشافه الجذري:
 	عبر ما يقارب
 	<i>
@@ -2176,7 +2198,7 @@ Final thing! These references also need you to TRANSLATE:
 
 	<div>
 	<a target="_blank" href="https://sociology.stanford.edu/sites/default/files/publications/the_strength_of_weak_ties_and_exch_w-gans.pdf">
-
+	
 	"قوة الروابط الضعيفة"</a> من قبل Granovetter
 	(١٩٧٣)
 	يرينا أن الروابط عبر المجموعات تساعد في نشر العدوى البسيطة
@@ -2194,9 +2216,9 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="small_world">
 
 	<h3>
-
+		
 	"شبكة العالم الصغير"
-
+	
 	</h3>
 
 	<div>
@@ -2212,19 +2234,19 @@ Final thing! These references also need you to TRANSLATE:
 		١٩٦٩</a>،
 		والذي وضّح أن أي شخصين عشوائيين في الولايات المتحدة يبعدون عن بعض بمتوسط ٦ صداقات
 		&mdash;
-
+		
 		"ست درجات من التباعد"!
 
 	<br><br>
 
 	<!-- The small-world network got more mathematical meat on its bones with -->
 	اكتسى عظم شبكة العالم الصغير بالعمليات الحسابية بعد صدور مقالة
-
+	
 	<a target="_blank" href="http://leonidzhukov.net/hse/2014/socialnetworks/papers/watts-collective_dynamics-nature_1998.pdf">
-
-	"الديناميكيات الموحّدة لشبكات العالم الصغير"</a>
+		
+	"الديناميكيات الموحّدة لشبكات العالم الصغير"</a> 
 	من قبل
-	Watts
+	Watts 
 	و
 	Strogatz (١٩٩٨)
 	والتي اقترحت خوارزمية لتشكيل شبكات تملك طولاً متوسطاً قصيراً للمسارات
@@ -2239,7 +2261,7 @@ Final thing! These references also need you to TRANSLATE:
 	يمكنك أيضاً قراءة
 	<a target="_blank" href="http://worrydream.com/ScientificCommunicationAsSequentialArt/">
 		هذه المحاكاة التفاعلية المقتبسة من الورقة العلمية السابقة
-	</a>
+	</a> 
 	من صنع
 	Bret Victor (٢٠١١).
 
@@ -2249,15 +2271,15 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="swn_neurons">
 
 	<h3>
-
+		
 	"[شبكات العالم الصغير]
 	تصف كيفية ارتباط العصبونات في الدماغ"
-
+	
 	</h3>
 
 	<div>
 	<a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/17079517">
-
+		
 	"شبكات عالم صغير دماغية"
 </a> من قبل Bassett
 	و
@@ -2269,10 +2291,10 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="swn_creativity">
 
 	<h3>
-
+		
 	"[شبكات العالم الصغير]
 	تزيد من الإبداع الجماعي"
-
+	
 	</h3>
 
 	<div>
@@ -2280,7 +2302,7 @@ Final thing! These references also need you to TRANSLATE:
 	<a target="_blank" href="http://www.jstor.org/stable/10.1086/432782?seq=1#page_scan_tab_contents">
 	"التعاون والإبداع: مشكلة العالم الصغير"</a>
 	من قبل
-	Uzzi
+	Uzzi 
 	و
 	Spiro
 	(٢٠٠٥).
@@ -2297,13 +2319,13 @@ Final thing! These references also need you to TRANSLATE:
 	<h3>
 	"[شبكات العالم الصغير]
 	تزيد من المشاركة في حل المشاكل"
-
+	
 	</h3>
 
 	<div>
 		ارجع إلى
 	<a target="_blank" href="http://socialphysics.media.mit.edu/">
-	“الفيزياء الاجتماعية”</a>
+	“الفيزياء الاجتماعية”</a> 
 	وهو موقع
 	البروفيسور
 	Alex "Sandy" Pentland
@@ -2317,14 +2339,14 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="swn_jfk">
 
 	<h3>
-
+		
 	"[شبكة العالم الصغيرة]
 	!ساعدت الرئيس الأمريكي (جون ف. كينيدي) بأن يتفادى حرباً نووية بأعجوبة"
-
+	
 	</h3>
 
 	<div>
-
+	
 	بالإضافة لانفجار مركبة (ناسا)، أكثر مثال مشهور بسوء السمعة للتفكير الجماعي
 	كان في إخفاق
 	("غزو خليج الخنازير")
@@ -2333,7 +2355,7 @@ Final thing! These references also need you to TRANSLATE:
 	(جون ف. كينيدي)
 	وفريق مستشاريه
 
-	&mdash;
+	&mdash; 
 	لسبب غبي لا أحد يعلمه
 	&mdash;
 	أن فكرة غزو كوبا بسرية وإسقاط حكمة
@@ -2351,7 +2373,7 @@ Final thing! These references also need you to TRANSLATE:
 	</i>
 
 	<br><br>
-
+	
 	بلى، لقد أفشل (جون) هذه المسألة فشلاً ذريعاً.
 
 	<br><br>
@@ -2362,7 +2384,7 @@ Final thing! These references also need you to TRANSLATE:
 	("غزو خليج الخنازير")
 	وعلى أساسها قام بإعادة تنظيم فريقه لتجنب التفكير الجماعي.
 	من أبرز اصلاحاته كانت:
-
+	
 	١-
 	شجع الأفراد على أن يطرحوا انتقاداتهم بشكل صريح، مما قلل من
 	"الحد الأدنى للعدوى"
@@ -2380,7 +2402,7 @@ Final thing! These references also need you to TRANSLATE:
 
 	<br><br>
 
-	وهكذا، باستخدام
+	وهكذا، باستخدام 
 	<i>
 	نفس الأفراد
 </i>
@@ -2412,7 +2434,7 @@ Final thing! These references also need you to TRANSLATE:
 	وكيف أنقذتها شبكة عالم صغير وحيدة!... نوعاً ما.
 
 	<br><br>
-
+	
 	يمكنك قراءة المزيد عن هذا الموضوع
 	<a target="_blank" href="https://hbr.org/2013/11/how-john-f-kennedy-changed-decision-making">
 	في صحيفة
@@ -2428,10 +2450,10 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="three_degrees">
 
 	<h3>
-	"نأثر على
+	"نأثر على 
 	[...]
 	أصدقاء أصدقاء أصدقائنا!"
-
+	
 	</h3>
 
 	<div>
@@ -2440,7 +2462,7 @@ Final thing! These references also need you to TRANSLATE:
 	"مرتبطون"
 	Connected</a>
 	الرائع. من قبل
-	Nicholas Christakis
+	Nicholas Christakis 
 	و
 	James Fowler
 	(٢٠٠٩).
@@ -2449,14 +2471,14 @@ Final thing! These references also need you to TRANSLATE:
 </reference>
 <reference id="flatter">
 	<h3>
-
+		
 	"كن شاكّاً بالأفكار التي تعجبك مباشرة"
-
+	
 	</h3>
 	<div>
 		بلى، وتطبق هذه النصيحة على الأفكار التي طرحتها
 		<i>
-		أنا في
+		أنا في 
 		هذه اللعبة.
 	</i>
 	</div>
@@ -2476,19 +2498,19 @@ Final thing! These references also need you to TRANSLATE:
 		</i>
 		في الأحاجي أيضاً وليس فقط في وضع اللعب الحر.
 	أنا لا أمزح! يمكنك العودة الآن إلى فصل سابق والتغيير في المحاكاة.
-	في الحقيقة،
+	في الحقيقة، 
 	<i>
 	هكذا صنعت أنا
 	</i>
 	جميع الأحاجي. تمتّع في الرسم!
-
+	
 	</div>
 
 </reference>
 <reference id="supporters" hidden=yes large=yes>
 	<div>
 	<a target="_blank" href="https://www.patreon.com/ncase">
-
+		
 	إلى داعميني على
 
 		Patreon</a>:
@@ -2498,7 +2520,7 @@ Final thing! These references also need you to TRANSLATE:
 	</i>
 	يطعمني ويدفع ثمن أجار بيتي ويتيح لي الحرية الإبداعية لصنع هذه الألعاب الاجتماعية والحسابية العلمية.
 	من باطن قلبي...
-
+	 
 	<b>
 	شكراً لكم!
 	</b>
@@ -2509,7 +2531,7 @@ Final thing! These references also need you to TRANSLATE:
 
 	جزيل الشكر لكلّ من اختبر هذه اللعبة
 	في جميع مراحل نشوئها!
-
+	
 	<div style="direction: ltr; position: relative; top: -50px;">
 
 		<br><br>
