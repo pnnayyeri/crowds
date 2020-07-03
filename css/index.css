@@ -578,7 +578,7 @@ ref:before{
     font-size: 30px;
     position: absolute;
     text-align: center;
-    top: -25px;
+    top: -20px;
 }
 ref:hover:before{
 	background: #eee;
