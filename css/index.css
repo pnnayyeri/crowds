@@ -19,7 +19,7 @@ body{
 	margin:0;
 
 	font-family: "PatrickHand", Helvetica, Arial;
-	font-size: 21px;
+	font-size: 19px;
 	line-height: 1.5em;
 
 }
@@ -542,17 +542,17 @@ bon{
     top:0;
 }
 bon:before{
-	content: '';
-	display: block;
-    position: absolute;
+		content: '';
+		display: block;
+	  position: absolute;
 
-    left: 25px;
-    top: 14px;
-    width: 35px;
-    height: 70px;
+	  left: 25px;
+	  top: 14px;
+	  width: 35px;
+	  height: 70px;
 
-	background: url(../sprites/ui/bonus.png);
-	background-size: 100% 100%;
+		background: url(../sprites/ui/bonus.png);
+		background-size: 100% 100%;
 }
 bon:hover{
 	top:-3px;
