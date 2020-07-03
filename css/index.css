@@ -74,7 +74,7 @@ a:hover{
 	/*display: inline-block;*/
 	margin: 0 auto;
 	position: relative;
-	top: -10px;
+	top: 0px;  /* default: -10px */
 	width: 300px;
     height: 20px;
     padding: 37px 0 43px 0;
