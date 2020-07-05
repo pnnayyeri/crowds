@@ -550,7 +550,7 @@ bon:before{
 	  top: 14px;
 	  width: 35px;
 	  height: 70px;
-
+		transform: scaleX(-1);
 		background: url(../sprites/ui/bonus.png);
 		background-size: 100% 100%;
 }
