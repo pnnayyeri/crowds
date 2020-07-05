@@ -190,6 +190,7 @@ a:hover{
 /* Sandbox UI */
 .sandbox_ui{
 	width: 270px;
+	left: 0px;
 }
 .sandbox_ui input[type="range"]{
 	width: 100%;

@@ -62,6 +62,12 @@ function Boxes(){
 		if(config.img){
 			box.classList.add("image");
 			box.style.backgroundImage = "url("+config.img+")"
+
+			if(config.flipOnRTL == true && document.documentElement.lang == "fa") {
+
+				box.style.webkitTransform = "ScaleX(-1)";
+				box.style.transform = "ScaleX(-1)";
+			}
 		}
 
 		// Sim UI
@@ -77,7 +83,7 @@ function Boxes(){
 		// Replace "next" buttons!
 		var next;
 		if(next = box.querySelector("next")){
-			
+
 			// Create next button
 			var nextButton = document.createElement("div");
 			nextButton.className = "next_button";
@@ -155,9 +161,9 @@ function Boxes(){
 			fadeIn(self.dom, toShow);
 		}
 	};
-	
+
 	self.removeChildByID = function(id, withFade){
-		
+
 		var removeBox = self.getChildByID(id);
 		if(!withFade){
 			self.dom.removeChild(removeBox);
