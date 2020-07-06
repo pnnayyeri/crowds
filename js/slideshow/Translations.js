@@ -6,12 +6,12 @@ var DEFAULT_LANG_CODE = 'en';
 
 r.open("GET", "translations.txt?cache="+Math.round(1000*Math.random()), true); // force cache refresh
 r.onreadystatechange = function () {
-	
+
 	if(r.readyState != 4 || r.status != 200) return;
 
 	// Get current language code from path
 	var currentCode = location.pathname.split('/').slice(-1)[0].replace('.html', '') || DEFAULT_LANG_CODE;
-	
+
 	// Parse available translations
 	// Only lines of the form "nn: name"
 	var response = r.responseText;
@@ -40,7 +40,7 @@ r.onreadystatechange = function () {
 		html += " <a target='_blank' href='"+window.ADD_YOUR_OWN_LINK+"'>"+getWords("translations_add")+"</a>";
 		html += " | ";
 		html += _createLinks(" · ");
-				
+
 		$("#translations").innerHTML = html;
 	}
 
@@ -61,7 +61,7 @@ function _createLinks(separator){
 	}
 
 	// Hardcoding the external Arabic translation, oh well
-	html += " · <a href='http://alexanderclay.github.io/crowds' style='text-decoration:none'>العربية</a>";
+	html += " · <a href='http://pnnayyeri.github.io/crowds' style='text-decoration:none'>فارسی</a>";
 
 	return html;
 }
