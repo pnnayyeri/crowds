@@ -60,8 +60,5 @@ function _createLinks(separator){
 		html += "</a>";
 	}
 
-	// Hardcoding the external Arabic translation, oh well
-	html += " · <a href='http://pnnayyeri.github.io/crowds' style='text-decoration:none'>فارسی</a>";
-
 	return html;
 }
