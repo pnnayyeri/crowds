@@ -1,4 +1,5 @@
 /* FONT FACE */
+
 @font-face {
 	font-family: "PatrickHand";
 	font-style: normal;
@@ -18,7 +19,7 @@ body{
 	margin:0;
 
 	font-family: "PatrickHand", Helvetica, Arial;
-	font-size: 23px;
+	font-size: 19px;
 	line-height: 1.5em;
 
 }
@@ -41,7 +42,6 @@ a:hover{
 	width: 100%;
 	height: calc(100% - 60px);
 	cursor: none;
-	overflow: hidden; /* modal's being awful */
 }
 #container[sim_is_running]{
 	background: #eee;
@@ -62,7 +62,7 @@ a:hover{
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none; 
+	user-select: none;
 }
 #simulations canvas, #slideshow > div{
 	position: absolute;
@@ -74,7 +74,7 @@ a:hover{
 	/*display: inline-block;*/
 	margin: 0 auto;
 	position: relative;
-	top: -10px;
+	top: 0px;  /* default: -10px */
 	width: 300px;
     height: 20px;
     padding: 37px 0 43px 0;
@@ -106,15 +106,15 @@ a:hover{
 
 /* Skip */
 #container > #skip{
-	
+
 	display: none;
 
 	position: absolute;
-	right:10px;
+	left:10px;
 	bottom:10px;
-	width: auto;
+	width: 80px;
 	height: 25px;
-	font-size: 25px;
+	font-size: 20px;
 	line-height: 25px;
 	color: #aaa;
 	text-align: right;
@@ -122,8 +122,8 @@ a:hover{
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none; 
-	
+	user-select: none;
+
 }
 #container > #skip:hover{
 	color: #ccc;
@@ -138,7 +138,7 @@ a:hover{
 }
 
 /* Right & Down Arrows */
-.rarr, .darr{
+.rarr, .darr, .larr{
 	display: inline-block;
 	width: 1em;
 	height: 1em;
@@ -149,6 +149,9 @@ a:hover{
 }
 .darr{
 	transform: rotate(90deg);
+}
+.larr{
+	transform: rotate(180deg);
 }
 
 /* Sim UI */
@@ -187,6 +190,7 @@ a:hover{
 /* Sandbox UI */
 .sandbox_ui{
 	width: 270px;
+	left: 0px;
 }
 .sandbox_ui input[type="range"]{
 	width: 100%;
@@ -306,14 +310,14 @@ a:hover{
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
-	user-select: none; 
+	user-select: none;
 }
 #sound{
 	position: absolute;
 	left:0; top:0;
 	color: #fff;
 	width: 150px;
-    font-size: 30px;
+    font-size: 20px;
     height: 60px;
 }
 #sound[mute=yes]{
@@ -321,7 +325,7 @@ a:hover{
 }
 #sound_icon{
 	background: url(../sprites/ui/sound.png);
-	background-size: auto 100%; 
+	background-size: auto 100%;
 	width: 60px; height: 60px;
 	position: absolute;
 }
@@ -360,7 +364,7 @@ a:hover{
 	width: 50px;
 	height: 60px;
 	background: url(../sprites/ui/sharing.png);
-	background-size: auto 100%; 
+	background-size: auto 100%;
 }
 #sharing #fb{
 	background-position: 0px 0px;
@@ -379,13 +383,13 @@ a:hover{
 }
 #translations{
 	position: absolute;
-    top: 12px;
+    top: 14px;
     left: calc(50% - 400px);
     width: 800px;
     text-align: center;
     color: #fff;
     font-size: 16px;
-    line-height: 17px;
+    line-height: 16px;
     letter-spacing: 0.5px;
 }
 #navigation{
@@ -439,23 +443,23 @@ a:hover{
 	margin: 0 8px;
 }
 #navigation > span#nav_bubble{
-	
+
 	transition: opacity 0.2s ease-in-out,
 			    left 0.2s ease-in-out,
 			    top 0.2s ease-in-out;
 
 	display: none;
 	opacity: 0;
-	
+
 	position: absolute;
 	top:-80px;
 	left:0;
-	
+
 	background: rgba(0,0,0,0.8);
 	color: #fff;
 	text-align: center;
 	border-radius: 20px;
-    
+
     width: 220px;
     padding: 6px 0;
 
@@ -520,7 +524,7 @@ words, bonus, reference{
 bon{
     margin: 0.75em auto;
     display: block;
-    
+
     background: #ccc;
     color: #444;
     text-align: left;
@@ -539,17 +543,17 @@ bon{
     top:0;
 }
 bon:before{
-	content: '';
-	display: block;
-    position: absolute;
-    
-    left: 25px;
-    top: 14px;
-    width: 35px;
-    height: 70px;
+		content: '';
+		display: block;
+	  position: absolute;
 
-	background: url(../sprites/ui/bonus.png);
-	background-size: 100% 100%;
+	  left: 25px;
+	  top: 14px;
+	  width: 35px;
+	  height: 70px;
+		transform: scaleX(-1);
+		background: url(../sprites/ui/bonus.png);
+		background-size: 100% 100%;
 }
 bon:hover{
 	top:-3px;
@@ -575,7 +579,7 @@ ref:before{
     font-size: 30px;
     position: absolute;
     text-align: center;
-    top: -25px;
+    top: -20px;
 }
 ref:hover:before{
 	background: #eee;

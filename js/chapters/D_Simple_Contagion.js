@@ -57,7 +57,7 @@ SLIDES.push(
 			id:"end",
 			type:"box",
 			text:"simple_simple_end",
-			x:660, y:440, w:300, h:100,
+			x:1, y:440, w:300, h:100,
 			hidden:true
 		}
 
@@ -101,7 +101,7 @@ SLIDES.push(
 		{
 			type:"box",
 			text:"simple_simple_end",
-			x:660, y:440, w:300, h:90
+			x:1, y:440, w:300, h:90
 		}
 	]
 },

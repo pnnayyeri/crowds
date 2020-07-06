@@ -1,0 +1,2580 @@
+<!--
+
+THE WISDOM AND/OR MADNESS OF CROWDS
+by Nicky Case | apr 2018
+
+- - - - - - - - - - -
+
+FAN TRANSLATION GUIDE:
+https://github.com/ncase/crowds#how-to-translate-this-thing
+
+Hello fan-translaters! Thank you so, so much for your help.
+I hope you know what you've gotten yourself into.
+There's about 3600+ WORDS to translate, including
+the Bonus Boxes and References.
+
+To make things easier (or less painful, anyway) I've marked
+what needs to be translated and how with big "TRANSLATE" comments.
+Ctrl+F for "TRANSLATE" in uppercase to see what needs to be translated!
+
+BUT BEFORE YOU TRANSLATE ANYTHING, DO THIS:
+1) Look up the two-letter code of the language you're translating to:
+   https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+2) *COPY* index.html, and name the copy [two-letter-code].html
+   For example: de.html, ar.html, zh.html, etc...
+3) Translate *THAT* page. Do NOT modify the original index.html!
+
+And once you're done, go to "translations.txt", and follow the
+instructions there to let this game "know" your translation exists.
+
+Good luck, and thanks again!
+
+<3,
+~ Nicky Case
+
+-->
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+	<!-- Meta Info -->
+	<title>حكمة أو جنون الحشود</title> <!-- <title>(TRANSLATE this part only)</title> -->
+	<meta name="description" content="دليل تفاعلي عن الشبكات الاجتماعية!"/> <!-- content="(TRANSLATE this part only)" -->
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+	<meta charset="utf-8">
+	<link rel="icon" type="image/png" href="favicon.png">
+
+
+	<link rel="alternate" href="http://ncase.me/crowds/"           hreflang="en">
+	<link rel="alternate" href="http://ncase.me/crowds/es.html"    hreflang="es-ES">
+	<link rel="alternate" href="http://ncase.me/crowds/fr.html"    hreflang="fr">
+	<link rel="alternate" href="http://ncase.me/crowds/it.html"    hreflang="it">
+	<link rel="alternate" href="http://ncase.me/crowds/ja.html"    hreflang="ja">
+	<link rel="alternate" href="http://ncase.me/crowds/pt.html"    hreflang="pt">
+	<link rel="alternate" href="http://ncase.me/crowds/ru.html"    hreflang="ru">
+	<link rel="alternate" href="http://ncase.me/crowds/uk.html"    hreflang="uk">
+	<link rel="alternate" href="http://ncase.me/crowds/vi.html"    hreflang="vi">
+	<link rel="alternate" href="http://ncase.me/crowds/zh-CN.html" hreflang="zh-CN">
+	<link rel="alternate" href="http://ncase.me/crowds/zh-TW.html" hreflang="zh-TW">
+	<link rel="alternate" href="https://alexanderclay.github.io/crowds/ar.html" hreflang="ar">
+
+
+	<!-- Sharing -->
+	<meta itemprop="name" content="حكمة أو جنون الحشود"> <!-- content="(TRANSLATE this part only)" -->
+	<meta itemprop="description" content="دليل تفاعلي عن الشبكات الاجتماعية!"> <!-- content="(TRANSLATE this part only)" -->
+	<meta itemprop="image" content="http://ncase.me/crowds/social/thumb.png">
+
+	<meta name="twitter:title" content="حكمة أو جنون الحشود"> <!-- content="(TRANSLATE this part only)" -->
+	<meta name="twitter:description" content="دليل تفاعلي عن الشبكات الاجتماعية!"> <!-- content="(TRANSLATE this part only)" -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@ncasenmare">
+	<meta name="twitter:creator" content="@ncasenmare">
+	<meta name="twitter:image" content="http://ncase.me/crowds/social/thumb.png">
+
+	<meta property="og:title" content="حكمة أو جنون الحشود"> <!-- content="(TRANSLATE this part only)" -->
+	<meta property="og:description" content="دليل تفاعلي عن الشبكات الاجتماعية!"> <!-- content="(TRANSLATE this part only)" -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://alexanderclay.github.io/crowds/ar.html">
+	<meta property="og:image" content="http://ncase.me/crowds/social/thumb.png">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=3">
+	<style>
+		/* font: Noto Sans Arabic https://www.google.com/get/noto/ */
+		@font-face {
+			font-family: "NotoSansArabic-CondensedLight";
+			font-style: normal;
+			font-weight: 400;
+			src: url(css/NotoSansArabic-CondensedLight.ttf) format('truetype');
+		}
+			body{
+			font-family: "PatrickHand", "NotoSansArabic-CondensedLight", Helvetica, Arial;
+		}
+	</style>
+</head>
+<body>
+
+	<!-- THE SLIDESHOW -->
+	<div id="container">
+
+		<!-- Simulation(s) in background -->
+		<div id="simulations_container">
+			<div id="simulations"></div>
+		</div>
+
+		<!-- Slideshow: words & buttons -->
+		<div id="slideshow_container">
+			<div id="slideshow"></div>
+		</div>
+
+		<!-- Scratch Transition -->
+		<canvas id="scratch" width="711" height="400"></canvas>
+
+		<!-- Skip -->
+		<div id="skip" style= "height:33px;">&lt; تخطي</div> <!-- TRANSLATE -->
+
+		<!-- Modal -->
+		<div id="modal_container">
+			<div id="modal_bg"></div>
+			<div id="modal">
+				<div id="modal_close">⨯</div>
+				<div id="modal_content_container">
+					<div id="modal_content"></div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<!-- Navigation: Audio, Contents, Share, Translations -->
+	<div id="navigation_container">
+		<div id="sound" mute="no">
+			<div id="sound_icon"></div>
+			<span id="sound_on" style="margin-left: -30px; margin-top: -2px; letter-spacing: 0px;">
+
+				مفعّل</span> <!-- TRANSLATE -->
+			<span id="sound_off" style="margin-left: -26px; margin-top: -2px; letter-spacing: 0px;">مطفأ</span> <!-- TRANSLATE -->
+		</div>
+		<div id="sharing">
+			<a id="fb" target="_blank" href="TODO"></a>
+			<a id="tw" target="_blank" href="TODO"></a>
+			<a id="em" target="_blank" href="TODO"></a>
+			<span id="share_title">
+			خرد و/یا جنون جمعی <!-- TRANSLATE -->
+			</span>
+			<span id="share_desc">
+			<!-- TRANSLATOR: keep this on ONE LINE or the social sharing will break! -->
+			لماذا تقوم جماعات من البشر بتصرفات ذكية أو حمقاء، طيّبة أو وحشية؟ هذا دليل تفاعلي حول الشبكات الاجتماعية:
+			</span>
+		</div>
+		<div id="navigation">
+
+			<!-- The chapters -->
+			<!-- TRANSLATE all the Chapter names! -->
+			<div chapter="Introduction">
+				<span>٠</span>
+				<span>٠- المقدمة</span>
+			</div>
+			<div chapter="Networks">
+				<span>١</span>
+				<span>١- الروابط</span>
+			</div>
+			<div chapter="Simple">
+				<span>٢</span>
+				<span>٢- العدوى</span>
+			</div>
+			<div chapter="Complex">
+				<span>٣</span>
+				<span>٣- العدوى المعقدة</span>
+			</div>
+			<div chapter="BB">
+				<span>٤</span>
+				<span>٤- الترابط وجسور التواصل</span> <!-- note: &amp; is html for the "and" sign -->
+			</div>
+			<div chapter="SmallWorld">
+				<span>٥</span>
+				<span>٥- إنه لعالم صغير</span>
+			</div>
+			<div chapter="Conclusion">
+				<span>٦</span>
+				<span>٦- في الختام...</span>
+			</div>
+			<div chapter="Credits">
+				<span>٧</span>
+				<span>٧- صانعوا اللعبة</span>
+			</div>
+			<div chapter="Sandbox">
+				<span>★</span>
+				<span>★ وضع اللعب الحر! ★</span>
+			</div>
+
+			<!-- A divider -->
+			<span class="nav_divider"></span>
+
+			<!-- Bonus Notes & References -->
+			<div modal="bonus">
+				<span>?</span>
+				<span>الصناديق الإضافية!</span> <!-- TRANSLATE -->
+			</div>
+			<div modal="references">
+				<span style="margin-top: 7px; font-size: 35px;">*</span>
+				<span>المراجع</span> <!-- TRANSLATE -->
+			</div>
+			<div modal="translations">
+			<span style="margin-top:5px; position:relative;"><span style="
+				    position: absolute;
+				    top: -8px;
+				    left: 6px;
+				">A</span><span style="
+				    position: absolute;
+				    font-size: 16px;
+				    top: -1px;
+				    left: 16px;
+				">あ</span></span>
+				<span>الترجمات</span> <!-- TRANSLATE -->
+			</div>
+
+			<!-- The hover bubble -->
+			<span id="nav_bubble"></span>
+
+		</div>
+		<div id="translations"></div>
+		<div id="social"></div>
+	</div>
+
+	<!-- The Pencil -->
+	<div id="pencil_container">
+		<canvas id="pencil"></canvas>
+	</div>
+
+	<!-- Preloader -->
+	<div id="pre_preloader">
+		<div>تحميل...</div> <!-- TRANSLATE -->
+	</div>
+
+</body>
+</html>
+
+<!-- - - - - -->
+<!-- SCRIPTS -->
+<!-- - - - - -->
+
+<script src="js/lib/helpers.js"></script>
+<script src="js/lib/minpubsub.src.js"></script>
+<script src="js/lib/howler.min.js"></script>
+<script src="js/lib/Key.js"></script>
+<script src="js/lib/Mouse.js"></script>
+<script src="js/lib/Sprite.js"></script>
+
+<script src="js/slideshow/Slideshow.js"></script>
+<script src="js/slideshow/Pencil.js"></script>
+<script src="js/slideshow/Boxes.js"></script>
+<script src="js/slideshow/Scratch.js"></script>
+<script src="js/slideshow/Navigation.js"></script>
+<script src="js/slideshow/SimUI.js"></script>
+<script src="js/slideshow/SandboxUI.js"></script>
+<script src="js/slideshow/Modal.js"></script>
+<script src="js/slideshow/Preloader.js"></script>
+<script src="js/slideshow/Translations.js?v=2"></script>
+
+<script src="js/sim/Peep.js?v=2"></script>
+<script src="js/sim/Connection.js"></script>
+<script src="js/sim/ConnectorCutter.js"></script>
+<script src="js/sim/Simulations.js"></script>
+
+<script src="js/chapters/A_Preloader.js"></script>
+<script src="js/chapters/B_Introduction.js"></script>
+<script src="js/chapters/C_Networks.js"></script>
+<script src="js/chapters/D_Simple_Contagion.js"></script>
+<script src="js/chapters/E_Complex_Contagion.js"></script>
+<script src="js/chapters/F_Bonding_And_Bridging.js"></script>
+<script src="js/chapters/G_Small_World.js"></script>
+<script src="js/chapters/H_Conclusion.js"></script>
+<script src="js/chapters/I_Credits.js"></script>
+<script src="js/chapters/J_Sandbox.js?v=2"></script>
+
+<script src="js/main.js"></script>
+
+
+<!-- - - - - - - - - - - - -->
+<!-- THE SLIDESHOW'S WORDS -->
+<!-- - - - - - - - - - - - -->
+
+<!--
+
+This is the bulk of what you need to TRANSLATE!
+Translate just the text that's within the <tag></tags>
+If you're using a code editor (like Sublime Text https://www.sublimetext.com/),
+it should automatically highlight what the text is (usually in white).
+
+-->
+
+<span style="display:none">
+
+<!-- Preloader -->
+
+<words id="preloader_title">
+
+	<div style="font-size: 30px;">
+		<!--<span>the</span>-->
+		<!--<br>-->
+
+		<!--
+		<span style="font-size: 60px;letter-spacing: 4px;">حكمة</span>
+		<span style="position:relative;top: -10px;">أو</span>
+		-->
+
+		<span style="font-size: 60px;position: relative; top: -30px;">حكمة أو جنون</span>
+		<!--<br>-->
+		<!--<span style="position: relative;top: -11px;">of</span>-->
+		<br>
+		<span style="font-size: 100px;line-height: 80px;top: -21px;position: relative; display:block;">الحــشــود</span>
+	</div>
+
+	<div style="color:#999">
+		<!-- TRANSLATE note: comment out the line below... -->
+		<!-- playing time: 30 min • by nicky case, april 2018 -->
+		<!-- ...and UN-comment + TRANSLATE this line! -->
+		ترجمت للعربية من قبل
+		Alex Clay
+		•
+		لعبة من قبل
+		Nicky Case
+		<br>
+		<a href='http://ncase.me/crowds/'>original game in English</a>
+	</div>
+
+</words>
+
+<words id="preloader_button">
+	<next></next>
+</words>
+
+<words id="preloader_loading">
+	تحميل...
+</words>
+
+<words id="preloader_play">
+	لنلعب!
+	<div class="larr"></div>
+</words>
+
+<!-- Introduction -->
+<!--
+
+TRANSLATE note: to make the text stay in a circle, I added lots of <br> breaks.
+You may have to re-arrange the <br>'s in order to do your translation.
+It shouldn't look too bad if they're slightly off, though!
+
+Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
+
+-->
+
+<words id="intro">
+
+	<br><br>
+
+	السير (إسحاق نيوتن) كان متأكداً أنه ولد ذكي،
+	<br>
+	ومن يلومه بعد أن اخترع علم التفاضل والتكامل الرياضي ونظرية
+	<br>
+	الجاذبية؟ لابد أن يكون ذكياً بما يكفي ليقوم باستثمار أمواله، أليس كذلك؟
+	<br>
+	لنختصر السيرة، خسر السير (نيوتن) ٤,٦٠٠,٠٠٠$ حسب قيمة الدولار اليوم
+	<br>
+	في هلع المضارية الوطنية المعروفة باسم
+	("فقاعة البحر الجنوبي")
+	<br>
+	South Sea Bubble of 1720.
+
+	<br><br>
+
+	ولهكذا قال السير (نيوتن) لاحقاً:
+	<i>
+	"أستطيع حساب حركة الأجسام الكونية
+	<br>
+	لكني لا أستطيع حساب جنون الناس".
+	</i>
+
+	<next>
+		جيد أني لست بمكانه
+		<div class="larr"></div>
+		 </next>
+
+</words>
+
+<words id="intro_2">
+
+	<div style="height:0.5em"></div>
+
+	ذلك بالطبع ليس الحين الوحيد حيث انهارت
+	<br>
+	أسواق أو مؤسسات أو ديمقراطيات بأكملها -
+	أي،
+	<i>
+	جنون
+	الحشود.
+</i>
+	<br>
+	ومع ذلك، عندما نفقد الأمل في البشرية نرى المواطنين يتعاونون لإنقاذ
+	<br>
+	بعضهم في العواصف، ونرى مجتمعات تبني الحلول لمشاكلهم،
+	<br>
+	ونرى أناساً تحارب في سبيل كوكب أفضل -
+	أي،
+	<i>
+	حكمة
+	الحشود!
+</i>
+
+<!--
+	Of course, that's not the only
+	time markets, institutions, or entire
+	democracies went haywire &mdash; the <i>madness</i> of
+	crowds. And yet, just when you lose hope in humanity,
+	<br>
+	you see citizens coordinating to rescue each other in
+	<br>
+	hurricanes, communities creating solutions to problems,
+	<br>
+	people fighting for a better world &mdash; the <i>wisdom</i> of crowds!
+-->
+	<div style="height:0.9em"></div>
+
+	<b>
+		<i>
+	ولكن
+	لماذا
+	</i>
+	تنقلب بعض الحشود إلى الجنون أو إلى الحكمة؟
+	</b>
+	لا يوجد نظرية
+	<br>
+	تفسر كل شي لكن أعتقد أنه هنالك حقلاً جديداً من الدراسة يستطيع أن يساعدنا:
+	<br>
+	<b>
+	("علم الشبكات")
+	network science
+	</b>
+	<br>
+	والفكرة الأساسية منه هو التالي: علينا ألا ننظر
+	<br>
+
+	<i>
+	إلى الأشخاص منفردين
+	</i>
+
+	لنفهم الحشود،
+	بل ننظر إلى...
+	<next>
+		<i>...الروبط بينهم</i>
+		<div class="larr"></div>
+	</next>
+
+</words>
+
+<!-- Networks -->
+
+<words id="networks_tutorial_start">
+	<b>لنرسم شبكة!</b>
+	كل رابطة تمثل صداقة بين فردين:
+</words>
+
+<words id="networks_tutorial_connect">
+	ارسم لتوصل الفردين
+</words>
+
+<words id="networks_tutorial_disconnect">
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+		&nbsp;
+	اشطب
+	&nbsp;
+	&nbsp;
+	لتقطع الوصلة
+</words>
+
+<words id="networks_tutorial_end">
+
+	عندما تنتهي من اللعب والرسم...
+	<next wiggle>
+		...اضغط هنا لنتابع
+		<div class="larr"></div>
+
+	</next>
+
+</words>
+
+<words id="networks_threshold">
+
+	تفيدنا الروابط الاجتماعية لأسباب قيّمة أكثر من صنع الرسمات الجميلة،
+	لأن الأفراد
+	<i>
+	ينظرون إلى
+	</i>
+	روابطهم الاجتماعية لفهم عالمهم.
+	على سبيل المثال، الناس تتأمل نظائرهم
+	<b>
+	لمعرفة الإجابة عن النسبة المئوية من أصدقائهم
+	الذين يدمنون على الشرب
+	<icon name="yellow"></icon>
+</b>
+(دون عد أنفسهم).
+
+</words>
+
+<words id="networks_threshold_instruction">
+	<b>
+			<div class="rarr"></div>
+		ارسم وامحي الروابط على اليمين، ثم لاحظ ما يحدث!
+		 </b>
+</words>
+
+<words id="networks_threshold_end">
+	<next>
+		حسناً، فهمت السابق
+		</next>
+</words>
+
+<words id="networks_pre_puzzle">
+	ولكن الشبكات قد
+	<i>
+	تخدع
+</i>
+	الناس.
+	<br>
+	الأفراد قد يأخذون أفكاراً خاطئة عن المجتمع
+	<i>
+	لأنهم
+	داخل البيئة
+	</i>
+	كما وأن الأرض تبدو مسطحة لأننا نمشي عليها.
+
+</words>
+
+<words id="optional_reading">
+	<div style="position:absolute; top:3px;">
+		<i>
+			زر اختياري
+		</i> للقراءة الإضافية
+		&uarr;
+	</div>
+	<div style="position:absolute; left:47px; top:15px;">
+		&darr; المصادر والمراجع
+	</div>
+</words>
+
+<words id="networks_pre_puzzle_2">
+
+	<bon id="books"></bon>
+
+	<br>
+	على سبيل المثال، بيّنت دراسة
+	<ref id="drunk"></ref>
+	أجريت عام ١٩٩١
+	أنه
+	"أبلغ ما يقارب جميع الطلاب
+	[الجامعيين]
+	أن أصدقائهم يشربون أكثر مما هم يشربون"
+	ولكن ألا يبدو ذلك مستحيلاً؟
+	كيف توصّل الطلاب إلى تلك النتيجة؟
+	الآن ستخترع الإجابة بنفسك عن طريق رسم شبكة،
+	لقد حان الوقت...
+	<next>
+		<b>
+		...لأن تخدع الجميع!
+		</b>
+		<div class="larr"></div> </next>
+
+</words>
+
+<words id="networks_puzzle">
+
+	<b style="font-size:2em">وقت الأحاجي!</b>
+	<br>
+	اخدع
+	<i>
+	الجميع
+	</i>
+	بأن يظنوا أن أغلبية أصدقائهم
+	(أكثر من ٥٠%)
+	مدمنون على الشرب
+	<icon name="yellow"></icon>
+	(على الرغم من أن الأفراد العاديين أكثر من الأفراد الشرهين بالشرب بنسبة ٢ إلى ١)!
+
+</words>
+<words id="networks_puzzle_metric">
+	<b>:المخدوعون</b>
+</words>
+<words id="networks_puzzle_metric_2">
+	من ٩ أشخاص
+</words>
+<words id="networks_puzzle_end">
+	تهانينا! لقد تلاعبت بعقل مجموعة من الطلاب وجعلتهم
+	يؤمنون بوجود انتشار مسيطر لعادة بالغة الضرر على الصحة! ثابر يا بطل!
+	<next wiggle>ش... شكراً؟</next>
+</words>
+
+<words id="networks_post_puzzle">
+
+	ما صنعتَه للتو يدعى
+	("وهم الأكثرية")
+	The Majority Illusion<ref id="majority"></ref>،
+	وهو يفسر سبب ظنّ الناس أن انحيازهم السياسي يوافق عليه الأكثرية، ويفسر السبب الذي يجعل
+	التطرّف يبدو أكثر شيوعا مما هو عليه في الحقيقة.
+	<i>أمر يدعوا للجنون.</i>
+
+	<bon id="connections"></bon>
+
+	ولكن الناس لا تكتفي بمجرد
+	<i>
+	مراقبة
+	</i>
+	آراء الآخرين وتصرفاتهم، بل تسعى
+	<i>
+	لتقلّدهم.
+	</i>
+	والآن، لنلقي نظرة على ما يدعوه علماء الشبكات...
+	<next>..."العدوى"!
+		<div class="larr"></div> </next>
+
+
+</words>
+
+<!-- Simple Contagions -->
+
+<words id="simple_simple">
+	<i>
+		لننسى موضوع
+		"الحدود الدنيا"
+		مؤقتاً.
+		</i>
+		في الأسفل: لدينا شخص
+		<icon name="red"></icon>
+		يملك بعض المعلومات
+
+		(أو بالأحرى بعض المعلومات
+		<i>
+		المغلوطة
+		</i>
+		أو "الأخبار الزائفة"
+		Fake news
+		كما هو المصطلح منتشر حالياً)،
+
+		وكل يوم يقوم ذلك الشخص بنشر تلك الإدعائات لأصدقائه مثل الفيروس،
+		ومن بعدها يقوم أصدقائه بنشر تلك الإدعائات
+		<i>
+		لأصدقائهم،
+		</i>
+		وهكذا...
+	<br>
+	<b>
+	ابدأ المحاكاة!
+	<div class="darr"></div>
+
+	(ملاحظة: لا يمكنك الرسم
+	<i>بينما</i>
+	المحاكاة مادامت تعمل)
+	</b>
+</words>
+
+<words id="simple_simple_2">
+	<div style="text-align:right;
+	position:relative;
+	right: 300px;">
+
+		ملاحظة:
+		"العدوى"
+		قد تكون شيئاً جيداً أو سيئاً
+		(أو محايداً أو غير واضحاً)
+		على الرغم من المصطلح ذوي الاسم السلبي.
+		هناك دليل إحصائي قوي
+		<ref id="contagion"></ref>
+		يشير أن التدخين وحضور الانتخابات ومعدل التعاون في الجماعة جميعهم يعدّون
+		"عدوات"
+		&mdash;
+		وحتى أنه هناك دلائل تشير أن الانتحار
+		<ref id="suicides"></ref>
+		وعمليات القتل الجماعي بإطلاق النار
+		<ref id="shootings"></ref>
+		يعتبرون أيضاً عدوات.
+	</div>
+</words>
+
+<words id="simple_simple_end">
+	<next wiggle>...هذا يشعرني بالحزن
+		<div class="larr"></div> </next>
+</words>
+
+<words id="simple_cascade">
+	بالفعل إنه شيء مؤسف...
+	على أية حال
+	<b>
+		حان وقت الأحاجي!
+	</b>
+
+	<br>
+	ارسم شبكة تجعل
+	<i>
+	الجميع
+	</i>
+	يصابون
+	"بالعدوى"،
+	ثم ابدأ المحاكاة.
+	<br>
+	(قاعدة جديدة: لا يمكنك محي
+		<i>
+		الروابط الثخينة)
+	</i>
+</words>
+
+<words id="simple_cascade_end">
+	<next wiggle>جــــمــــيــــل
+		<div class="larr"></div> </next>
+</words>
+
+<words id="simple_post_cascade">
+	هذا الانتشار الجنوني يدعى
+	<b>
+		"التتالي المعلوماتي"
+		information cascade.</b>
+	وقع ضحية لمثل ذلك التتالي السير (نيوتن) في ١٧٢٠
+	والمؤسسات المالية العالمية في ٢٠٠٨.
+	<ref id="subprime"></ref>
+	<br><br>
+	ولكن
+	<i>
+	هذه المحاكاة خاطئة
+</i>
+<b>
+	لأن أغلب الأفكار لا تنتشر مثل الفيروسات.
+</b>
+من أجل العديد من الاعتقادات والتصرفات
+	يجب أن نكون
+	"متعرضين"
+	للعدوى لأكثر من مرة حتى تصبح
+	"معديين".
+	لذا ابتكر علماء الشبكات طريقة أفضل وأحدث لوصف كيفية انتشار الأفكار والتصرفات، وسمّوها...
+
+	<next wiggle>
+		<i>
+		...
+		"العدوى المعقدة"!
+		</i>
+		<div class="larr"></div> </next>
+</words>
+
+<!-- Complex Contagions -->
+
+<words id="complex_complex">
+
+
+		<span style="direction:rtl;
+		position:relative;
+		right: 470px;">
+
+		لنقم بإعادة فكرة
+		"الحدود الدنيا"
+		ومثال الشره في الشرب
+		<icon name="yellow"></icon> !
+		عندما لعبتَ هذا المثال في المرة الأولى، لم يغير الأفراد تصرفاتهم.
+
+		<br><br>
+
+		الآن سنحاكي ما يحدث إذا بدأ الأفراد بالشرب
+		<i>
+			عندما يشرب أكثر من ٥٠% من أصدقائهم.
+		</i>
+		<b>
+			قبل أن تبدأ المحاكاة، اسأل نفسك ما
+			<i>
+			تظن
+			</i>
+			أنه سيحدث.
+		</b>
+
+		<br><br>
+
+		<b>
+				<div class="rarr"></div>
+			الآن، ابدأ المحاكاة وراقب ما سيحدث فعلاً!
+		</b>
+	</span>
+</words>
+
+<words id="complex_complex_2">
+	<span style="
+		direction:rtl; position:relative; right: 470px;
+		line-height:1.3em; display:block;">
+
+			على غير مثال "الأخبار الزائفة"
+			<icon name="red"></icon>
+			هذه العدوى
+			<icon name="yellow"></icon>
+			<b>
+			لا تنتشر للجميع.
+		</b>
+
+			أول الأفراد يصابون بالعدوى على الرغم من أنهم معرضون لشخص وحيدٍ فقط، لأن
+			ذلك الشخص يمثل ٥٠% من أصدقائهم (كم هم وحيدون...).
+
+			بينما الشخص في نهاية السلسلة لم يتعرض للعدوى رغم أنه معرض لصديق
+			يشرب، لأن العادة بين أصدقائه لم تتجاوز حده الأدنى
+			٥٠%.
+
+			<div style="height:0.75em"></div>
+			<i>
+			النسبة المئوية %
+			</i>
+			للأصدقاء المصابين مهم في النتيجة.
+
+			<i>
+			ذلك
+		</i>
+			هو الفرق بين نظرية
+			<b>
+			العدوى المعقدة
+			</b>
+			<ref id="complex"></ref>
+			ونظرية
+			<b>
+			العدوى البسيطة
+		</b>
+			ذات
+			<i>
+			الاتنشار مثل الفيروس.
+		</i>
+			(ويمكن القول أن العدوى البسيطة هي مجرد عدوى ذات حد أدنى للانتشار يساوي صفر بالمئة)
+
+			<div style="height:0.75em"></div>
+
+			ولكن، العدوى ليست شيئاً سيئاً بالضرورة
+			&mdash;
+			لذا سنكتفي
+			<i>
+			بجنون
+			</i>
+			الحشود، ماذا عن...
+			<next>
+				...
+				<i>
+				حكمة
+				</i>
+				الحشود؟
+			</next>
+
+	</span>
+</words>
+
+<words id="complex_complex_3">
+
+	لدينا شخص
+	<icon name="blue"></icon>
+	يتطوع بجمعية خيرية تهدف، على سبيل المثال، إلى إنقاذ المصابين في الأعاصير
+	أو تدريس الطلاب الفقراء في مجتمعه المحلي أو شيء جذاب على ذلك الصياغ.
+	على كلّن، الفكرة أن هذه العدوى طيّبة.
+	ولنقل أن الحد الأدنى لانتشار العدوى هو فقط
+	%٢٥
+	&mdash;
+	الناس مستعدة للتطوع، لكن بشرط أن %٢٥ من أصدقائهم يتطوعون أيضاً.
+	(حتى الأفعال الطيبة بحاجة لبعض التشجيع الاجتماعي!)
+	<br><br>
+
+	<b>
+		مهمتك أن تعدي الجميع بالطاقة الإيجابية!
+		&larr;
+	</b>
+
+</words>
+
+<words id="complex_complex_3_end">
+	<span style="line-height:1.3em; display:block;">
+
+		<b>ملاحظة:</b>
+
+		التطوع هو
+		<i>
+		فقط أحد
+	</i>
+		الأمثلة العديدة للعدوى المعقدة!
+		أمثلة أخرى تتضمن: حضور الانتخابات أو العادات الحياتية أو تغيير المعتقدات أو الانفتاح على القضايا العميقة
+		 &mdash;
+
+		فهو أي فعل بحاجة لأكثر من موقف وحيد لنقله.
+		العداوى المعقدة ليست
+		<i>
+		بالضرورة
+	</i>
+		حكيمة، لكن الحكمة تنتشر بواسطة العدوى المعقدة.
+
+		<div style="height:0.75em"></div>
+
+		(لنأخذ مثال واقعي عن العدوى البسيطة:
+		عادة تنتشر أي حقيقة من نموذج "هل تعلم" على هذا النمط، كمثال: "هل تعلم أن حيوان الأبسوم لديه ١٣ حلمة ثدي؟")
+		<ref id="possum"></ref>
+
+
+		<bon id="contagions"></bon>
+
+		والآن، لنستوعب حقاً مدى قوة العدوى المعقدة، سوف نعود...
+
+		<next>
+			...إلى أحجية سابقة!
+			<div class="larr"></div>
+		</next>
+
+	</span>
+</words>
+
+<words id="complex_cascade">
+	أتتذكر هذا المثال؟ سنزوره مجدداً لكن هذه المرة بنمط
+	<i>العدوى المعقدة</i>
+	<icon name="blue"></icon>،
+
+	وذلك سيجعله أصعب قليلاً...
+	<br>
+	<b>
+		حاول أن تعدي الجميع بالحكمة المعقدة!
+		<div class="darr"></div>
+		</b>
+</words>
+
+<words id="complex_cascade_feel_free">
+	(لك حرية أن تبداً بضغط زر "ابدأ" وأن تجرب أي قدر من الحلول حتى أن تنجح!)
+</words>
+
+<words id="complex_cascade_end">
+	<next wiggle><div class="rarr"></div>
+		مـــمـــتـــاز!! </next>
+</words>
+
+<words id="complex_post_cascade">
+	قد تعتقد أن الحل هو إضافة أكبر قدر من الروابط لنشر أي عدوى،
+	المعقدة أو البسيطة، الطيبة أو المؤذية، الحكيمة أو المجنونة.
+	ولكن هل هذا صحيح؟ لنتبين من ذلك سنعود...
+</words>
+<words id="complex_post_cascade_end">
+	<next wiggle>
+		إلى أحجية سابقة أخرى...
+		<div class="larr"></div>
+		</next>
+</words>
+
+<words id="complex_prevent">
+	عندما تضغط زر "ابدأ" في الأسفل، ستنتشر العدوى المعقدة
+	<icon name="blue"></icon>
+	للجميع.
+	الأمر غير مفاجئٍ،
+	لكن الآن سنقوم
+
+	<i>
+		بعكس
+	</i>
+	كل ما قمنا به إلى هذه المرحلة:
+	<br>
+	<b>
+		ارسم شبكة
+
+		<i>
+			تمنع
+		</i>
+		الوباء عن الانتشار للجميع!
+		<div class="darr"></div>
+	</b>
+</words>
+
+<words id="complex_prevent_2">
+
+		<span style="direction:rtl; position:relative;
+		right: 330px;
+		top: 30px;
+		display:block;">
+
+			أترى؟
+			على الرغم من أن الروابط الكثيرة تساعد دوماً في نشر الأفكار
+			<i>
+				البسيطة،
+
+			</i>
+
+			<b>
+				إلا أنّ الروابط الكثيرة قد تضر نشر الأفكار
+				<i>المعقدة!</i>
+			</b>
+
+			(ألا يذكرك ذلك بشبكة الأنترنت؟)
+			هذه ليست مجرد معضلة نظرية، بل إنها قد تحدد مصير الحياة...
+		</span>
+</words>
+
+<words id="complex_prevent_end">
+	<next wiggle>
+			...أو الموت
+			<div class="larr"></div>
+		</next>
+</words>
+
+<words id="complex_groupthink">
+	<span style="position: relative; direction: rtl; right: 480px;">
+	العلماء في شركة (ناسا)
+	NASA
+	أولاد أذكياء.
+	ومن ينقض ذلك؟ لقد استخدموا نظريات نيوتن لإيصالنا إلى القمر.
+	لنتختصر السيرة، أطلقوا في عام ١٩٨٦
+
+	مركبة
+	(تشالنجر)
+	<i>Challenger</i>
+	إلى الفضاء
+	<i>
+			على الرغم من تحذيرات المهندسين،
+		</i>
+
+	وذلك أدى لانفجار المركبة الفضائية وقتل ٧ أشخاص.
+	السبب المباشر:
+	برودة الطقس ذلك الصباح...
+
+	<div style="height:0.9em"></div>
+
+	السبب الأقل مباشرة:
+	تجاهل المدراء لتحذيرات المهندسين.
+
+	لماذا تجاهلوهم؟ بسبب
+	<b>
+	("التفكير الجماعي")
+	Groupthink.
+	</b>
+	<ref id="groupthink"></ref>
+	عندما تكون جماعة مترابطة بشكل قريب جداً
+	(كما هو الحال في المراكز العليا في المؤسسات)
+	فيصبحون مقاومين لتقبل الأفكار التي تتحدى معتقداتهم أو تقلل من شأنهم.
+
+	<div style="height:0.9em"></div>
+
+	وهكذا تنهار المؤسسات لجنون الحشود.
+	ولكن، كيف يمكننا
+	"تصميم"
+	أي جماعة لنزيد من
+	<b>حكمة الحشد؟</b>
+
+	باختصار، يمكننا عن طريق عبارتين:
+
+	<next>
+		الترابط وجسور التواصل
+		<div class="larr"></div>
+		  </next>
+
+</words>
+
+<!-- Bonding & Bridging -->
+
+<words id="bonding_1">
+	قليل من التروابط، ولن تستطيع الفكرة بالانتشار.
+	<div class="larr"></div>
+	<br>
+	<div class="rarr"></div>
+	كثير من الترابط، وتميل الفكرة إلى الفكر الجماعي
+	Groupthink.
+</words>
+
+<words id="bonding_2">
+	<b>
+	ارسم مجموعة تملك القيمة الموازنة الصحيحة من الروابط:
+
+	يكتفي أن تربط القليل لتنشر فكرة معقدة!
+	<div class="darr"></div>
+	</b>
+</words>
+
+<words id="bonding_end">
+
+	تكفي هذه البساطة!
+	عدد الروابط
+	<b>
+	داخل
+	</b>
+	 مجموعة من الناس
+	نسميه
+	<b>
+	("ترابط رأس المال الاجتماعي")
+	Bonding Social Capital
+	</b>
+	<ref id="social_capital"></ref>.
+	ولكن ما شأن الروابط...
+	<next wiggle>...
+		<i>بين</i>
+		 المجموعات؟</next>
+</words>
+
+<words id="bridging_1">
+	كما حزرت، فإن عدد الروابط
+
+
+	<b>
+		بين
+	</b>
+
+	مجموعات من الناس
+	نسميه
+
+	<b>
+
+	("جسور تواصل رأس المال الاجتماعي")
+		Bridging Social Capital.
+	</b>
+	هذه الموضوع مهم لأنه يساعد المجموعات على كسر جدران رد الصدى لأفكارهم
+	("Echo Chambers")!
+
+	<br>
+	<b>
+		مهمتك أن تبني جسراً يعدي الجميع بالحكمة المعقدة:
+	</b>
+</words>
+
+<words id="bridging_end">
+	يوجد قيمة موازنة صحيحة لجسور التواصل مثلما شأن الترابط في السابق.
+	<ref id="bridge"></ref>
+
+	(تحدي إضافي: حاول رسم جسرٍ ثخين لدرجة أن العدوى المعقدة
+	<b>
+		لا
+	</b>
+	يمكنها المرور من خلاله!)
+	بعدما تعلمنا كيفية "تصميم" الروابط
+	<i>
+	داخل
+	</i>
+	المجموعة
+	<i>
+	وبين
+	</i>
+	المجموعات
+	لنقم...
+	<next wiggle>
+		...بالاختبار مع العمليتين سواءً!
+	</next>
+</words>
+
+<words id="bb_1">
+
+	<div style="direction: rtl; right: 570px;position: relative;">
+		<b style="font-size:2em">الأحجية الأخيرة</b>
+		<br>
+		ارسم روابط داخل المجموعات
+		(ترابط)
+		وبين المجموعات
+		(جسور التواصل)
+		لنشر الحكمة في الحشد بأكمله:
+	</div>
+</words>
+<words id="bb_2">
+
+	<div style= "width: 290px; height: 230px;  direction: rtl;right: 660px;position: absolute; opacity: 1;">
+
+	تهانينا، لقد رسمت شبكة مميزة للغاية!
+	الشبكات التي تملك المزيج المناسب من الترابط وجسور التواصل هن في غاية الأهمية، وندعوها...
+
+		<next wiggle>
+
+			("شبكات العالم الصغير")
+			<div class="larr"></div>
+		</next>
+	</div>
+
+</words>
+<words id="bb_small_world_1">
+
+
+	<i>
+		"الاتحاد دون التوحّد"،
+		"الاختلاف دون الانشقاق"،
+		"الواحد من الكثرة"
+		E Pluribus Unum.
+	</i>
+	<br>
+	مهما صيغت العبارة إلا أن الناس عبر الأزمان والثقافات توصلوا لنفس الحكمة:
+
+	<b>
+		المجتمع السليم بحاجة إلى قيمة موازنة من الروابط
+		<i>
+		داخل
+		</i>
+		 مجموعاته،
+		وجسور روابط
+		<i>
+		بين
+		</i>
+		مجموعاته.
+	</b>
+	أي:
+
+</words>
+<words id="bb_small_world_2">
+	لا هذا...
+	<br>
+	(لأن الأفكار لا يمكنها الانتشار)
+</words>
+<words id="bb_small_world_3">
+	ولا هذا...
+	<br>
+	(لأنك ستردّ إلى التفكير الجماعي)
+</words>
+<words id="bb_small_world_4">
+	<div style="position: absolute; left: -550px;">
+	<i>...بل هذا!</i>
+	</div>
+</words>
+<words id="bb_small_world_5">
+
+	<div style="position:absolute; width:650px; right: 310px;">
+	علماء الشبكات اليوم لديهم تعريف رياضي لهذه الحكمة التاريخية:
+
+	<b>("شبكة العالم الصغير")
+		Small World Network</b><ref id="small_world"></ref>.
+		المزيج المناسب من الترابط وجسور التواصل يمثّل الطريقة التي تشتبك بها العصبونات
+		<ref id="swn_neurons"></ref>
+		ويرعى الإبداع الجماعي
+		<ref id="swn_creativity"></ref>
+	ويحل المشاكل<ref id="swn_social_physics"></ref>
+	وحتى ساعد الرئيس الأمريكي
+	(جون ف. كينيدي)
+	John F. Kennedy
+	مرة بأن يتفادى حرباً نووية بأعجوبة!
+	<ref id="swn_jfk"></ref>
+	مما سبق، نرى أن العوالم الصغيرة في غاية التأثير.
+
+	</div>
+</words>
+<words id="bb_small_world_end">
+	<next>
+		...إذاً، حان وقت الختام
+		<div class="larr"></div>
+		</next>
+</words>
+
+<!-- Sandbox -->
+
+<words id="sandbox_caption">
+	(أتريد أن تسمع سراً؟<ref id="sandbox"></ref>)
+</words>
+
+<words id="sandbox_contagion">
+	العدوى:
+</words>
+<words id="sandbox_contagion_simple">
+	بسيط
+</words>
+<words id="sandbox_contagion_complex">
+	معقد
+</words>
+<words id="sandbox_color_chooser">
+	لون العدوى:
+</words>
+<words id="sandbox_tool_chooser">
+	اختر أداة...
+</words>
+
+<words id="sandbox_tool_pencil">
+	ارسم شبكة
+</words>
+<words id="sandbox_tool_add">
+	ضف فرداً
+</words>
+<words id="sandbox_tool_add_infected">
+	ضف فرداً مصاباً
+</words>
+<words id="sandbox_tool_move">
+	حرّك أماكن الأفراد
+</words>
+<words id="sandbox_tool_delete">
+	احذف فرداً
+</words>
+<words id="sandbox_tool_clear">
+	<b>احذف كل شيء!</b>
+</words>
+
+<words id="sandbox_shortcuts_label">
+</words>
+
+<words id="sandbox_shortcuts">
+	<div style="direction:rtl; top:-7px; position:relative;">
+		(اختصارات على لوحة المفاتيح)
+		<br>
+
+		[1]
+		ضف فرداً
+
+		[2]
+		ضف فرداً مصاباً
+
+		<br>
+		[Space فراغ]
+		حرّك مكان فرد
+		<br>
+		[Backspace&larr; الممحاة]
+		حذف
+	</div>
+</words>
+
+<!-- Conclusion -->
+
+<words id="conclusion_1">
+
+	<div style="font-size: 30px;
+
+	direction: rtl;">
+		في الختام:
+		يمكن اختصار حديثنا بكلمتين...
+	</div>
+	<div style="
+		width: 100%;
+	    position: absolute;
+	    font-size: 88px;
+	    top: 20px;
+		line-height: 100px; display:block;
+		direction: rtl;
+	">
+	    العدوى و الروابط
+	</div>
+
+	<div style="
+	    width: 710px;
+	    position: absolute;
+	    top: 125px;
+		left: 250px;
+		direction: rtl;
+	">
+		<b>العدوى:</b>
+		مثلما تنقل العصبونات الإشارات في الدماغ، فالناس
+		ينقلون المعتقدات والتصرفات في المجتمع.
+		لا نكتفي بالتأثير على أصدقائنا، بل ونأثر على أصدقاء أصدقائنا، وحتى أصدقاء أصدقاء أصدقائنا!
+		<ref id="three_degrees"></ref>
+
+		("كن التأثير الذي ترد أن تراه في العالم"
+		وغيره من أقوال)
+		ولكن، كما الحال للعصبونات، ليست فقط الإشارات ما تؤثر، بل أيضاً...
+	</div>
+
+	<div style="
+	    width: 710px;
+	    position: absolute;
+	    top: 275px;
+		left: 250px;
+		direction: rtl;
+	">
+		<b>الروابط:</b>
+		قليل من الروابط لا يتيح فرصة للأفكار المعقدة بأن تنتشر.
+		<i>
+		كثير
+	</i>
+		من الروابط يجعل الأفكار المعقدة تنهار تحت قدم التفكير الجماعي.
+		الحل هو بناء شبكة عالم صغير تملك المزيج المناسب من الروابط وجسور التواصل:
+
+		<i>
+			"الواحد من الكثرة"
+			E Pluribus Unum.</i>
+	</div>
+
+	<div style="
+	    width: 350px;
+	    position: absolute;
+	    top: 410px;
+	    left: 220px;
+	    text-align: center;
+	    color: #999;
+		direction: rtl;
+	">
+		(أتريد صنع محاكياتك الخاصة؟
+			اضغط على
+			زر
+			(★)
+			في الأسفل للذهاب إلى وضع اللعب الحر!)
+	</div>
+
+	<div style="
+	    width: 400px;
+	    position: absolute;
+	    top: 395px;
+	    right: 0px;
+	    text-align: right;
+	">
+	فإذا، ما شأن السؤال الذي طرحناه في البداية؟
+	<br>
+		<i>لماذا</i>
+		تنقلب بعض الحشود...
+	</div>
+	<div style="
+	    width: 300px;
+	    position: absolute;
+	    top: 460px;
+	    right: 0px;
+	">
+		<next>
+				...إلى الحكمة و/أو الجنون؟
+		</next>
+	</div>
+
+</words>
+
+<words id="conclusion_2">
+	<span style="line-height:1.4em; display:block;">
+
+		<div style="height:0.5em"></div>
+
+		من
+		(نيوتن)
+		إلى
+		(ناسا)
+		إلى
+		<br>
+		علم الشبكات، لقد غطينا الكثير
+		<br>
+		اليوم. باختصار، جنون الحشود
+		<br>
+		ليس بالضرورة مسبَّباً من
+		<i>أفراد محددين</i>،
+		بل قد يكون سببه
+		<br>
+		لزاقة الشبكة التي تعلقنا.
+
+		<div style="height:0.9em"></div>
+
+		<i>
+			هذا لا يعني
+			</i>
+			أنه علينا التخلي عن المسؤولية الشخصية
+		<br>
+		لأننا أيضاً من يحيك الشبكة. لذا، هنا بعض النصائح الشخصية حتى تحسّن عداواتك:
+
+		<br>
+		كن شاكّاً بالأفكار التي تعجبك مباشرة
+		<ref id="flatter"></ref>،
+		وخصص وقتاً لتفهم
+
+		<br>
+		الأفكار المعقدة، وحسن روابطك: ارتبط مع أفراد
+
+		<br>
+		مماثلين لك، لكن ابني جسور تواصل عبر الفروق السياسية والثقافية.
+
+
+		<div style="height:0.9em"></div>
+		يمكننا أن نحيك شبكة واعية. بلى، الأمر أصعب من مجرد رسم
+
+		<br>
+		خطوط على شاشة...
+
+		<next>
+		...ولكن الأمر حقاً يستحق العناء.
+		</next>
+
+	</span>
+</words>
+
+<words id="conclusion_3">
+	<i>
+		"النجاحات والمآسي التاريخية العظمى لم يسببها البشر لأنهم
+		بالأساس أخيار أو بالأساس أشرار، بل لأن البشر بالأساس بشر."
+	</i>
+	<br>
+	<span style="position:relative; top:5px">~</span>
+	Terry Pratchett
+	و
+	Neil Gaiman
+	<div style="height:0.8em"></div>
+	<next small>&lt;3</next>
+</words>
+
+<!-- Credits -->
+
+<words id="credits">
+
+	<div style="text-align:center; color:#fff; letter-spacing: 1px; font-size: 24px; line-height: 27px;">
+
+		<span style="color:#777; position:relative; top:5px;">
+			لعبة صنعت من قبل</span>
+		<div style="font-size: 3em; line-height: 1.0em;">
+			NICKY CASE</div>
+		<a target="_blank" href="http://ncase.me" style="text-decoration:none">
+		العبْ تجاربي الأخرى
+		</a> ·
+		<a target="_blank" href="https://twitter.com/ncasenmare" style="text-decoration:none">
+			تابعني على تويتر</a>
+
+		<br><br>
+
+		<span style="color:#777; position:relative; top:5px; display: inline-block; margin-top: 15px;">
+			كثير من الحب والشكر إلى
+		</span>
+		<div style="margin-bottom:18px; font-size: 3em; line-height: 1.0em;">
+			داعميني على
+			PATREON
+		</div>
+		<a onclick='publish("reference/show", ["supporters"]);'>
+			اقرأ أسماء الداعمين وتمعن على رسمات لأشكالهم
+		</a>
+			·
+		<a onclick='publish("reference/show", ["playtesters"]);'>
+			اقرأ أسماء مختبري اللعبة</a>
+		<br>
+		<a target="_blank" href="https://www.patreon.com/ncase" style="text-decoration:none">
+			ادعمني في صنع تجارب بمثل هذا النمط!
+			&lt;3</a>
+
+		<br><br>
+
+		<span style="display: inline-block; margin-top: 15px;">
+			♫ الأغنية
+			<a target="_blank" href="http://freemusicarchive.org/music/Komiku/Tale_on_the_Late/" style="text-decoration:none">
+				"Friends 2018" and "Friends 2068"</a>
+			من قبل Komiku
+			<br>
+			&lt;/&gt;
+			<i>لعبة حكمة أو جنون الحشود</i>
+			<a target="_blank" href="https://github.com/ncase/crowds" style="text-decoration:none">
+				مفتوحة المصدر بالكامل
+				open source</a>
+		</span>
+
+		<br>
+
+		<bon id="further_reading"></bon>
+
+	</div>
+
+</words>
+
+<!-- x. misc -->
+<words id="WIN">
+	رائع
+</words>
+<words id="sim_start">
+	ابدأ المحاكاة
+</words>
+<words id="sim_stop">
+	ارجع للوضع الأصلي
+</words>
+<words id="translations_exist">
+	ترجمات من قبل المعجبين:
+</words>
+<words id="translations_do_not_exist">
+	غريب... ألا يوجد أي ترجمة بعدّ؟
+</words>
+<words id="translations_add">
+	(!add your own)
+</words>
+
+<!-- - - - - - - -->
+<!-- BONUS BOXES -->
+<!-- - - - - - - -->
+
+<!--
+Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
+(And then afterwards, the final thing, translate the References)
+-->
+
+<bonus id="books">
+
+
+<!--
+		-->
+	<h3>
+		<div style="text-align: right;">
+			رد سريع لكتاب (جيمس سوروكي)
+
+			<i>
+				"حكمة الحشود"
+			</i>
+		</div>
+	</h3>
+	<!--
+		-->
+
+	<div>
+
+	<img src="sprites/bonus/surowieki.jpg" width="200" height="300" style="float:right; margin-left:1em"/>
+
+	أولاً، أنا لا أريد أن أقلل من شأن
+	<a target="_blank" href="https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds">
+	هذا الكتاب.</a>
+	إنه كتاب جيد، و(سوروكي) يحاول الإجابة عن نفس السؤال الذي أسأله أنا:
+
+	<b>“لماذا تنقلب بعض الحشود إلى الجنون أو إلى الحكمة”</b>
+
+	<br><br>
+
+	جواب (سوروكي): تقوم الحشود باختيارات جيدة عندما يكون جميع الأفراد منفردين بأكبر قدر ممكن.
+	يلقي (سوروكي) قصة عن مهرجان بلدي: دعي سكان بلدة للتخمين عن وزن ثور،
+	المفاجئ أن
+	<i>
+	متوسط جميع
+</i>
+	التخمينات كان أفضل من أي تخمينٍ
+	<i>
+	وحيد،
+</i>
+	وهنا سبب نجاح المجموعة: يجب على الأفراد أن يخمّنوا
+	<i>
+	مستقلين
+	</i>
+	عن بعضهم وإلا فيتأثروا بالتخمينات السابقة الخاطئة، ومنه ينحاز متوسط الجواب بشدة.
+
+	<br><br>
+
+	ولكن... لا أعتقد أن نصيحة
+	"اجعل جميع الأفراد مستقلين قدر الإمكان"
+	هي الجواب الكامل.
+
+	العباقرة يتأثرون بشدة بالأخرين، من ضمنهم العباقة الذين يوصفون على خطأ بأنهم شديدوا التفكير الاستقلالي. كما
+	قال السير (إسحاق نيوتن):
+
+	<i>"إن رأيت أبعد من غيري، فذلك لأني أقف على أكتاف العملاقة".</i>
+
+	<br><br>
+
+	إذاً، أي فكرة هي الصحيحة؟
+	أترجع الحكمة إلى التفكير مع النفس؟ أم إلى التفكير مع الآخرين؟
+	واضح أي منهم هو الجواب الأفضل.
+
+
+	<br><br>
+
+
+	وهذا ما سأحاول شرحه في هذه
+	<i>
+	"المحاكية المفسرة":
+	</i>
+	كيف يمكننا الوصول إلى قيمة موازنة بين الاستقلال والترابط
+	&mdash;
+	أي، كيف يمكننا الوصول إلى حشد حكيم.
+
+	</div>
+
+</bonus>
+<bonus id="connections">
+
+	<h3>
+
+	<div style="text-align: right;">
+		ما هي أنواع الأخرى للروابط؟
+	</div>
+	</h3>
+
+	<div>
+
+		من أجل التبسيط، محاكياتي تفترض أن الأفراد يمكنها فقط الارتباط عبر الصداقة، وأن جميع الصداقات متساوية القيمة.
+		ولكن علماء الشبكات
+		<i>
+		يأخذون بعين الاعتبار
+	</i>
+		أشكالاً أخرى لارتباط الأفراد، مثل:
+
+	<div style="clear:both"></div>
+	<br>
+
+	<img src="sprites/bonus/connection1.png" width="250" height="150" style="float:left; margin-right:1em"/>
+	<b>
+		("رابطة ذات اتجاهين")
+		Directional connections
+	</b>
+	<br>
+	(نور)
+	هي رئيسة
+	(ماهر)
+	ولكن
+	(ماهر)
+	ليس رئيس
+	(نور).
+
+	(يسرى)
+	هي والدة
+	(هشام)
+	ولكن
+	(هشام)
+	ليس والد
+	(يسرى)
+	.
+
+	"الوالد"
+	و
+	"رئيس العمل"
+	هما
+	<i>
+	علاقات ذات جهة وحيدة.
+	</i>
+	بالمقارنة،
+	"الصداقة"
+	هي
+	<i>
+	علاقة ذات جهتين
+	</i>
+	(أو، على الأقل، أنا أأمل ذلك).
+
+	<div style="clear:both"></div>
+	<br>
+
+	<img src="sprites/bonus/connection2.png" width="250" height="150" style="float:left; margin-right:1em"/>
+	<b>
+		("الرابطة الموزونة")
+		Weighted connections</b>
+
+		<br>
+	(آلاء)
+	و
+	(أنس)
+	هم مجرد معارف لبعض.
+	بينما
+	(شهاب)
+	و
+	(أكرم)
+	هم أعزّ الأصدقاء.
+	على الرغم من وجود رابطة
+	"صداقة"
+	في الحالتين، إلّا أن الحالة الثانية أقوى. ونقول
+	أن لهذه الرابطتين
+	"وزنان مختلفان".
+
+	<div style="clear:both"></div>
+	<br>
+
+	<img src="sprites/bonus/map.png" width="200" height="200" style="float:left; margin-right:1em"/>
+
+	عليك أن تتذكر:
+
+	<b>
+		جميع هذه المحاكيات خاطئة
+
+	</b>
+	مثلما أي خريطة تعتبر
+	"خاطئة".
+	أترى الخارطة على اليسار؟ في الواقع، إن الأبنية ليست مكعّبات رمادية ناعمة! وإن
+	الكلمات لا تطفوا فوق المدن! مع ذلك، الخوارط تساعدنا... ليس
+	<i>
+	على الرغم
+</i>
+	من تبسيطها للواقع،
+	بل
+	<i>
+	بسبب
+</i>
+	تبسيطها للواقع.
+
+	والأمر مشابه من أجل المحاكيات أو أي نظرية علمية.
+	<i>
+	بالطبع
+</i>
+	إنها خاطئة
+	&mdash;
+	هذا ما يجعلها
+	<i>
+	مفيدة.
+	</i>
+
+	</div>
+
+</bonus>
+<bonus id="contagions">
+
+	<h3>
+
+		<div style="text-align: right;">
+			ما هي أنواع الأخرى للعدوى؟
+		</div>
+	</h3>
+
+	<div>
+	لدى علماء الشبكات العديد العديد من الطرق ليحاكوا
+	"العدوات"!
+	لقد اخترت أنا أبسط واحدة من أجل أسباب تعليمية، ولكن هنا بعض الطرق الأخرى:
+
+	<div style="clear:both"></div>
+	<br>
+
+	<img src="sprites/bonus/contagion1.png" width="250" height="150" style="float:left; margin-right:1em"/>
+	<b>
+		العدوى العشوائية:
+	</b>
+		التعرض للعدوى لا
+		<i>
+		يضمن
+	</i>
+		الإصابة بها بل يجعل الإصابة أكثر
+		<i>
+		إرجاحاً.
+	</i>
+
+	<div style="clear:both"></div>
+	<br>
+
+	<img src="sprites/bonus/contagion2.png" width="250" height="150" style="float:left; margin-right:1em"/>
+	<b>
+		لكل فرد قيمة مختلفة للحد الأدنى للعدوى:
+	</b>
+	محاكياتي تفترض أن جميع الأفراد لهم نفس الحد الأدنى للشره في الشرب
+	(%٥٠)
+	أو التطوع
+	(%٢٥)
+	أو نقل المعلومات المغلوطة
+	(%٠).
+	بالطبع لا يحدث ذلك في الواقع، ويمكن أن نصنع محاكيات تعكس تلك الحقيقة.
+
+	<div style="clear:both"></div>
+	<br>
+
+	<img src="sprites/bonus/contagion3.png" width="250" height="150" style="float:left; margin-right:1em"/>
+	<b>
+		بيئة من العداوي:
+	</b>
+	ماذا يحدث لو كان هناك عداوي
+	<i>
+		مختلفة
+	</i>
+	تملك قيم حد أدنى
+	<i>
+		مختلفة
+	</i>
+	في نفس البيئة؟
+	كمثال، ليكن هناك عدوى
+	"جنون"
+	بسيطة وعدوى
+	"حكمة"
+	معقدة.
+	إن أعدي فرد بالجنون، فهل يمكن أن يصاب بعدوى الحكمة؟ أو بالعكس؟
+	أيمكن لفرد أن يصاب بالعدواتان معاً؟
+
+	<div style="clear:both"></div>
+	<br>
+
+	<img src="sprites/bonus/contagion4.png" width="250" height="150" style="float:left; margin-right:1em"/>
+	<b>
+		عدوى يمكنها التغير والتطور:
+	</b>
+	الأفكار لا تنتقل بين فرد وآخر بشكل تام مثل الفيروس. فمثل لعبة "الهاتف" الرسالة تتغير كل مرة يتم إعادة إلقائها
+
+	&mdash;
+	وأحياناً التغير يجعلها أكثر إعدائاً من الصورة الأصلية!
+	لذا الأفكار
+	"تتطور"
+	لتصبح أكثر إطلاقاً وأسهل نسخاً وإعدائاً عبر الزمن.
+
+	<div style="clear:both"></div>
+
+	</div>
+
+</bonus>
+<bonus id="further_reading">
+
+	<h3>
+
+	<div style="text-align: right;">
+	أريد تعلم المزيد! ما تنصحني بقرائته أو لعبه؟
+	</div>
+	</h3>
+
+	<div>
+	هذه
+	"المحاكية المفسرة"
+	مجرد منصة قفز لفضولك حتى تنتقل إلى بحر المعرفة! هنا
+	بعض الكتابات الأخرى عن الشبكات أو أنظمة المجتمع:
+
+	<br><br>
+
+	<img src="sprites/bonus/connected.png" width="200" height="200" style="float:left; margin-right:1em"/>
+	<b>كتاب:</b>
+	<a target="_blank" href="http://www.connectedthebook.com/">
+	"مرتبطون"</a>
+	من قبل Nicholas Christakis و James Fowler (٢٠٠٩).
+	جولة بسيطة حول الطرق التي تؤثر الشبكات بحياتنا، سيئة كانت أم جيدة.
+
+	<a target="_blank" href="http://www.connectedthebook.com/pdf/excerpt.pdf">
+		هنا نبذة من الكتاب:
+	Preface &amp; Chapter 1 (English)
+	</a>
+
+	<div style="clear:both"></div>
+	<br>
+
+	<img src="sprites/bonus/trust.png" width="200" height="200" style="float:left; margin-right:1em"/>
+
+	<b>لعبة تفاعلية:</b>
+	<a target="_blank" href="http://ncase.me/trust/">
+		"تطور الثقة والأمانة"
+	The Evolution of Trust</a> من قبل نفس كاتب هذه اللعبة Nicky Case (٢٠١٧).
+	لعبة عن
+	("نظرية الألعاب")
+	Game Theory
+	وعن كيفية نشوء التعاون... أو إنهياره.
+	<br>
+	(مترجمة إلى العربية من نفس المترجم)
+
+	<div style="clear:both"></div>
+	<br>
+
+	<img src="sprites/bonus/polygons.png" width="200" height="200" style="float:left; margin-right:1em"/>
+	<b>لعبة تفاعلية:</b>
+	<a target="_blank" href="http://ncase.me/polygons/">
+	"حكاية المضلعات"
+	Parable of the Polygons</a>
+	من قبل
+	Vi Hart
+	و
+	كاتب هذه اللعبة
+	Nicky Case (٢٠١٤).
+	قصة تحكي عن الخيارات البرئية التي يقوم بها الناس والتي تؤدي إلى صنع عالم مضرْ.
+	<br>
+	(مترجمة إلى العربية)
+
+	<div style="clear:both"></div>
+	<br>
+
+	<img src="sprites/bonus/ee.png" width="200" height="200" style="float:left; margin-right:1em"/>
+	أو، إن أردت رؤية جميع الكتابات التفاعلية
+	(مثل هذه اللعبة)
+	فيمكنك زيارة موقع
+	<a target="_blank" href="http://explorabl.es/">
+	"المحاكيات المفسرة"
+	Explorable Explanations</a>
+	وهو مركز يجمع تجارباً تعلِّم عبر اللعب!
+
+	<div style="clear:both"></div>
+
+	</div>
+
+</bonus>
+
+<!-- - - - - - - -->
+<!-- REFERENCES  -->
+<!-- - - - - - - -->
+
+<!--
+Final thing! These references also need you to TRANSLATE:
+-->
+
+<reference id="drunk">
+
+	<h3>
+	"أبلغ ما يقارب جميع الطلاب
+	(الجامعيين)
+	أن أصدقائهم يشربون أكثر مما هم يشربون"
+
+	</h3>
+
+	<div>
+	<a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/1758185">
+	"التحيزات في تقرير معدلات الشرب لدى الطلاب الجامعيين"</a> من قبل
+	Baer
+	ومعاونيه
+	(١٩٩١)
+	</div>
+
+</reference>
+<reference id="majority">
+
+	<h3>
+
+	"وهم الأكثرية"
+
+	</h3>
+
+	<div>
+	<a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147617">
+
+	"وهم الأكثرية في الشبكات الاجتماعية"</a> من قبل Lerman
+	ومعاونيه
+	(٢٠١٦).
+	<br>
+	متعلق: <a target="_blank" href="https://en.wikipedia.org/wiki/Friendship_paradox">
+	("تناقضة الصداقة").</a>
+	</div>
+</reference>
+<reference id="contagion">
+
+	<h3>
+	"تشير أدلة احصائية قوية أن التدخين والصحة والسعادة وحضور الانتخابات ومعدلات التعاون بين الناس جميعهم معديين"
+	</h3>
+
+	<div>
+
+	من الكتاب البليغ وسهل الفهم الذي كتبه
+	Nicholas Christakis
+	و
+	James Fowler،
+
+	<a target="_blank" href="http://www.connectedthebook.com/">
+	"مرتبطون"</a>
+	(٢٠٠٩).
+
+	</div>
+</reference>
+<reference id="suicides">
+
+	<h3>
+
+	"يوجد أدلة تشير أن الانتحارات معدية أيضاً"
+
+	</h3>
+
+	<div>
+	<a target="_blank" href="http://www.jstor.org/stable/42000514?seq=4#page_scan_tab_contents">
+
+	"عدوى الانتحار والتقرير عن الانتحار: توصيات من ورشة وطنية"</a>
+	من قبل
+	O'Carroll
+	ومعاونيه
+	(١٩٩٤)،
+
+	مؤيد من وكالة "مراكز مكافحة الأمراض واتقائها".
+	</div>
+
+</reference>
+<reference id="shootings">
+
+	<h3>
+
+	"بعض الأدلة تشير إلى أن عمليات القتل الجماعي بإطلاق النار هي عدوى أيضاً"
+
+	</h3>
+
+	<div>
+
+	<a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117259">
+
+	"العدوى في القتل الجماعي واطلاق النار في المدارس"</a> من قبل
+	Towers
+	ومعاونيه
+	(٢٠١٥).
+
+	<br><br>
+
+	أيضاً، ارجع إلى حملة
+
+	<a target="_blank" href="http://www.dontnamethem.org/">
+	"لا تسمّيهم"</a>
+	التي تلح وكالات الإعلام
+	<b>
+	بعدم
+	</b>
+	بث اسم مطلق النار أو كتاباته أو حسابه الشخصي على مواقع التواصل الاجتماعي،
+	لأن ذلك ينشر العدوى.
+	بدلاً من ذلك فيجب على وكالات الإعلام التركيز على الضحايا وأعضاء الشرطة
+	المستجيبين الأوائل والأبطال المدنيين والمجتمع المحلي الألم والمتعافي.
+
+	</div>
+
+</reference>
+<reference id="subprime">
+
+	<h3>
+	"وقعت المؤسسات المالية العالمية ضحية لهذا التتالي في ٢٠٠٨"
+	</h3>
+
+	<div>
+	<a target="_blank" href="https://newrepublic.com/article/63023/wall-streets-lemmings">
+	"قوارض
+	(وول ستريت)"
+	Lemmings of Wall Street</a>
+	مقالة من كتابة
+	Cass Sunstein
+	هي نبذة سريعة غير تقنية،
+	نشرت في ربيع الأزمة، أكتوبر ٢٠٠٨.
+
+	</div>
+
+</reference>
+<reference id="complex">
+
+	<h3>
+
+	"نظرية العدوى المعقدة"
+
+	</h3>
+
+	<div>
+
+	<a target="_blank" href="https://www.unc.edu/~fbaum/teaching/articles/Granovetter_AJS_1978.pdf">
+
+	"نمط الحد الأدنى للتصرف الجماعي"</a>
+	من كتابة Granovetter
+	عام
+	١٩٧٨،
+	هو أول مرة وصف أحد نمط العدوى المعقدة على حد علمي
+
+	(على الرغم من أنه لم يستخدم ذلك المصطلح بالذات).
+
+	<br><br>
+
+	<a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0180802">
+
+	"أدلة لنمط العدوى المعقدة في العدوى الاجتماعية من منظور البيانات المراقبة"</a>
+	من قبل Sprague
+	و
+	House (٢٠١٧)
+	يشير أن العدوى المعقدة موجودة بالفعل
+	(على الأقل، ضمن بيانات وسائل الإعلام المراقبة).
+
+	<br><br>
+
+	وأخيراً،
+	<a target="_blank" href="https://arxiv.org/pdf/cond-mat/0403699.pdf">
+
+	"التصرف العام في نماذج معمّمة للعدوى"</a> من كتابة
+	 Dodds
+	 و
+	  Watts (٢٠٠٤).
+	يقترح نموذج يعمم
+
+	 <i>جميع</i>
+	 أنواع العدوى:
+	 البسيطة ومعقدة، البيلوجية والاجتماعية!
+
+	</div>
+
+</reference>
+<reference id="possum">
+	<h3>
+
+		"حيوان الأبسوم لديه ١٣ مهبل ثدي"
+
+	</h3>
+	<div>
+		موزعين في حلقة من ١٢ مهبل، وواحد إضافي في المنتصف.
+	</div>
+</reference>
+<reference id="groupthink">
+
+	<h3>
+
+
+	"التفكير الجماعي
+	(groupthink)"
+
+	</h3>
+
+	<div>
+	هذه العبارة المستوحاة من كتابات (أوريل)
+	George Orwell
+	اخترعت من قبل
+	Irving L. Janis
+	في ١٩٧١.
+
+	يحقق
+	Janis
+
+	<a target="_blank" href="https://web.archive.org/web/20100401033524/http://apps.olin.wustl.edu/faculty/macdonald/GroupThink.pdf">
+	في مقالته الأصلية</a>
+
+	عن أسباب التفكير الجماعي ويعدد أسبابه
+	و
+	&mdash;
+	لحسن الحظ
+	&mdash;
+	بعض الحلول له.
+	</div>
+
+</reference>
+<reference id="social_capital">
+
+	<h3>
+
+	"ترابط وجسور رأس المال الاجتماعي"
+
+	</h3>
+
+	<div>
+	نوعا رأس المال الاجتماعي
+	 &mdash;
+
+	"الترابط"
+	و
+	"جسور التواصل"
+	&mdash;
+
+	سماهما
+	Robert Putnam
+	في كتابه المبصر
+	<a target="_blank" href="http://bowlingalone.com/">
+	"لعب البولينغ منفرداً"</a>
+	(٢٠٠٠).
+	اكتشافه الجذري:
+	عبر ما يقارب
+	<i>
+	جميع
+	</i>
+	المقاييس التجربية للارتباط الاجتماعي...
+	الأمريكان منفردون اليوم أكثر من أي زمن سابق...
+	يا للأسى.
+	</div>
+
+</reference>
+<reference id="bridge">
+
+	<h3>
+	"لجسور تواصل رأس المال الاجتماعي قيمة موازنة"
+	</h3>
+
+	<div>
+	<a target="_blank" href="https://sociology.stanford.edu/sites/default/files/publications/the_strength_of_weak_ties_and_exch_w-gans.pdf">
+
+	"قوة الروابط الضعيفة"</a> من قبل Granovetter
+	(١٩٧٣)
+	يرينا أن الروابط عبر المجموعات تساعد في نشر العدوى البسيطة
+	(كالمعلومات)،
+	لكن
+	<a target="_blank" href="http://www.jstor.org/stable/10.1086/521848?seq=1#page_scan_tab_contents">
+
+	"العدوى المعقدة وضعف الروابط الطويلة"</a> من قبل Centola
+	و
+	Macy (٢٠٠٧)
+	يرينا أن الروابط بين المجموعات قد لا تساعد العدوى المعقدة، بل بالعكس، قد تضر انتشارها!
+	</div>
+
+</reference>
+<reference id="small_world">
+
+	<h3>
+
+	"شبكة العالم الصغير"
+
+	</h3>
+
+	<div>
+	نشرت فكرة
+	"العالم الصغير"
+	من
+	<a target="_blank" href="http://www.jstor.org/stable/2786545">
+		اختبار
+		Travers
+		و
+		Milgram
+		عام
+		١٩٦٩</a>،
+		والذي وضّح أن أي شخصين عشوائيين في الولايات المتحدة يبعدون عن بعض بمتوسط ٦ صداقات
+		&mdash;
+
+		"ست درجات من التباعد"!
+
+	<br><br>
+
+	<!-- The small-world network got more mathematical meat on its bones with -->
+	اكتسى عظم شبكة العالم الصغير بالعمليات الحسابية بعد صدور مقالة
+
+	<a target="_blank" href="http://leonidzhukov.net/hse/2014/socialnetworks/papers/watts-collective_dynamics-nature_1998.pdf">
+
+	"الديناميكيات الموحّدة لشبكات العالم الصغير"</a>
+	من قبل
+	Watts
+	و
+	Strogatz (١٩٩٨)
+	والتي اقترحت خوارزمية لتشكيل شبكات تملك طولاً متوسطاً قصيراً للمسارات
+	(درجة متدنية من التباعد)
+	وعدداً كبير من التعاقد
+	(الأصدقاء لديهم الكثير من الأصدقاء المشتركين)
+	&mdash;
+	أي، شبكة متوازنة!
+
+	<br><br>
+
+	يمكنك أيضاً قراءة
+	<a target="_blank" href="http://worrydream.com/ScientificCommunicationAsSequentialArt/">
+		هذه المحاكاة التفاعلية المقتبسة من الورقة العلمية السابقة
+	</a>
+	من صنع
+	Bret Victor (٢٠١١).
+
+	</div>
+
+</reference>
+<reference id="swn_neurons">
+
+	<h3>
+
+	"[شبكات العالم الصغير]
+	تصف كيفية ارتباط العصبونات في الدماغ"
+
+	</h3>
+
+	<div>
+	<a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/17079517">
+
+	"شبكات عالم صغير دماغية"
+</a> من قبل Bassett
+	و
+	Bullmore
+	(٢٠٠٦).
+	</div>
+
+</reference>
+<reference id="swn_creativity">
+
+	<h3>
+
+	"[شبكات العالم الصغير]
+	تزيد من الإبداع الجماعي"
+
+	</h3>
+
+	<div>
+
+	<a target="_blank" href="http://www.jstor.org/stable/10.1086/432782?seq=1#page_scan_tab_contents">
+	"التعاون والإبداع: مشكلة العالم الصغير"</a>
+	من قبل
+	Uzzi
+	و
+	Spiro
+	(٢٠٠٥).
+	حللت هذه الورقة العلمية الشبكة الاجتماعية لمسارح
+	Broadway
+	خلال الزمن، واكتشفت، كما قلت أنا سابقاً، أن الشبكة أكثر ابداعاً عندما تكون شبكة من نمط
+	"عالم صغير"!
+
+	</div>
+
+</reference>
+<reference id="swn_social_physics">
+
+	<h3>
+	"[شبكات العالم الصغير]
+	تزيد من المشاركة في حل المشاكل"
+
+	</h3>
+
+	<div>
+		ارجع إلى
+	<a target="_blank" href="http://socialphysics.media.mit.edu/">
+	“الفيزياء الاجتماعية”</a>
+	وهو موقع
+	البروفيسور
+	Alex "Sandy" Pentland
+	من جامعة
+	MIT
+	(٢٠١٤).
+	يمكّنك الموقع من الاطلاع على تحليل للذكاء الجماعي أساسه البيانات.
+	</div>
+
+</reference>
+<reference id="swn_jfk">
+
+	<h3>
+
+	"[شبكة العالم الصغيرة]
+	!ساعدت الرئيس الأمريكي (جون ف. كينيدي) بأن يتفادى حرباً نووية بأعجوبة"
+
+	</h3>
+
+	<div>
+
+	بالإضافة لانفجار مركبة (ناسا)، أكثر مثال مشهور بسوء السمعة للتفكير الجماعي
+	كان في إخفاق
+	("غزو خليج الخنازير")
+	Bay of Pigs fiasco.
+	في عام ١٩٦١، ظن الرئيس الأمريكي
+	(جون ف. كينيدي)
+	وفريق مستشاريه
+
+	&mdash;
+	لسبب غبي لا أحد يعلمه
+	&mdash;
+	أن فكرة غزو كوبا بسرية وإسقاط حكمة
+	(فيدل كاسترو)
+	فكرة جيدة.
+	ثم فشلوا،
+	بل أسوأ من
+	"فشلوا":
+	لقد أدت الغزوة إلى
+	("أزمة صواريخ كوبا")
+	Cuban Missile Crisis
+	لعام ١٩٦٢،
+	<i>
+		وتلك كانت أقرب مرة وصل فيها العالم إلى حرب نووية شاملة.
+	</i>
+
+	<br><br>
+
+	بلى، لقد أفشل (جون) هذه المسألة فشلاً ذريعاً.
+
+	<br><br>
+
+	ولكن تعلم
+	(جون ف. كينيدي)
+	بعض الدروس الصعبة من إخفاق
+	("غزو خليج الخنازير")
+	وعلى أساسها قام بإعادة تنظيم فريقه لتجنب التفكير الجماعي.
+	من أبرز اصلاحاته كانت:
+
+	١-
+	شجع الأفراد على أن يطرحوا انتقاداتهم بشكل صريح، مما قلل من
+	"الحد الأدنى للعدوى"
+	تجاه الأفكار البديلة.
+	وأيضاً
+	٢-
+		قسّم فريقه إلى عدة فرق مصغّرة قبل عقد الاجتماعات، مما أعطى مجموعته تصميماً يشابه تصميم
+		"شبكة العالم الصغير".
+		وسمح ذلك التنظيم بوجود تنوّع مفيد من الآراء دون شقّ المجموعة كثيراً
+		&mdash;
+		أي، حشد
+		<i>
+		حكيم.
+	</i>
+
+	<br><br>
+
+	وهكذا، باستخدام
+	<i>
+	نفس الأفراد
+</i>
+
+	الذين اختاروا القيام
+	<b>
+	بغزوة خليج الخنازير،
+	</b>
+	ولكن منظمين
+
+	<i>
+	بشكل جماعي
+	</i>
+	لاتخاذ القرارات في
+	<b>
+	أزمة صواريخ كوبا...
+	</b>
+	نجح فريق
+	(جون ف. كينيدي)
+	بالوصول لاتفاق سلمي مع الرئيس السوفييتي
+	(نيكيتا خروتشوف).
+
+	زعم الاتفاق بأن يزيل السوفييت صواريخم من كوبا، وبالمقابل وعدت الولايات المتحدة بعدم غزو كوبا مجدداً
+	(واتفقوا بسرية على إزالة الصورايخ الأمريكية من تركيا).
+
+	<br><br>
+
+	وتلك كانت قصة تحكي كيف أوشكت البشرية على الانقراض،
+	وكيف أنقذتها شبكة عالم صغير وحيدة!... نوعاً ما.
+
+	<br><br>
+
+	يمكنك قراءة المزيد عن هذا الموضوع
+	<a target="_blank" href="https://hbr.org/2013/11/how-john-f-kennedy-changed-decision-making">
+	في صحيفة
+	Harvard Business Review</a>،
+	أو في
+	<a target="_blank" href="https://web.archive.org/web/20100401033524/http://apps.olin.wustl.edu/faculty/macdonald/GroupThink.pdf">
+	المقالة الأصلية عن التفكير الجماعي.
+	</a>
+
+	</div>
+
+</reference>
+<reference id="three_degrees">
+
+	<h3>
+	"نأثر على
+	[...]
+	أصدقاء أصدقاء أصدقائنا!"
+
+	</h3>
+
+	<div>
+	مقتبسة أيضاً من كتاب
+	<a target="_blank" href="http://www.connectedthebook.com/">
+	"مرتبطون"
+	Connected</a>
+	الرائع. من قبل
+	Nicholas Christakis
+	و
+	James Fowler
+	(٢٠٠٩).
+	</div>
+
+</reference>
+<reference id="flatter">
+	<h3>
+
+	"كن شاكّاً بالأفكار التي تعجبك مباشرة"
+
+	</h3>
+	<div>
+		بلى، وتطبق هذه النصيحة على الأفكار التي طرحتها
+		<i>
+		أنا في
+		هذه اللعبة.
+	</i>
+	</div>
+</reference>
+<reference id="sandbox">
+
+	<h3>
+	★ وضع اللعب الحر ★
+	</h3>
+
+	<div>
+		اختصارات لوحة المفاتيح
+		(1, 2, space, backspace)
+		تعمل
+		<i>
+		جميعها
+		</i>
+		في الأحاجي أيضاً وليس فقط في وضع اللعب الحر.
+	أنا لا أمزح! يمكنك العودة الآن إلى فصل سابق والتغيير في المحاكاة.
+	في الحقيقة،
+	<i>
+	هكذا صنعت أنا
+	</i>
+	جميع الأحاجي. تمتّع في الرسم!
+
+	</div>
+
+</reference>
+<reference id="supporters" hidden=yes large=yes>
+	<div>
+	<a target="_blank" href="https://www.patreon.com/ncase">
+
+	إلى داعميني على
+
+		Patreon</a>:
+	أنا في غاية الامتنان، كرمكم
+	<i>
+	حرفياً
+	</i>
+	يطعمني ويدفع ثمن أجار بيتي ويتيح لي الحرية الإبداعية لصنع هذه الألعاب الاجتماعية والحسابية العلمية.
+	من باطن قلبي...
+
+	<b>
+	شكراً لكم!
+	</b>
+	</div>
+</reference>
+<reference id="playtesters" hidden=yes large=yes>
+	<div>
+
+	جزيل الشكر لكلّ من اختبر هذه اللعبة
+	في جميع مراحل نشوئها!
+
+	<div style="direction: ltr; position: relative; top: -50px;">
+
+		<br><br>
+		<b>The Prototype:</b>
+		<br>
+		Maria ·
+		Monica Srivastava
+
+		<br><br>
+		<b>The Alpha:</b>
+		<br>
+		Glen Chiacchieri ·
+		Kalli Repzeti ·
+		Mali Akmanalp ·
+		Toph Tucker
+
+		<br><br>
+		<b>The Beta:</b>
+		<br>
+		Alex Dytrych ·
+		Amit Patel ·
+		Cassandra McClure ·
+		Catherine Ray ·
+		Josh Comeau ·
+		Kayle Sawyer ·
+		Matthew Conlen ·
+		Srini Kadamati ·
+		Vanessa Shen ·
+		Wick Perry
+
+	</div>
+	</div>
+</reference>
+
+</span>
+
+<!--
+
+And that's it! That's the last of what needed to a TRANSLATE
+
+Thank you so, so much for doing this again, wow.
+
+Finally, go to "translations.txt" and follow the instructions there,
+in order to let this game "know" your translation exists.
+
+-->

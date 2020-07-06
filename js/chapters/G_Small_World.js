@@ -83,7 +83,7 @@ SLIDES.push(
 		// PIC
 		{
 			type:"box",
-			img:"sprites/small_world.png", x:-10, y:95, w:970, h:284
+			img:"sprites/small_world.png", x:-10, y:95, w:970, h:284, flipOnRTL:true
 		},
 
 		// Words
@@ -115,7 +115,7 @@ SLIDES.push(
 		},
 		{
 			type:"box",
-			text:"bb_small_world_end", x:640, y:440, w:320, h:100,
+			text:"bb_small_world_end", x:1, y:460, w:320, h:100,
 			align:"center"
 		}
 

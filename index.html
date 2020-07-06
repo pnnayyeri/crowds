@@ -1,4 +1,4 @@
-<!--
+۴<!--
 
 THE WISDOM AND/OR MADNESS OF CROWDS
 by Nicky Case | apr 2018
@@ -35,20 +35,19 @@ Good luck, and thanks again!
 -->
 
 <!DOCTYPE html>
-<html lang="en"> <!-- lang="(TRANSLATE: set your language code here, same as the page name!) e.g: es, es-ES, pt-BR, ja, it, fr-CA, de, ..." -->
+<html lang="fa" dir="rtl">
 <head>
 
 	<!-- Meta Info -->
-	<title>The Wisdom and/or Madness of Crowds</title> <!-- <title>(TRANSLATE this part only)</title> -->
-	<meta name="description" content="an interactive guide to human networks"/> <!-- content="(TRANSLATE this part only)" -->
+	<title>خرد و/یا جنون جمعی</title> <!-- <title>(TRANSLATE this part only)</title> -->
+	<meta name="description" content="راهنمای تعاملی برای شبکه های انسانی"/> <!-- content="(TRANSLATE this part only)" -->
 	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 	<meta content="utf-8" http-equiv="encoding">
 	<meta charset="utf-8">
 	<link rel="icon" type="image/png" href="favicon.png">
 
+
 	<link rel="alternate" href="http://ncase.me/crowds/"           hreflang="en">
-	<link rel="alternate" href="http://ncase.me/crowds/cs.html"    hreflang="cs">
-	<link rel="alternate" href="http://ncase.me/crowds/de.html"    hreflang="de">
 	<link rel="alternate" href="http://ncase.me/crowds/es.html"    hreflang="es-ES">
 	<link rel="alternate" href="http://ncase.me/crowds/fr.html"    hreflang="fr">
 	<link rel="alternate" href="http://ncase.me/crowds/it.html"    hreflang="it">
@@ -59,28 +58,41 @@ Good luck, and thanks again!
 	<link rel="alternate" href="http://ncase.me/crowds/vi.html"    hreflang="vi">
 	<link rel="alternate" href="http://ncase.me/crowds/zh-CN.html" hreflang="zh-CN">
 	<link rel="alternate" href="http://ncase.me/crowds/zh-TW.html" hreflang="zh-TW">
+	<link rel="alternate" href="https://alexanderclay.github.io/crowds/ar.html" hreflang="fa">
+
 
 	<!-- Sharing -->
-	<meta itemprop="name" content="The Wisdom and/or Madness of Crowds"> <!-- content="(TRANSLATE this part only)" -->
-	<meta itemprop="description" content="an interactive guide to human networks"> <!-- content="(TRANSLATE this part only)" -->
+	<meta itemprop="name" content="خرد و/یا جنون جمعی"> <!-- content="(TRANSLATE this part only)" -->
+	<meta itemprop="description" content="راهنمای تعاملی برای شبکه های انسانی"> <!-- content="(TRANSLATE this part only)" -->
 	<meta itemprop="image" content="http://ncase.me/crowds/social/thumb.png">
 
-	<meta name="twitter:title" content="The Wisdom and/or Madness of Crowds"> <!-- content="(TRANSLATE this part only)" -->
-	<meta name="twitter:description" content="an interactive guide to human networks"> <!-- content="(TRANSLATE this part only)" -->
+	<meta name="twitter:title" content="خرد و/یا جنون جمعی"> <!-- content="(TRANSLATE this part only)" -->
+	<meta name="twitter:description" content="راهنمای تعاملی برای شبکه های انسانی"> <!-- content="(TRANSLATE this part only)" -->
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:site" content="@ncasenmare">
 	<meta name="twitter:creator" content="@ncasenmare">
 	<meta name="twitter:image" content="http://ncase.me/crowds/social/thumb.png">
 
-	<meta property="og:title" content="The Wisdom and/or Madness of Crowds"> <!-- content="(TRANSLATE this part only)" -->
-	<meta property="og:description" content="an interactive guide to human networks"> <!-- content="(TRANSLATE this part only)" -->
+	<meta property="og:title" content="خرد و/یا جنون جمعی"> <!-- content="(TRANSLATE this part only)" -->
+	<meta property="og:description" content="راهنمای تعاملی برای شبکه های انسانی"> <!-- content="(TRANSLATE this part only)" -->
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="http://ncase.me/crowds/">
 	<meta property="og:image" content="http://ncase.me/crowds/social/thumb.png">
 
 	<!-- Styles -->
-	<link rel="stylesheet" type="text/css" href="css/index.css?v=7">
-
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=3">
+	<style>
+		/* font: Noto Sans Arabic https://www.google.com/get/noto/ */
+		@font-face {
+			font-family: "Vazir-Light";
+			font-style: normal;
+			font-weight: 400;
+			src: url(css/Vazir-Light.ttf) format('truetype');
+		}
+			body{
+			font-family: "PatrickHand", "Vazir-Light", Helvetica, Arial;
+		}
+	</style>
 </head>
 <body>
 
@@ -101,7 +113,7 @@ Good luck, and thanks again!
 		<canvas id="scratch" width="711" height="400"></canvas>
 
 		<!-- Skip -->
-		<div id="skip">skip &gt;</div> <!-- TRANSLATE -->
+		<div id="skip">رد کردن &gt;</div> <!-- TRANSLATE -->
 
 		<!-- Modal -->
 		<div id="modal_container">
@@ -115,24 +127,26 @@ Good luck, and thanks again!
 		</div>
 
 	</div>
-	
+
 	<!-- Navigation: Audio, Contents, Share, Translations -->
 	<div id="navigation_container">
 		<div id="sound" mute="no">
 			<div id="sound_icon"></div>
-			<span id="sound_on">ON</span> <!-- TRANSLATE -->
-			<span id="sound_off">OFF</span> <!-- TRANSLATE -->
+			<span id="sound_on" style="margin-left: -30px; margin-top: -2px; letter-spacing: 0px;">
+
+				روشن</span> <!-- TRANSLATE -->
+			<span id="sound_off" style="margin-left: -34px; margin-top: -2px; letter-spacing: 0px;">خاموش</span> <!-- TRANSLATE -->
 		</div>
 		<div id="sharing">
 			<a id="fb" target="_blank" href="TODO"></a>
 			<a id="tw" target="_blank" href="TODO"></a>
 			<a id="em" target="_blank" href="TODO"></a>
 			<span id="share_title">
-			The Wisdom and/or Madness of Crowds <!-- TRANSLATE -->
+			خرد و/یا جنون جمعی <!-- TRANSLATE -->
 			</span>
 			<span id="share_desc">
 			<!-- TRANSLATOR: keep this on ONE LINE or the social sharing will break! -->
-			Why do groups of people act smart, dumb, kind, cruel? An interactive guide to human networks: <!-- TRANSLATE -->
+			چرا گروه های انسانی رفتار هوشمندانه، احمقانه، محبت آمیز، ظالمانه نشان میدهند؟ راهنمای تعاملی برای شبکه های انسانی: <!-- TRANSLATE -->
 			</span>
 		</div>
 		<div id="navigation">
@@ -140,53 +154,53 @@ Good luck, and thanks again!
 			<!-- The chapters -->
 			<!-- TRANSLATE all the Chapter names! -->
 			<div chapter="Introduction">
-				<span>0</span>
-				<span>0. Introduction</span>
+				<span>۰</span>
+				<span>۰) مقدمه</span>
 			</div>
 			<div chapter="Networks">
-				<span>1</span>
-				<span>1. Connections</span>
+				<span>۱</span>
+				<span>۱) ارتباطات</span>
 			</div>
 			<div chapter="Simple">
-				<span>2</span>
-				<span>2. Contagions</span>
+				<span>۲</span>
+				<span>۲) سرایت</span>
 			</div>
 			<div chapter="Complex">
-				<span>3</span>
-				<span>3. Complex Contagions</span>
+				<span>۳</span>
+				<span>3) سرایت پیچیده</span>
 			</div>
 			<div chapter="BB">
-				<span>4</span>
-				<span>4. Bonding &amp; Bridging</span> <!-- note: &amp; is html for the "and" sign -->
+				<span>۴</span>
+				<span>۴) پیوند و اتصال</span> <!-- note: &amp; is html for the "and" sign -->
 			</div>
 			<div chapter="SmallWorld">
-				<span>5</span>
-				<span>5. It's A Small World</span>
+				<span>۵</span>
+				<span>۵) دنیا کوچیکه</span>
 			</div>
 			<div chapter="Conclusion">
-				<span>6</span>
-				<span>6. In Conclusion...</span>
+				<span>۶</span>
+				<span>۶) ختم کلام...</span>
 			</div>
 			<div chapter="Credits">
-				<span>7</span>
-				<span>7. Credits</span>
+				<span>۷</span>
+				<span>۷) تیتراژ</span>
 			</div>
 			<div chapter="Sandbox">
 				<span>★</span>
-				<span>★ Sandbox Mode! ★</span>
+				<span>★ فضای تمرینی ★</span>
 			</div>
 
 			<!-- A divider -->
 			<span class="nav_divider"></span>
-			
+
 			<!-- Bonus Notes & References -->
 			<div modal="bonus">
-				<span>?</span>
-				<span>Bonus Boxes!</span> <!-- TRANSLATE -->
+				<span>؟</span>
+				<span>جعبه‌های جایزه!</span> <!-- TRANSLATE -->
 			</div>
 			<div modal="references">
 				<span style="margin-top: 7px; font-size: 35px;">*</span>
-				<span>Links &amp; References</span> <!-- TRANSLATE -->
+				<span>مراجع</span> <!-- TRANSLATE -->
 			</div>
 			<div modal="translations">
 			<span style="margin-top:5px; position:relative;"><span style="
@@ -199,17 +213,17 @@ Good luck, and thanks again!
 				    top: -1px;
 				    left: 16px;
 				">あ</span></span>
-				<span>Translations</span> <!-- TRANSLATE -->
+				<span>ترجمه‌ها</span> <!-- TRANSLATE -->
 			</div>
 
 			<!-- The hover bubble -->
 			<span id="nav_bubble"></span>
-			
+
 		</div>
 		<div id="translations"></div>
 		<div id="social"></div>
 	</div>
-	
+
 	<!-- The Pencil -->
 	<div id="pencil_container">
 		<canvas id="pencil"></canvas>
@@ -217,7 +231,7 @@ Good luck, and thanks again!
 
 	<!-- Preloader -->
 	<div id="pre_preloader">
-		<div>loading...</div> <!-- TRANSLATE -->
+		<div>یخورده صبر کن...</div> <!-- TRANSLATE -->
 	</div>
 
 </body>
@@ -228,7 +242,6 @@ Good luck, and thanks again!
 <!-- - - - - -->
 
 <script src="js/lib/helpers.js"></script>
-<script src="js/lib/inobounce.js"></script>
 <script src="js/lib/minpubsub.src.js"></script>
 <script src="js/lib/howler.min.js"></script>
 <script src="js/lib/Key.js"></script>
@@ -242,9 +255,9 @@ Good luck, and thanks again!
 <script src="js/slideshow/Navigation.js"></script>
 <script src="js/slideshow/SimUI.js"></script>
 <script src="js/slideshow/SandboxUI.js"></script>
-<script src="js/slideshow/Modal.js?v=5"></script>
+<script src="js/slideshow/Modal.js"></script>
 <script src="js/slideshow/Preloader.js"></script>
-<script src="js/slideshow/Translations.js?v=5"></script>
+<script src="js/slideshow/Translations.js?v=2"></script>
 
 <script src="js/sim/Peep.js?v=2"></script>
 <script src="js/sim/Connection.js"></script>
@@ -269,7 +282,7 @@ Good luck, and thanks again!
 <!-- THE SLIDESHOW'S WORDS -->
 <!-- - - - - - - - - - - - -->
 
-<!-- 
+<!--
 
 This is the bulk of what you need to TRANSLATE!
 Translate just the text that's within the <tag></tags>
@@ -285,22 +298,35 @@ it should automatically highlight what the text is (usually in white).
 <words id="preloader_title">
 
 	<div style="font-size: 30px;">
-		<span>the</span>
+		<!--<span>the</span>-->
+		<!--<br>-->
+		<span style="font-size: 60px;letter-spacing: 4px;">خرد</span>
+		<span style="position:relative;top: -10px;">و/یا</span>
+		<span style="font-size: 60px;">جنون</span>
 		<br>
-		<span style="font-size: 60px;letter-spacing: 4px;">WISDOM</span>
-		<span style="position:relative;top: -10px;">and/or</span>
-		<span style="font-size: 60px;">MADNESS</span>
+		<span style="font-size: 100px;line-height: 80px;position: relative;top: -15px; display:block;">جمعی</span>
 		<br>
-		<span style="position: relative;top: -11px;">of</span>
-		<br>
-		<span style="font-size: 100px;line-height: 80px;position: relative;top: -15px; display:block;">CROWDS</span>
+		<!--
+		<span style="font-size: 60px;letter-spacing: 4px;">حكمة</span>
+		<span style="position:relative;top: -10px;">أو</span>
+		-->
+
+		<!-- <span style="font-size: 60px;position: relative; top: -30px;">حكمة أو جنون</span> -->
+		<!--<br>-->
+		<!--<span style="position: relative;top: -11px;">of</span>-->
+		<!--<br>
+		<span style="font-size: 100px;line-height: 80px;top: -21px;position: relative; display:block;">الحــشــود</span>
+		-->
 	</div>
 
 	<div style="color:#999">
 		<!-- TRANSLATE note: comment out the line below... -->
-		playing time: 30 min • by nicky case, april 2018
+		<!-- playing time: 30 min • by nicky case, april 2018 -->
 		<!-- ...and UN-comment + TRANSLATE this line! -->
-		<!-- by nicky case • translated by [your name] • <a href='.'>original in English</a> -->
+		سازنده:
+		nicky case
+		 • مترجم: پویان نیّری <br>
+		<a href='http://ncase.me/crowds/'>original game in English</a>
 	</div>
 
 </words>
@@ -310,11 +336,12 @@ it should automatically highlight what the text is (usually in white).
 </words>
 
 <words id="preloader_loading">
-	loading...
+	بارگذاری...
 </words>
 
 <words id="preloader_play">
-	let's play! <div class="rarr"></div> 
+	شروع کن!
+	<div class="larr"></div>
 </words>
 
 <!-- Introduction -->
@@ -332,25 +359,35 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 	<br><br>
 
-	Sir Isaac Newton was pretty sure he was a
+	سر آیزاک نیوتن خودش رو کاملا یه فرد
 	<br>
-	smart cookie. I mean, after inventing calculus and
+	باهوش می‌دونست. منظورم اینه که اون بعد از
 	<br>
-	a theory of gravity, he should be clever enough to do
+	اینکه حساب دیفرانسیل و نظریه گرانش رو اختراع کرد،
 	<br>
-	some financial investing, right? Anyway, long story short, he
+	حتـما به انـدازه کافـی باهـوش بوده کـه یه سرمایـه‌گذاری
 	<br>
-	lost $4,600,000 (in today's dollars) in the nationwide
+	اقتـصادی انجام بـده، نـه؟ به هر حـال سرتـونو درد نیـارم،
 	<br>
-	speculation frenzy known as the South Sea Bubble of 1720.
+	اون توی آشفتگی سراسری بورس معروف به
+	<br>
+	«حباب دریای جنوب سال ۱۷۲۰»،
+	<br>
+	۴,۶۰۰,۰۰۰ دلار (به پول امروز) ضرر کرد. همونطور که
+	<br>
+	آقای نیوتن بعدا گفت:
+	<br>
+	<i>
+		«من می‌توانم حرکت اجسام آسمانی را محاسبه کنم،
+		<br>
+		ولی از محاسبه‌ی حماقت مردم عاجزم.»
+	</i>
 
-	<br><br>
 
-	As Mr. Newton later said: <i>“I can calculate the motion of
-	<br>
-	heavenly bodies, but not the madness of people.”</i>
-
-	<next>yeah sucks for him <div class="rarr"></div> </next>
+	<next>
+		واقعا، بیچاره نیوتن
+		<div class="larr"></div>
+		 </next>
 
 </words>
 
@@ -358,143 +395,215 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 	<div style="height:0.5em"></div>
 
-	Of course, that's not the only
+	البته اون اولین بار نبوده که
 	<br>
-	time markets, institutions, or entire
+	بازارها، موسسات یا کل دموکراسی‌ها
 	<br>
-	democracies went haywire &mdash; the <i>madness</i> of
+	از کنترل خارج شدن&mdash;
+	<i>
+		جنون
+	</i>
+	جمعی. با این وجود،
 	<br>
-	crowds. And yet, just when you lose hope in humanity,
+	درست موقعی که از بشریت ناامید میشی، مردمی رو
 	<br>
-	you see citizens coordinating to rescue each other in
+	می‌بینی که توی زلزله‌ها به همدیگه کمک می‌کنن، جوامعی
 	<br>
-	hurricanes, communities creating solutions to problems,
+	که برای مشکلات راه حل درست می‌کنن، مردمی که برای ساختن
 	<br>
-	people fighting for a better world &mdash; the <i>wisdom</i> of crowds!
+	دنیای بهتر می‌جنگن&mdash; <i>خرد</i> جمعی!
 
 	<div style="height:0.9em"></div>
 
-	<b>But <i>why</i> do some crowds turn to madness, or wisdom?</b> No theory
+	<b>اما
+		<i>
+			چرا
+		</i>
+		بعضی از جوامع رفتار جنون‌آمیز یا خردمندانه نشون می‌دن؟
+	</b>
 	<br>
-	can explain everything, but I think a new field of study,
+	هیچ نظریه‌ای نیست که بتونه همه چیز رو توضیح بده، اما فکر
 	<br>
-	<b>network science</b>, can guide us! And its core idea is this: to
+	می‌کنم یک زمینه‌ی مطالعاتی جدید به نام
+	<b>
+		علم شبکه
+	</b>
+	،
 	<br>
-	understand crowds, we should look not at the <i>individual
+	می‌تونه به ما کمک کنه! ایده‌ی کلیدی این علم
 	<br>
-	people</i>, but at...
-
-	<next>...their <i>connections.</i> <div class="rarr"></div> </next>
+	اینه: برای شناخت جوامع، ما نباید
+	<br>
+	به تک تک افراد جامعه بپردازیم.
+	<br>
+	بلکه باید به...
+	<next>
+		<span  style="font-size: 18px">
+			<i>ارتباطات</i> بین اونا بپردازیم.
+		</span>
+		<div class="larr"></div>
+	</next>
 
 </words>
 
 <!-- Networks -->
 
 <words id="networks_tutorial_start">
-	<b>Let's draw a network!</b>
-	Each connection represents a friendship between two people:
+	<b>بیاین یه شبکه رسم کنیم!</b>
+	هر ارتباط نشون دهنده‌ی دوستی بین دو نفره:
 </words>
 
 <words id="networks_tutorial_connect">
-	draw to connect
+	بکش تا وصل بشن
 </words>
 
 <words id="networks_tutorial_disconnect">
-	scratch to&nbsp;&nbsp;&nbsp;disconnect
+		خط بزن تا
+	&nbsp;&nbsp;&nbsp;
+	قطع بشن
 </words>
 
 <words id="networks_tutorial_end">
 
-	when you're done doodling and playing around,
-	<next wiggle>let's continue <div class="rarr"></div> </next>
+	هروقت نقاشی و بازی کردنت تموم شد،
+	<next wiggle>ادامه بدیم <div class="larr"></div> </next>
 
 </words>
 
 <words id="networks_threshold">
 
-	Now, social connections are for more than just making pretty pictures.
-	People <i>look to</i> their social connections to understand their world.
-	For example, people look to their peers to
-	find out <b>what % of their friends (not counting themselves)</b> are,
-	say, binge-drinkers. <icon name="yellow"></icon>
+
+	ارتباطات اجتماعی چیزی بیشتر از فقط کشیدن نقاشی‌های بامزه است.
+	مردم به ارتباطات اجتماعیشون
+	<i>
+		رجوع می‌کنن
+	</i>
+	 تا دنیاشونو بشناسن.
+	برای مثال، مردم به امثال خودشون نگاه می‌کنن
+	تا ببینن
+	<b>
+		چند درصد از دوستاشون (به جز خودشون)
+	</b>
+	، مثلا، اهل مشروبن.
+	<icon name="yellow"></icon>
+
 
 </words>
 
 <words id="networks_threshold_instruction">
-	<b>Draw/erase connections, and see what happens! <div class="rarr"></div> </b>
+	<b>
+			<div class="rarr"></div>
+		ارتباطات رو قطع/وصل کن و ببین چه اتفاقی می‌افته.
+		 </b>
 </words>
 
 <words id="networks_threshold_end">
-	<next>cool, got it</next>
+	<next>
+			باحاله، گرفتم
+		</next>
 </words>
 
 <words id="networks_pre_puzzle">
-	However, networks can <i>fool</i> people.
-	Just like how the earth seems flat because we're on it,
-	people may get wrong ideas about society because they're <i>in</i> it.
+	هرچند، ارتباطات میتونه مردم رو
+	<i>
+		گمراه
+	</i>
+	 کنه.
+	درست همونطور که زمین صاف به نظر می‌رسه چون ما روش هستیم،
+	مردم هم ممکنه تفکرات اشتباهی رو از جامعه بدست بیارن چون
+	<i>
+		درونش
+	</i>
+	 هستن.
+	<br>
 </words>
 
 <words id="optional_reading">
-	<div style="position:absolute; top:5px;">
-		<i>optional</i> extra bonus notes! &uarr;
+	<div style="position:absolute; top:3px;">
+		نکات اضافی
+		<i>
+			اختیاری
+		</i>
+		&uarr;
 	</div>
-	<div style="position:absolute; left:216px; top:10px;">
-		&darr; links and references
+	<div style="position:absolute; left:19px; top:8px;">
+		&darr;
+		لینک‌ها و مراجع
 	</div>
 </words>
 
 <words id="networks_pre_puzzle_2">
-	
+
 	<bon id="books"></bon>
 
 	<br>
 
-	For example, a 1991 study<ref id="drunk"></ref> showed that 
-	“virtually all [college] students reported that their friends drank more than they did.”
-	But that seems impossible!
-	How can that be?
-	Well, you're about to invent the answer yourself, by drawing a network.
-	It's time to...
+	برای مثال، یک تحقیق در سال ۱۹۹۱
+	<ref id="drunk"></ref>
+	 نشون داد که
+	"تمام دانشجویان عنوان کردن که دوستاشون بیشتر از خودشون مشروب می‌خورن."
+	ولی این غیرممکنه!
+	چطور میشه؟
+	خب قراره که شما خودتون با رسم یک شبکه جواب رو پیدا کنین.
+	وقتشه که...
 
-	<next>FOOL EVERYONE <div class="rarr"></div> </next>
-
+	<next>
+		همه رو گمراه کنیم
+		<div class="larr"></div>
+	</next>
 </words>
 
 <words id="networks_puzzle">
 
-	<b style="font-size:2em">PUZZLE TIME!</b>
+	<b style="font-size:2em">وقت معماست!</b>
 	<br>
-	Fool <i>everyone</i> into thinking
-	the majority of their friends (50% threshold) are binge-drinkers <icon name="yellow"></icon>
-	(even though binge-drinkers are outnumbered 2-to-1!)
+	<i>
+		تمامی افراد
+	</i>
+	 رو جوری گمراه کنید
+	که فکر کنن اکثریت دوستاشون (آستانه‌ی ۵۰%) اهل مشروب هستن
+	<icon name="yellow"></icon>
+	<br>
+	(با وجود اینکه تعداد مشروب‌خورها نصف هستش!)
 
 </words>
+
 <words id="networks_puzzle_metric">
-	<b>FOOLED:</b>
+	<b>گمراه شده:</b>
 </words>
 <words id="networks_puzzle_metric_2">
-	out of 9 people
+	نفر از 9 نفر
 </words>
 <words id="networks_puzzle_end">
-	Congrats! You manipulated a group of students into believing
-	in the prevalance of an incredibly unhealthy social norm! Good going!
-	<next wiggle>...uh. thanks?</next>
+	تبریک میگم! شما یک گروه از دانشجوها رو جوری گمراه کردین
+	که فکر کنن یک ناهنجاری اجتماعی غالبه! خوب بود!
+	<next wiggle>...اممم. نظر لطفته؟</next>
 </words>
 
 <words id="networks_post_puzzle">
 
-	What you just created is called The Majority Illusion<ref id="majority"></ref>,
-	which also explains why people think their political views are consensus,
-	or why extremism seems more common than it actually is.
-	<i>Madness.</i>
+	چیزی که شما ساختین با اسم توهم اکثریت شناخته میشه
+	<ref id="majority"></ref>
+	که همچنین توضیح میده که چرا مردم فکر میکنن نظر سیاسی خودشون مورد قبول عموم مردم هست،
+	یا چرا افراطی‌گری بیشتر از اون چیزی که هست به نظر میاد.
+	<i>
+		جنون.
+	</i>
 
 	<bon id="connections"></bon>
 
-	But people don't just passively <i>observe</i> others' ideas and behaviors,
-	they actively <i>copy</i> them.
-	So now, let's look at something network scientists call...
+	ولی مردم فقط به صورت منفعلانه تفکرات و رفتار بقیه رو
+	<i>
+		نگاه نمی‌کنن
+	</i>،
+	اونا به صورت فعالانه
+	<i>
+		تقلید می‌کنن
+	</i>.
+	خب حالا بیاین به چیزی نگاه بندازیم که دانشمندان شبکه بهش می‌گن...
 
-	<next>“Contagions!” <div class="rarr"></div> </next>
+	<next>..."سرایت"!
+		<div class="larr"></div> </next>
 
 
 </words>
@@ -502,418 +611,685 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 <!-- Simple Contagions -->
 
 <words id="simple_simple">
-	<i>Let's put aside the "threshold" thing for now.</i>
-	Below: we have a person <icon name="red"></icon> with some information.
-	Some <i>mis</i>information. "Fake news", as the cool kids say.
-	And every day, that person spreads the rumor, like a virus, to their friends.
-	And they spread it to <i>their</i> friends. And so on.
+	<i>
+		بیاین اون قضیه "آستانه" رو فعلا کنار بذاریم.
+	</i>
+	در پایین یه فردی رو داریم
+	<icon name="red"></icon>
+	 که یه سری اطلاعات داره.
+	یه سری اطلاعات
+	<i>
+		اشتباه
+	</i>
+	. به قول امروزی "فیک نیوز".
+	این فرد هر روز اون شایعه رو، مثل یک ویروس به دوستاش منتقل می‌کنه.
+	دوستاش هم به دوستای
+	<i>
+		خودشون
+	</i>
+	 منتقل میکنن و به همین منوال ادامه داره.
 	<br>
 	<b>
-	Start the simulation! <div class="darr"></div>
-	(p.s: you can't draw <i>while</i> the sim's running)
+	شبیه‌سازی رو شروع کن!
+	<div class="darr"></div>
+
+	(نکته:
+	<i>
+		در حین
+	</i>
+	 شبیه‌سازی نمی‌تونین چیزی بکشین)
 	</b>
 </words>
 
 <words id="simple_simple_2">
-	Note: despite the negative name, "contagions" can be good or bad (or neutral or ambiguous). 
-	There's strong statistical evidence<ref id="contagion"></ref> that
-	smoking, health, happiness, voting patterns, and cooperation levels
-	are all "contagious" --
-	and even some evidence that suicides<ref id="suicides"></ref> and mass shootings<ref id="shootings"></ref> are, too.
+	<div style="text-align:right;
+	position:relative;
+	right: 50px;">
+
+		تذکر: "سرایت" بر خلاف اسم منفیش، می‌تونه چیز خوب یا بدی (یا خنثی یا مبهم) باشه.
+		شواهد آماری محکمی
+		<ref id="contagion"></ref>
+		وجود داره که سیگار کشیدن، سلامتی، خوشحالی، الگوی رای دادن و سطوح مختلف همکاری
+		همگی "مسری" هستن —
+		و یه سری شواهدی که خودکشی
+		<ref id="suicides"></ref
+		> و تیراندازی کور
+		<ref id="shootings"></ref>
+		 هم مسری هستن.
+	</div>
 </words>
 
 <words id="simple_simple_end">
-	<next wiggle>well that's depressing <div class="rarr"></div> </next>
+	<next wiggle>ناراحت کنندست ...
+		<div class="larr"></div> </next>
 </words>
 
 <words id="simple_cascade">
-	Indeed it is.
-	Anyway, <b>PUZZLE TIME!</b>
+	واقعا هم ناراحت کنندست.
+	به هر حال،
+	<b>
+		وقت معماست!
+	</b>
 	<br>
-	Draw a network &amp; run the simulation,
-	so that <i>everyone</i> gets infected with the "contagion".
+	یک شبکه بکش و شبیه‌سازی رو جوری اجرا کن،
+	که
+	<i>
+		همه‌ی افراد
+	</i>
+	 توسط "سرایت" آلوده بشن.
 	<br>
-	(new rule: you can't cut the <i>thick</i> connections)
+	(قانون جدید: نمی‌تونی اتصالات <i>عمیق</i> رو قطع کنی)
 </words>
 
 <words id="simple_cascade_end">
-	<next wiggle>fan-flipping-tastic <div class="rarr"></div> </next>
+	<next wiggle>فوق العادســـت
+		<div class="larr"></div> </next>
 </words>
 
 <words id="simple_post_cascade">
-	This madness-spreading is called an <b>"information cascade"</b>.
-	Mr. Newton fell for such a cascade in 1720.
-	The world's financial institutions fell for such a cascade in 2008.<ref id="subprime"></ref>
+	به گسترش این جنون میگن
+	<b>
+		"آبشار اطلاعاتی"
+	</b>.
+	آقای نیوتن در سال ۱۷۲۰ دچار یک آبشار اطلاعاتی شد.
+	موسسات مالی جهان دچار همچنین آبشار اطلاعاتی‌ای در سال ۲۰۰۸ شدن.
+	<ref id="subprime"></ref>
 	<br><br>
-	However: <i>this simulation is wrong.</i>
-	Most ideas <i>don't</i> spread like viruses.
-	For many beliefs and behaviors, you need to be "exposed" to the contagion more than just once
-	in order to be "infected".
-	So, network scientists have come up with a new, better way to 
-	describe how ideas/behaviors spread, and they call it...
-	<next wiggle>“<i>Complex</i> Contagions!” <div class="rarr"></div> </next>
+	به هر حال:
+	<i>
+		این شبیه‌سازی اشتباهه.
+	</i>
+	بیشتر تفکرات به صورت ویروس منتقل
+	<i>
+		نمیشن.
+	</i>
+	برای خیلی از اعتقادات و رفتارها، شما باید بیشتر از یکبار "در معرض" سرایت قرار بگیرین
+	تا "آلوده" بشین.
+	پس دانشمدان شبکه یک راه جدید و بهتر برای توصیف گسترش تفکرات/رفتارها ارائه دادن
+	و بهش گفتن...
+	<next wiggle>
+		...
+		“سرایت <i>پیچیده</i>!”
+		<div class="larr"></div> </next>
 </words>
 
 <!-- Complex Contagions -->
 
 <words id="complex_complex">
+		<span style="direction:rtl;
+		position:relative;
+		right: 470px;">
 
-	Let's bring back "thresholds" and the binge-drinking <icon name="yellow"></icon> example!
-	When you played with this the first time, people didn't change their behavior.
+		بیا دوباره به "آستانه‌ها" و مثال مشروب‌خورها
+		<icon name="yellow"></icon>
+		 برگردیم!
+		دفعه‌ی اول که اینو بازی کردی، افراد رفتارشون رو تغییر نمی‌دادن.
 
-	<br><br>
+		<br><br>
 
-	Now, let's simulate what happens if people start drinking
-	<i>when 50%+ of their friends do!</i> 
-	<b>Before you start the sim, ask yourself what you think <i>should</i> happen.</b>
+		حالا بیا شبیه‌سازی کنیم و ببینیم که اگه افراد
+		<i>
+			در صورتی که بیشتر از ۵۰% دوستاشون	اهل مشروب باشن
+		</i>
+		 مشروب‌خور بشن چی میشه!
 
-	<br><br>
-	
-	<b>Now, run the sim, and see what actually happens! <div class="rarr"></div> </b>
-
+		<b>قبل از شروع شبیه‌سازی، از خودت بپرس که چه اتفاقی
+			<i>
+				باید
+			</i>
+			 بیوفته.
+	 	</b>
+		<br><br>
+		<b>
+				<div class="rarr"></div>
+				حالا شبیه‌سازی رو اجرا کن و ببین واقعا چه اتفاقی میوفته
+		</b>
+	</span>
 </words>
 
 <words id="complex_complex_2">
-	<span style="line-height:1.3em; display:block;">
-		
-		Unlike our earlier "fake news" <icon name="red"></icon> contagion,
-		this contagion <icon name="yellow"></icon> does <i>not</i> spread to everyone!
-		The first few people get "infected", because although they're only exposed to one
-		binge-drinker, that binge-drinker is 50% of their friends. (yeah, they're lonely)
-		In contrast, the person near the end of the chain did <i>not</i> get "infected",
-		because while they were exposed to a binge-drinking friend,
-		they did not pass the 50%+ threshold.
+	<span style="
+		direction:rtl; position:relative; right: 470px;
+		line-height:1.3em; display:block;">
+			برخلاف سرایت "فیک نیوز"
+			<icon name="red"></icon>
+			 قبلی،
+			این سرایت
+			<icon name="yellow"></icon>
+			 به همه افراد منتقل
+			 <i>
+				 نمیشه
+			 </i>!
+			چند نفر اول "آلوده" میشن چون با اینکه فقط در معرض یک مشروب‌خور‌ هستن
+			اما اون مشروب‌خور ۵۰% دوستاشون حساب میشه. (آره، خیلی تنهان)
+			متقابلا، فرد نزدیک به انتهای زنجیره "آلوده"
+			<i>
+				نمیشه
+			</i>،
+			چون با اینکه در معرض یک دوست مشروب‌خور هست، اما به آستانه ۵۰% نمی‌رسه.
 
-		<div style="height:0.75em"></div>
+			<div style="height:0.75em"></div>
 
-		The <i>relative</i> % of "infected" friends matters.
-		<i>That's</i> the difference between the <b>complex contagion</b> theory<ref id="complex"></ref>,
-		and our naive it-spreads-like-a-virus <b>simple contagion</b> theory.
-		(you could say "simple contagions" are just contagions with a "more than 0%" infection threshold)
+					اینجا درصد
+					<i>
+						نسبی
+					</i>
+					 دوستان "آلوده" اهمیت داره.
+					فرق بین نظریه‌ی
+					<b>
+						سرایت پیچیده
+					</b>
+					<ref id="complex"></ref>
+					و نظریه‌ی
+					<b>
+						سرایت ساده
+					</b>
+					 که مثل ویروس منتقل میشه، همینه.
+					(میشه اینطور گفت که "سرایت ساده" همون سرایت با آستانه ۰% هستش)
 
-		<div style="height:0.75em"></div>
+			<div style="height:0.75em"></div>
 
-		However, contagions aren't necessarily bad &mdash;
-		so enough about crowd <i>madness</i>, what about...
-		<next>...crowd <i>wisdom?</i></next>
+			هرچند که سرایت لزوما چیز بدی نیست &mdash;
+			پس دیگه
+			<i>
+				جنون
+			</i>
+			 جمعی بسه، می‌رسیم به....
+
+			<next>
+				...
+				<i>
+					خرد
+				</i>
+				 جمعی؟
+			</next>
 
 	</span>
 </words>
 
 <words id="complex_complex_3">
 
-	Here, we have a person <icon name="blue"></icon> who volunteers to... I don't know,
-	rescue people in hurricanes, or tutor underprivileged kids in their local community, or something cool like that.
-	Point is, it's a "good" complex contagion.
-	This time, though, let's say the threshold is only 25% &mdash;
-	people are willing to volunteer, but only if 25% or more of their friends do so, too.
-	Hey, goodwill needs a bit of social encouragement.
+	اینجا ما یه فردی رو داریم
+	<icon name="blue"></icon>
+	 که داوطلب میشه که... چمیدونم مثلا
+	مردم رو از طوفان نجات بده، یا به بچه‌های فقیر شهرشون درس بده، یا یه کار باحال مشابه انجام بده.
+	نکته اینه که، این یک سرایت پیچیده‌ی "خوب" هست.
+	ایندفعه اما آستانه مثلا فقط ۲۵% هست&mdash;
+	مردم وقتی تمایل به داوطلبی نشون میدن
+	که ۲۵% یا بیشتر از دوستاشون داوطلب بشن.
+	به هر حال حسن نیت هم نیاز به یخورده تشویق اجتماعی داره.
 
 	<br><br>
 
-	<b>&larr; Get everyone "infected" with the good vibes!</b>
+	<b>
+		&larr; همه رو با حس خوب "آلوده" کن!
+	</b>
 
 </words>
 
 <words id="complex_complex_3_end">
 	<span style="line-height:1.3em; display:block;">
 
-		<b>NOTE:</b> Volunteering is just <i>one</i> of many complex contagions!
-		Others include: voter turnout, lifestyle habits, 
-		challenging your beliefs,
-		taking time to understand an issue deeply &mdash; anything
-		that needs more than one "exposure".
-		Complex contagions aren't <i>necessarily</i> wise,
-		but being wise is a complex contagion.
+
+		<b>
+			تذکر:
+		</b>
+		 داوطلب شدن تنها
+		 <i>
+			 یکی
+		 </i>
+		  از نمونه‌های سرایت پیچیده هست!
+		نمونه‌های دیگه: میزان مشارکت در انتخابات، عادت‌های زندگی،
+		به چالش کشیدن عقاید،
+		وقت گذاشتن برای درک عمیق یک مسئله
+		&mdash; هر چیزی که به چیزی بیشتر از فقط "در معرض قرار گرفتن" نیاز داره.
+		سرایت‌های پیچیده
+		<i>
+			لزوما
+		</i>
+		 از نوع خرد نیستن،
+		اما خردمند بودن یک سرایت پیچیده هست.
 
 		<div style="height:0.75em"></div>
 
-		(So what's a real-life <i>simple</i> contagion?
-		Usually bits of trivia, like, "the possum has 13 nipples"<ref id="possum"></ref>)
+		پس سرایت‌های <i>ساده</i> در زندگی واقعی چیا هستن؟
+		معمولا اطلاعات پیش پا افتاده مثل "۹۰% شکار بر عهده‌ی شیر ماده هستش"، سرایت ساده حساب میشن.
+		<ref id="possum"></ref>
+
 
 		<bon id="contagions"></bon>
 
-		Now, to <i>really</i> show the power and weirdness of complex contagions, let's revisit...
+		حالا برای اینکه <i>واقعا</i> قدرت و عجایب سرایت پیچیده رو ببینیم، بیا برگردیم به...
 
-		<next>...an earlier puzzle <div class="rarr"></div> </next>
+		<next>
+			...یک معمای قبلی
+			<div class="larr"></div>
+		</next>
 
 	</span>
 </words>
 
 <words id="complex_cascade">
-	Remember this? This time, with a <i>complex</i> contagion <icon name="blue"></icon>, it'll be a bit tougher...
+	این معما رو یادته؟ ایندفعه با سرایت
+	<i>
+		پیچیده
+	</i>
+	<icon name="blue"></icon>
+	 حلش می‌کنیم، یخورده سخت‌تر میشه
 	<br>
-	<b>Try to "infect" everyone with complex wisdom! <div class="darr"></div></b>
+
+	<b>
+		سعی کن همه رو با خرد پیچیده "آلوده" کنی
+		<div class="darr"></div>
+	</b>
 </words>
 
 <words id="complex_cascade_feel_free">
-	(feel free to just hit 'start' and <i>try</i> as many solutions as you want)
+	(راحت باش، روی "شروع" بزن و راه‌حل‌های مختلف رو
+	<i>
+		امتحان
+	</i>
+ 	کن)
 </words>
 
 <words id="complex_cascade_end">
-	<next wiggle>HOT DANG <div class="rarr"></div> </next>
+	<next wiggle>
+		ایول!
+		<div class="larr"></div>
+	</next>
 </words>
 
 <words id="complex_post_cascade">
-	Now, you may think that you just need to keep adding connections to spread any contagion,
-	"complex" or "simple", good or bad, wise or mad.
-	But is that really so? Well, let's revisit...
+	الان ممکنه فکر کنی که تنها کافیه اینقد ارتباطات رو زیاد کنی تا به همه سرایت کنه،
+	چه "پیچیده" چه "ساده"، چه خوب چه بد، چه خرد چه جنون.
+	اما آیا واقعا اینطوره؟ خب بیا برگردیم به....
 </words>
 <words id="complex_post_cascade_end">
-	<next wiggle>...another earlier puzzle <div class="rarr"></div> </next>
+	<next wiggle>
+		...یک معمای قبلی دیگه
+		<div class="larr"></div>
+		</next>
 </words>
 
 <words id="complex_prevent">
-	If you hit "start" below, the complex contagion <icon name="blue"></icon> will just spread to everyone.
-	No surprise there.
-	But now, let's do the <i>opposite</i> of everything we've done before:
-	<b>draw a network to <i>prevent</i> the contagion from spreading to everyone! <div class="darr"></div></b>
+
+	اگه بر روی "شروع" بزنی، سرایت پیچیده
+	<icon name="blue"></icon>
+ 	 به همه منتقل میشه.
+	چیز عجیبی نیست.
+	اما بیا ایندفعه یک کار
+	<i>
+		برعکس
+	</i>
+	 دفعه‌های قبل انجام بدیم:
+	<b>
+		یک شبکه‌ای بکش که از سرایت به همه‌ی افراد
+		<i>
+			جلوگیری
+		</i>
+ 		بشه!
+		<div class="darr"></div>
+	</b>
 </words>
 
 <words id="complex_prevent_2">
-	You see?
-	While more connections will always help the spread of <i>simple</i> ideas,
-	<b>more connections can hurt the spread of <i>complex</i> ideas!</b>
-	(makes you wonder about the internet, hm?)
-	And this isn't just a theoretical problem. This can be a matter of life...
+
+		<span style="direction:rtl; position:relative;
+		right: 10px;
+		top: 30px;
+		display:block;">
+			دیدی؟
+			همونطور که ارتباطات بیشتر همیشه به انتقال تفکرات
+			<i>
+				ساده
+			</i>
+			 کمک می‌کنه،
+			<b>
+				ارتباطات بیشتر میتونه به انتقال تفکرات
+				<i>
+					پیچیده
+				</i>
+				 آسیب بزنه.
+		 	</b>
+			(باعث میشه در مورد اینترنت بیشتر فکر کنیم، نه؟)
+			و این فقط یک مسئله‌ی نظری نیست. میتونه بحث زندگی باشه...
+		</span>
 </words>
 
 <words id="complex_prevent_end">
-	<next wiggle>...or death. <div class="rarr"></div> </next>
+	<next wiggle>
+			...یا بحث مرگ.
+			<div class="larr"></div>
+		</next>
 </words>
 
 <words id="complex_groupthink">
-		
-	The people at NASA were smart cookies.
-	I mean, they'd used Newton's theories to get us to the moon.
-	Anyway, long story short, in 1986,
-	<i>despite warnings from the engineers</i>,
-	they launched the <i>Challenger</i>,
-	which blew up and killed 7 people.
-	The immediate cause: 
-	it was too cold that morning.
+	<span style="position: relative; direction: rtl; right: 0px;">
+
+		آدمایی که توی ناسا کار می‌کردن افراد باهوشی بودن.
+		منظورم اینه که اونا از نظریات نیوتن استفاده کردن تا ما رو به کره ماه ببرن.
+		به هر حال، خلاصه بگم، در سال ۱۹۸۶،
+		<i>
+			با وجود هشدارهایی از سمت مهندسین،
+		</i>
+		ناسا شاتل فضایی
+		<i>
+			چلنجر
+		</i>
+		 رو پرتاب کرد،
+		که منفجر شد و ۷ نفر کشته شدن.
+		دلیل اولیه:
+		هوای اون روز صبح خیلی سرد بود.
 
 	<div style="height:0.9em"></div>
 
-	The less immediate cause: the managers ignored the engineers' warnings.
-	Why? Because of <b>groupthink</b><ref id="groupthink"></ref>.
-	When a group is <i>too</i> closely knit, (as they tend to be at the top of institutions)
-	they become resistant to complex ideas that challenge their beliefs or ego.
+	دلیل بعدی:
+	مدیران هشدارهای مهندسین رو نادیده گرفتن.
+	چرا؟ به علت
+	<b>
+		تفکر گروهی
+	</b>
+	<ref id="groupthink"></ref>.
+	وقتی یک گروه
+	<i>
+		خیلی
+	</i>
+	 به هم نزدیک باشن، (هرچی به رده‌های بالاتر موسسه نزدیک‌تر باشن)
+	نسبت به تفکرات پیچیده‌ای که عقاید یا غرور خودشون
+	 رو به چالش میکشه مقاومت نشون میدن.
 
 	<div style="height:0.9em"></div>
 
-	So, that's how institutions can fall to crowd madness.
-	But how can we "design" for crowd <i>wisdom?</i>
-	In short, two words:
+	پس اینطوری میشه که موسسات می‌تونن دچار جنون جمعی بشن.
+	اما چطور می‌تونیم <i>خرد</i> جمعی رو "طراحی" کنیم؟
+	جواب دو کلمه‌است:
 
-	<next>Bonding &amp; Bridging <div class="rarr"></div> </next>
+	<next>
+		پیوند و اتصال
+		<div class="larr"></div>
+  </next>
 
 </words>
 
 <!-- Bonding & Bridging -->
 
 <words id="bonding_1">
-	&larr; Too few connections, and an idea can't spread.
+ 	اگه ارتباطات خیلی کم باشه یک تفکر نمی‌تونه منتقل بشه.
+ 	<div class="larr"></div>
 	<br>
-	Too many connections, and you get groupthink. <div class="rarr"></div> 
+	<div class="rarr"></div>
+	اگه ارتباطات زیاد بشه مشکل تفکر گروهی پیش میاد.
 </words>
 
 <words id="bonding_2">
-	<b>
-	Draw a group that hits the sweet spot:
-	just connected enough to spread a complex idea!
-	<div class="darr"></div>
-	</b>
+		<b>
+		یک گروهی رو بکش که حالت مطلوب باشه:
+		ارتباطات به اندازه کافی باشه تا تفکرات پیچیده منتقل بشن!
+		<div class="darr"></div>
+		</b>
 </words>
 
 <words id="bonding_end">
-	Simple enough!
-	The number of connections <i>within</i> a group is called <b>bonding social capital</b><ref id="social_capital"></ref>.
-	But what about the connections...
-	<next wiggle>...<i>between</i> groups?</next>
+
+	ساده بود!
+	تعداد ارتباطات <i>درون</i> یک گروه <b>سرمایه‌ی اجتماعی پیوندی</b><ref id="social_capital"></ref> نامیده میشن.
+	اما ارتباطات...
+
+	<next wiggle>
+		...
+		<i>
+			بین
+		</i>
+	 	گروه‌ها چی؟
+ 	</next>
+
 </words>
 
 <words id="bridging_1">
-	As you may have already guessed, 
-	the number of connections <i>between</i> groups is called
-	<b>bridging social capital</b>.
-	This is important, because it helps groups break out of their insular echo chambers!
+	همونطور که ممکنه حدس زده باشین،
+	تعداد ارتباطات
+	<i>
+		بین
+	</i>
+	 گروه‌ها
+	 <b>
+		 سرمایه‌های اجتماعی اتصالی
+	 </b>
+	  نامیده میشن.
+	این خیلی مهمه چون به گروه‌ها کمک میکنه تا از انزوا خارج بشن.
 	<br>
-	<b>Build a bridge, to "infect" everyone with complex wisdom:</b>
+	<b>
+		اتصالی بکش تا همه رو با تفکرات پیچیده "آلوده" کنی:
+	</b>
 </words>
 
 <words id="bridging_end">
-	Like bonding, there's a sweet spot for bridging, too.<ref id="bridge"></ref>
-	(extra challenge: try drawing a bridge so thick that the complex contagion
-	<i>can't</i> pass through it!)
-	Now that we know how to "design" connections <i>within</i> and <i>between</i> groups, let's...
-	<next wiggle>...do BOTH at the same time!</next>
+		مثل پیوندها، برای اتصالات هم یک حد مطلوب وجود داره.
+		<ref id="bridge"></ref>
+		(چالش فرعی: یک اتصالی رو بکش که اینقد عمیق باشه تا سرایت پیچیده <i>نتونه</i> منتقل بشه!)
+		حالا که می‌دونیم چطور ارتباطات <i>درون</i> و <i>بین</i> گروه‌ها رو "طراحی" کنیم، بیا...
+		<next wiggle>
+			...هر دوتا رو همزمان انجام بدیم!
+		</next>
 </words>
 
 <words id="bb_1">
 
-	<b style="font-size:2em">FINAL PUZZLE!</b>
-	<br>
-	Draw connections within groups (bonding) and between groups (bridging)
-	to spread wisdom to the whole crowd:
+	<div style="direction: rtl; right: 570px;position: relative;">
 
+		<b style="font-size:2em">
+			معمای نهایی!
+		</b>
+		<div style="height:0.9em"></div>
+		<br>
+		ارتباطاتی رو درون گروه‌ها (پیوند) و بین گروه‌ها (اتصال) بکش
+		تا خرد به کل اجتماع منتقل بشه:
+
+	</div>
 </words>
 <words id="bb_2">
 
-	Congrats, you've just drawn a very special kind of network!
-	Networks with the right mix of bonding and bridging
-	are profoundly important, and they're called...
-	<next wiggle>“Small World Networks” <div class="rarr"></div> </next>
+	<div style= "width: 290px; height: 230px;  direction: rtl;right: 660px;position: absolute; opacity: 1;">
+
+		تبریک میگم، یک شبکه‌ی خیلی خاص کشیدی.
+		شبکه‌هایی با ترکیب درست از پیوندها و اتصالات
+		بسیار مهم هستن و بهشون میگن...
+
+		<next wiggle>
+			"شبکه‌های دنیای کوچک"
+			<div class="larr"></div>
+		</next>
+	</div>
 
 </words>
 <words id="bb_small_world_1">
 
-	<i>"Unity without uniformity". "Diversity without division". "E Pluribus Unum: out of many, one".</i>
+	<i>"وحدت بدون یکنواختی". "تنوع بدون تفرقه". "یکپارچگی علیرغم متفاوت بودن."</i>
 	<br>
-	No matter how it's phrased,
-	people across times and cultures often arrive at the same piece of wisdom:
+	مهم نیست چطوری بیان بشه،
+	مردم در فرهنگ‌ها و زمان‌های مختلف همه به یک خرد رسیدن:
 	<b>
-	a healthy society needs a sweet spot of bonds <i>within</i> groups
-	and bridges <i>between</i> groups.
+	یک جامعه‌ی سالم نیاز به حد مطلوبی از پیوندها <i>درون</i> گروه‌ها
+	و حد مطلوبی از اتصالات <i>بین</i> گروه‌ها داره.
 	</b>
-	That is:
+	منظورم...
 
 </words>
 <words id="bb_small_world_2">
-	Not this...
+	این نیست....
 	<br>
-	(because ideas can't spread)
+	(چون تفکرات نمی‌تونن پخش بشن)
 </words>
 <words id="bb_small_world_3">
-	nor this...
+	اینم نیست...
 	<br>
-	(because you'll get groupthink)
+	(چون مشکل تفکر گروهی پیش میاد)
 </words>
 <words id="bb_small_world_4">
-	...but <i>THIS:</i>
+	<div style="position: absolute; left: -550px;">
+	...<b>اینه!</b>
+	</div>
 </words>
 <words id="bb_small_world_5">
-	
-	Network scientists now have a mathematical definition for this ancient wisdom:
-	the <b>small world network</b><ref id="small_world"></ref>.
-	This optimal mix of bonding+bridging describes how
-	our neurons are connected<ref id="swn_neurons"></ref>,
-	fosters collective creativity<ref id="swn_creativity"></ref>
-	and problem-solving<ref id="swn_social_physics"></ref>,
-	and even once helped US President John F. Kennedy (barely) avoid nuclear war!<ref id="swn_jfk"></ref>
-	So, yeah, small worlds are a big deal.
+
+	<div style="position:absolute; width:650px;">
+		دانشمندان شبکه یک تعریف ریاضی برای این خرد باستانی دارن:
+		<b>شبکه‌ی دنیای کوچک</b><ref id="small_world"></ref>.
+		این ترکیب بهینه از پیوند+اتصال تعریف می‌کنه که
+		چطور نورون‌های مغز ما به هم متصل هستن<ref id="swn_neurons"></ref>
+		تا خلاقیت <ref id="swn_creativity"></ref>
+		و مهارت حل مسئله <ref id="swn_social_physics"></ref> رو پرورش بدن
+		و حتی به جان اف کندی رئیس جمهور آمریکا کمک کنن تا جلوی جنگ هسته‌ای رو بگیره (تا حدی)!<ref id="swn_jfk"></ref>
+		پس میشه گفت دنیاهای کوچک مسائل بزرگی هستن.
+	</div>
 
 </words>
 <words id="bb_small_world_end">
-	<next>ok, let's wrap this up... <div class="rarr"></div> </next>
+	<next>
+		خب، بیا جمع‌بندی کنیم...
+		<div class="larr"></div>
+		</next>
 </words>
 
 <!-- Sandbox -->
 
 <words id="sandbox_caption">
-	(pst... wanna know a secret?<ref id="sandbox"></ref>)
+	(می‌خوای یه رازی رو بدونی؟<ref id="sandbox"></ref>)
 </words>
 
 <words id="sandbox_contagion">
-	Contagion:
+	سرایت:
 </words>
 <words id="sandbox_contagion_simple">
-	simple
+	ساده
 </words>
 <words id="sandbox_contagion_complex">
-	complex
+	پیچیده
 </words>
 <words id="sandbox_color_chooser">
-	The Contagion's Color:
+	رنگ سرایت:
 </words>
 <words id="sandbox_tool_chooser">
-	Select a tool...
+	انتخاب ابزار:
 </words>
 
 <words id="sandbox_tool_pencil">
-	Draw Network
+	رسم شبکه
 </words>
 <words id="sandbox_tool_add">
-	Add Person
+	افزودن فرد
 </words>
 <words id="sandbox_tool_add_infected">
-	Add "Infected"
+	افزودن فرد آلوده
 </words>
 <words id="sandbox_tool_move">
-	Drag Person
+	جابجایی فرد
 </words>
 <words id="sandbox_tool_delete">
-	Delete Person
+	حذف فرد
 </words>
 <words id="sandbox_tool_clear">
-	<b>CLEAR IT ALL</b>
+	<b>حذف همه</b>
 </words>
 
 <words id="sandbox_shortcuts_label">
-	(...or, use keyboard shortcuts!)
 </words>
 
 <words id="sandbox_shortcuts">
-	[1]: Add Person &nbsp;&nbsp;&nbsp; [2]: Add "Infected"
-	<br>
-	[Space]: Drag &nbsp;&nbsp;&nbsp; [Backspace]: Delete
+	<div style="direction:rtl; top:-7px; position:relative;font-size:16px;">
+		(... یا استفاده از میانبرهای صفحه کلید)
+		<br>
+
+		[1]
+		افزودن فرد
+
+		[2]
+		افزودن فرد آلوده
+
+		<br>
+		[Space]
+		جابجایی فرد
+		<br>
+		[Backspace&larr;]
+		حذف
+	</div>
 </words>
 
 <!-- Conclusion -->
 
 <words id="conclusion_1">
-	
-	<div style="font-size: 30px;">
-		IN CONCLUSION: it's all about...
+
+	<div style="font-size: 30px; direction: rtl;">
+		ختم کلام: همه چی مربوطه به...
 	</div>
 	<div style="
 		width: 100%;
 	    position: absolute;
 	    font-size: 88px;
 	    top: 20px;
-	    line-height: 100px; display:block;
+		line-height: 100px; display:block;
+		direction: rtl;
 	">
-	    Contagions &amp; Connections
+	    سرایت و ارتباطات
 	</div>
 
 	<div style="
 	    width: 710px;
 	    position: absolute;
 	    top: 125px;
-	    left: 250px;
+		left: 250px;
+		direction: rtl;
 	">
-		<b>Contagions:</b>
-		Like how neurons pass signals in a brain,
-		people pass beliefs &amp; behaviors in a society.
-		Not only do we influence our friends,
-		we also influence our friends' friends, and even our friends' friends' friends!<ref id="three_degrees"></ref>
-		(“be the change you wanna see in the world” etc etc)
-		But, like neurons, it's not just signals that matter, it's also...
+	<b>
+		سرایت:
+	</b>
+	همونطور که نورون‌ها سیگنال‌ها رو در مغزمون منتقل می‌کنن،
+	مردم هم عقاید و رفتارهای خودشون رو در جامعه منتقل می‌کنن.
+	نه تنها ما روی دوستان خودمون تاثیر می‌بذاریم
+	بلکه ما روی دوستان دوستامون و حتی دوستان دوستان دوستامون تاثیر می‌ذاریم!
+	<ref id="three_degrees"></ref>
+	("همان تغییری باش که می‌خواهی در دنیا ببینی." و ...)
+	اما مثل نورون‌ها، این فقط سیگنال‌ها نیستن که مهمن، بلکه ارتباطات هم مهم هستن...
 	</div>
 
 	<div style="
 	    width: 710px;
 	    position: absolute;
 	    top: 275px;
-	    left: 250px;
+		left: 250px;
+		direction: rtl;
 	">
-		<b>Connections:</b>
-		Too few connections and complex ideas can't spread.
-		Too <i>many</i> connections and complex ideas get crushed by groupthink.
-		The trick is to build a small world network, the optimal mix of
-		bonding and bridging: <i>e pluribus unum.</i>
+	<b>
+		ارتباطات:
+	</b>
+	اگه ارتباطات خیلی کم باشه تفکرات پیچیده نمی‌تونن منتقل بشن.
+	اگه ارتباطات
+	<i>
+		خیلی زیاد
+	</i>
+	 باشه تفکرات پیچیده توسط تفکرگروهی نابود میشن.
+	راهش اینه که یک شبکه‌ی دنیای کوچک ساخته بشه، ترکیب بهینه‌ای از
+	پیوند‌ها و اتصالات:
+	<i>
+		یکپارچگی علیرغم متفاوت بودن.
+	</i>
 	</div>
 
 	<div style="
 	    width: 350px;
 	    position: absolute;
-	    top: 410px;
+	    top: 420px;
 	    left: 220px;
 	    text-align: center;
+			font-size: 16px;
 	    color: #999;
+		direction: rtl;
 	">
-		(wanna make your own simulations?
-		check out Sandbox Mode, by clicking the (★) button below!)
+	(می‌خوای شبیه‌سازی خودت رو درست کنی؟)
+	<br>
+	با کلیک بر روی دکمه
+	(★)
+	 به فضای تمرینی وارد میشی
 	</div>
 
 	<div style="
@@ -923,16 +1299,19 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 	    right: 0px;
 	    text-align: right;
 	">
-		So, what about our question from the very beginning?
-		Why <i>do</i> some crowds turn to...
+	پس، جواب اولین سوالمون چی میشه؟
+	چرا بعضی از جوامع رفتار...
 	</div>
 	<div style="
 	    width: 300px;
 	    position: absolute;
 	    top: 460px;
-	    right: 0px;
+	    right: 70px;
+			font-size:16px;
 	">
-		<next>...wisdom and/or madness?</next>
+		<next>
+			...خردمندانه و/یا جنون‌آمیز نشون میدن
+		</next>
 	</div>
 
 </words>
@@ -940,93 +1319,114 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 <words id="conclusion_2">
 	<span style="line-height:1.4em; display:block;">
 
-		<div style="height:0.5em"></div>
+		<div style="height:3.5em"></div>
 
-		From Newton to NASA to
+		از نیوتن تا ناسا تا علم شبکه، خیلی از موارد
 		<br>
-		network science, we've covered a lot here
+		رو امروز بررسی کردیم. خلاصه بگم، جنون جمعی لزوما به خاطر
 		<br>
-		today. Long story short, the madness of crowds
+		<b>
+			تک تک افراد
+		</b>
+		نیست، بلکه به خاطر ساز و کارتارهای چسبناک شبکه‌ای
 		<br>
-		is not necessarily due to the <i>individual people</i>, but due
-		<br>
-		to how we're trapped in a network's sticky web.
-
+		هست که توش گیر افتادیم.
 		<div style="height:0.9em"></div>
-
-		That <i>does NOT</i> mean abandoning personal responsibility, for
+		<b>
+			این به معنی
+		</b>
+		رها کردن مسئولیت‌های فردی نیست، چون ما هم از
 		<br>
-		we're also the <i>weavers</i> of that web. So, improve your contagions:
+		<b>
+			تشکیل دهندگان
+		</b>
+		این تارها هستیم.پس سرایت‌های خودتون رو ارتقا
 		<br>
-		be skeptical of ideas that flatter you<ref id="flatter"></ref>, spend time understanding
+		بدین: به تفکراتی که ازشون خوشتون میاد مشکوک باشید <ref id="flatter"></ref>،
 		<br>
-		complex ideas. And, improve your connections: bond with similar
+		وقتتون رو صرف درک تفکرات پیچیده کنید. و همچنین ارتباطات خودتون
 		<br>
-		folk, but also build bridges across cultural/political divides.
-
+		رو ارتقا بدین: با افراد شبیه خودتون نزدیک‌تر بشین، اما در عین حال
+		<br>
+		اتصالاتی رو برای عبور از موانع فرهنگی/سیاسی ایجاد کنید.
 		<div style="height:0.9em"></div>
-
-		We can weave a wise web. Sure, it's harder than doodling
+		می‌تونیم یک شبکه خردمندانه تشکیل بدیم.
 		<br>
-		lines on a screen...
+		البته که سخت‌تر از کشیدن چندتا خط
+		<br>
+		روی صفحه‌اس...
 
-		<next>...but so, so worth it.</next>
+		<next>
+			...اما خب، ارزشش رو داره.
+		</next>
 
 	</span>
 </words>
 
 <words id="conclusion_3">
-	<i>
-		“The great triumphs and tragedies of history are caused,
-		not by people being fundamentally good or fundamentally bad,
-		but by people being fundamentally people.”
-	</i>
+	<b>
+		"بزرگ‌ترین دستاوردها و تراژدی‌های تاریخ
+		نه توسط انسان‌های اساسا خوب و نه توسط انسان‌های اساسا بد بدست آمده است،
+		بلکه توسط انسان‌های اساسا انسان بدست آمده است."
+	</b>
 	<br>
-	<span style="position:relative; top:5px">~</span> Neil Gaiman &amp; Terry Pratchett
+	<span style="position:relative; top:5px">~</span>
+	نیل گیمن و تری پرچت
 	<div style="height:0.8em"></div>
-	<next small>&lt;3</next>
+	<next small>3></next>
 </words>
 
-<!-- Credits --> 
+<!-- Credits -->
 
 <words id="credits">
 
 	<div style="text-align:center; color:#fff; letter-spacing: 1px; font-size: 24px; line-height: 27px;">
-	
+
 		<span style="color:#777; position:relative; top:5px;">
-			created by</span>
+			ساخته شده توسط
+		</span>
 		<div style="font-size: 3em; line-height: 1.0em;">
 			NICKY CASE</div>
 		<a target="_blank" href="http://ncase.me" style="text-decoration:none">
-			play my other shtuff</a> ·
+			بازی‌های دیگمو بازی کن
+		</a> ·
 		<a target="_blank" href="https://twitter.com/ncasenmare" style="text-decoration:none">
-			follow my tweeter</a>
-		
+			توییترمو دنبال کن
+		</a>
+
 		<br><br>
 
 		<span style="color:#777; position:relative; top:5px; display: inline-block; margin-top: 15px;">
-			lots of love and thanks to</span>
-		<div style="font-size: 3em; line-height: 1.0em;">
-			MY PATREON SUPPORTERS</div>
-		<a target="_blank" href="https://www.patreon.com/ncase" style="text-decoration:none">
-			help me make more like this! &lt;3</a>
-		<br>
+			کلی عشق و محبت برای
+		</span>
+		<div style="margin-bottom:18px; font-size: 3em; line-height: 1.0em;">
+			حامیانم در
+			PATREON
+		</div>
 		<a onclick='publish("reference/show", ["supporters"]);'>
-			see my supporters</a> ·
+			مشاهده اسم حامیان
+		</a>
+			·
 		<a onclick='publish("reference/show", ["playtesters"]);'>
-			see my playtesters</a>
+			مشاهده لیست آزمایش‌کننده‌ها</a>
+		<br>
+		<a target="_blank" href="https://www.patreon.com/ncase" style="text-decoration:none">
+			کمکم کن تا باز هم شبیه این بسازم!
+			3></a>
 
 		<br><br>
 
 		<span style="display: inline-block; margin-top: 15px;">
-			♫ music is
+			♫ آهنگ‌ها
 			<a target="_blank" href="http://freemusicarchive.org/music/Komiku/Tale_on_the_Late/" style="text-decoration:none">
-				"Friends 2018" and "Friends 2068"</a>
-			by Komiku
+				"Friends 2018" و "Friends 2068"</a>
+			اثر Komiku
 			<br>
-			&lt;/&gt; <i>Crowds</i> is
+			&lt;/&gt;
+			<i>بازی خرد/جنون جمعی</i>
 			<a target="_blank" href="https://github.com/ncase/crowds" style="text-decoration:none">
-				fully open source</a>
+				کاملا متن بازه
+			</a>
 		</span>
 
 		<br>
@@ -1039,24 +1439,22 @@ Also, <b></b> bolds a word/phrase, and <i></i> italicizes a word/phrase.
 
 <!-- x. misc -->
 <words id="WIN">
-	WIN
+	آفرین
 </words>
 <words id="sim_start">
-	start simulation
+	شروع شبیه‌سازی
 </words>
 <words id="sim_stop">
-	reset &amp; re-draw
+	توقف و بازنشانی
 </words>
 <words id="translations_exist">
-	Fan-made translations:
+	ترجمه‌های ساخته شده توسط هواداران:
 </words>
 <words id="translations_do_not_exist">
-	<!-- There's no need to TRANSLATE this line since, well, -->
-	<!-- it'll only show up if no translations exist -->
-	What the, no fan-made translations exist yet?!
+	عجیبه، هنوز ترجمه‌ای از هواداران وجود نداره؟!
 </words>
 <words id="translations_add">
-	(add your own!)
+	(ترجمه خودت رو اضافه کن!)
 </words>
 <words id="translations_original">
 	<!-- No need to translate this, because, I assume, -->
@@ -1075,49 +1473,61 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 
 <bonus id="books">
 
+
+<!--
+		-->
 	<h3>
-	A quick response to James Surowiecki's <i>The Wisdom of Crowds</i>
+		<div style="text-align: right;">
+			پاسخی کوتاه به کتاب
+			<i>
+				خرد جمعی
+			</i>
+			 اثر جیمز ساروویکی
+		</div>
 	</h3>
+	<!--
+		-->
 
 	<div>
 
-	<img src="sprites/bonus/surowieki.jpg" width="200" height="300" style="float:left; margin-right:1em"/>
-	
-	First off, I'm not dissing
-	<a target="_blank" href="https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds">
-	this book.</a>
-	It's a good book, and Surowiecki was trying to tackle the same question I am:
-	<b>“why do some crowds turn to madness, or wisdom?”</b>
+	<img src="sprites/bonus/surowieki.jpg" width="200" height="300" style="float:right; margin-left:1em"/>
 
-	<br><br>
+		اول از همه من
+		<a target="_blank" href="https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds">
+		این کتاب</a>
+		رو نقد نمی‌کنم.
+		کتاب خوبی هست و ساروویکی هم مانند من قصد پاسخ دادن به همون سوال رو داره:
+		<b>"چرا بعضی از جوامع رفتار خردمندانه یا جنون‌آمیز نشون میدن؟"</b>
 
-	Surowiecki's answer: crowds make good decisions when everybody is as independent as possible.
-	He gives the story of a county fair,
-	where the townsfolk were invited to guess the weight of an ox.
-	Surprisingly, the average of <i>all</i> their guesses was better than any <i>one</i> guess</i>.
-	But, here's the rub: the people have to guess <i>independently</i> of each other.
-	Otherwise,
-	they'd be influenced by earlier incorrect guesses,
-	and the average answer would be highly skewed.
+		<br><br>
 
-	<br><br>
+		جواب ساروویکی اینه: جوامع زمانی تصمیم‌های خوبی می‌گیرن که تمامی افراد تا حد ممکن مستقل باشن.
+		اون داستان یک جشنواره محلی رو میگه،
+		که اهالی محله دعوت شدن تا وزن یک گاو رو حدس بزنن.
+		به طور شگفت‌انگیزی، میانگین <i>تمام</i> حدس‌های زده شده دقیق‌تر از <i>هرکدام</i> از حدس‌ها بود.
+		ولی نکته‌اش اینجاست: مردم باید به صورت <i>مستقل</i> از همدیگه حدس بزنن.
+		در غیر این صورت حدس‌ اونها متاثر از حدس‌های نادرست قبلی شکل می‌گیره
+		و میانگین جواب‌ها ممکنه کمی بالا یا پایین بشه.
 
-	But... I don't think "make everyone as independent as possible" is the full answer.
-	Even geniuses, who we mischaracterize as the most independent thinkers,
-	are deeply influenced by others. As Sir Isaac Newton said,
-	<i>“If I have seen further, it is by standing on the shoulders of Giants.”</i>
+		<br><br>
 
-	<br><br>
+		ولی... من فکر نمی‌کنم که "تمامی افراد تا حد ممکن مستقل باشن" جواب کاملی باشه.
+		حتی نوابغ که ما اشتباها به عنوان بزرگترین متفکران مستقل می‌شناسیمشون
+		عمیقا توسط دیگران تحت تاثیر قرار می‌گیرن.
+		همانطور که سر آیزاک نیوتن گفت
+		<i>"اگر من فراتر از دیگران را دیده‌ام به دلیل آن است که بر شانه‌های غول‌ها ایستاده‌ام."</i>
 
-	So, which idea is correct?
-	Does wisdom come from thinking for yourself, or thinking with others?
-	The answer is: "yes".
+		<br><br>
 
-	<br><br>
+		پس کدوم ایده درسته؟
+		آیا خرد از تفکر فردی سرچشمه می‌گیره یا تفکر جمعی؟
+		جواب "هر دو" هستش.
 
-	So that's what I'll try to explain in this explorable explanation:
-	how to get that sweet spot between independence and interdependence &mdash;
-	that is, how to get a wise crowd.
+		<br><br>
+
+		این چیزی هست که توی این تفسیر اکتشافی قصد دارم توضیح بدم:
+		چطور حد مطلوب بین استقلال و وابستگی رو بدست بیاریم &mdash;
+		یعنی چطور یک جمع خردمند داشته باشیم.
 
 	</div>
 
@@ -1125,45 +1535,82 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 <bonus id="connections">
 
 	<h3>
-	What other kinds of connections are there?
+
+	<div style="text-align: right;">
+		چه نوع ارتباطات دیگه‌ای وجود داره؟
+	</div>
 	</h3>
 
 	<div>
 
-	For the sake of simplicity,
-	my simulations pretend that people can only be connected through friendships,
-	and that all friendships are equal.
-	But network scientists <i>do</i> consider other ways we can be connected, such as:
+		محض سادگی،
+		شبیه‌سازی‌های من اینطور بود که افراد فقط از طریق روابط دوستانه ارتباط دارن
+		 و تمام دوستی‌ها یکسان هستن.
+		 اما دانشمندان شبکه انواع دیگری که ما می‌تونیم
+		 به هم متصل باشیم رو
+		 <i>
+			 در نظر می‌گیرن.
+		 </i>
+		 از جمله:
 
 	<div style="clear:both"></div>
 	<br>
 
 	<img src="sprites/bonus/connection1.png" width="250" height="150" style="float:left; margin-right:1em"/>
-	<b>Directional connections.</b> Alice is the boss of Bob, but Bob is not the boss of Alice.
-	Carol is the parent of Dave, but Dave is not the parent of Carol.
-	"Boss" &amp; "parent" are <i>directional</i> relationships:
-	the relationship only goes one way.
-	In contrast, "friends" is a <i>bidirectional</i> relationship:
-	the relationship goes both ways. (well, hopefully)
+	<b>
+		ارتباطات جهت‌دار
+	</b>
+	<br>
+	آلیس رئیس باب هست، اما باب رئیس آلیس نیست.
+	کارول مادر دیوید هست، اما دیوید مادر کارول نیست.
+	"رئیس" و "والدین" بودن
+	روابط
+	<i>
+		جهت‌دار
+	</i>
+	هستن:
+	رابطه فقط یک طرفه است.
+	متضاد اون، "دوستی" یک رابطه‌ی
+	<i>
+		بدون جهت
+	</i>
+	هست:
+	رابطه دو طرفه است (البته، امیدوارم)
 
 	<div style="clear:both"></div>
 	<br>
 
 	<img src="sprites/bonus/connection2.png" width="250" height="150" style="float:left; margin-right:1em"/>
-	<b>Weighted connections.</b> Elinor and Frankie are mere acquaintances.
-	George and Harry are Best Friends Forever.
-	Even though there's a "friendship" connection in both cases, the second one is stronger.
-	We say that these two connections have different "weights".
+	<b>
+		ارتباطات وزن‌دار
+	</b>
+
+	<br>
+	الی و فرانکی با هم آشنا هستن.
+	جرج و هری بهترین دوستای هم هستن.
+	با اینکه در هر دو مورد یک رابطه‌ی "دوستی" برقرار هست،
+	دوستی مورد دوم قوی‌تره.
+	اینطور می‌گیم که این دو اتصال "وزن"های متفاوتی دارن.
 
 	<div style="clear:both"></div>
 	<br>
 
 	<img src="sprites/bonus/map.png" width="200" height="200" style="float:left; margin-right:1em"/>
-	Just remember: <b>all these simulations are wrong.</b> The same way any map is "wrong".
-	You see the map on the left? Buildings aren't gray featureless blocks!
-	Words don't float above the city! However, maps are useful not <i>despite</i> being simplified,
-	but <i>because</i> they're simplified. Same goes for simulations, or any scientific theory.
-	Of <i>course</i> they're "wrong" &mdash; that's what makes them <i>useful</i>.
+
+	فقط یادتون باشه:
+	<b>
+		تمامی این شبیه‌سازی‌ها اشتباهن.
+	</b>
+	همونطور که تمامی نقطه‌ها "اشتباه" هستن.
+	نقشه‌ی سمت چپ رو می‌بینی؟ ساختمون‌ها مربع‌های خاکستری ساده نیستن!
+	کلمات بالای شهر‌ها معلق نیستن! با این حال نقشه‌ها به خاطر همین سادگیشون به درد بخورن.
+	شبیه‌سازی‌ها و نظریه‌های علمی هم به همین صورتن.
+	<i>مسلما</i>
+	 اونا اشتباه هستن
+	 &mdash;
+  و همینه که اونا رو
+	<i>به درد بخور</i>
+	می‌کنه.
 
 	</div>
 
@@ -1171,52 +1618,80 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 <bonus id="contagions">
 
 	<h3>
-	What other kinds of contagions are there?
+
+		<div style="text-align: right;">
+			چه نوع سرایت‌های دیگه‌ای وجود داره؟
+		</div>
 	</h3>
 
 	<div>
-	
-	There are so, so many ways that network scientists can simulate "contagions"!
-	I picked the simplest one, for educational purposes.
-	But here's other ways you could do it:
+
+		راه‌های بسیار بسیار زیادی وجود داره که دانشمندان شبکه می‌تونن سرایت رو شبیه‌سازی کنن.
+		من برای مقاصد آموزشی، ساده‌ترین رو انتخاب کردم.
+		اما راه‌های دیگری هم هست:
 
 	<div style="clear:both"></div>
 	<br>
 
 	<img src="sprites/bonus/contagion1.png" width="250" height="150" style="float:left; margin-right:1em"/>
-	<b>Contagions with Randomness</b>.
-	Being "exposed" to a contagion doesn't <i>guarantee</i> you'll be infected,
-	it only makes it more <i>likely</i>.
+	<b>
+		سرایت‌های تصادفی
+	</b>
+
+	در معرض سرایت قرار گرفتن
+	<i>
+		لزوما
+	</i>
+	 شما رو آلوده نمی‌کنه،
+	 فقط احتمالش رو
+	 <i>
+		 بیشتر
+	 </i>
+	 می‌کنه.
 
 	<div style="clear:both"></div>
 	<br>
 
 	<img src="sprites/bonus/contagion2.png" width="250" height="150" style="float:left; margin-right:1em"/>
-	<b>People have different contagion thresholds.</b> 
-	My simulations pretend that everyone has the same threshold for binge-drinking (50%) or
-	volunteering (25%) or misinformation (0%). 
-	Of course, that's not true in real life, and you could make your sim reflect that.
+	<b>
+		افراد آستانه‌ی سرایت متفاوتی دارن.
+	</b>
+
+	در شبیه‌سازی‌های من آستانه برای تمامی افراد یکسان در نظر گرفته شده.
+	برای مشروب‌خورها ۵۰%، برای داوطلب‌ها ۲۵% و برای اطلاعات غلط ۰%.
+	البته که در دنیای واقعی اینطوری نیست و میشه در شبیه‌سازی هم این رو در نظر گرفت.
 
 	<div style="clear:both"></div>
 	<br>
 
 	<img src="sprites/bonus/contagion3.png" width="250" height="150" style="float:left; margin-right:1em"/>
-	<b>An ecology of contagions.</b>
-	What if there were <i>multiple</i> contagions, with <i>different</i> thresholds?
-	For example, a simple "madness" contagion and a complex "wisdom" contagion.
-	If someone's infected with madness, can they still be infected with wisdom?
-	Or vice versa?
-	Can someone be infected with both?
+	<b>
+		بوم‌شناسی سرایت:
+	</b>
+
+	اگه
+	<i>
+		چندتا
+	</i>
+	 سرایت با آستانه‌های مختلف وجود داشته باشه چی؟
+	 برای مثال یک سرایت "جنون" ساده و یک سرایت "خرد" پیچیده داشته باشیم.
+	 اگه کسی با جنون آلوده بشه، همچنان ممکنه با خرد هم آلوده بشه؟
+	 یا بالعکس؟
+	 یک نفر می‌تونه به هردوتا آلوده بشه؟
 
 	<div style="clear:both"></div>
 	<br>
 
 	<img src="sprites/bonus/contagion4.png" width="250" height="150" style="float:left; margin-right:1em"/>
-	<b>Contagions that mutate and evolve.</b>
-	Ideas don't pass perfectly from one person to another the way a virus does.
-	Like a game of Telephone, the message gets mutated with each re-telling &mdash;
-	and sometimes the mutant will be more infectious than the original!
-	So, over time, ideas "evolve" to be more catchy, copy-able, contagious.
+	<b>
+		سرایت‌هایی که جهش و تکامل دارن
+	</b>
+
+	ایده‌ها مثل ویروس‌ها به صورت کامل و بی‌نقض از افزاد به بقیه منتقل نمیشن.
+	مثل داستان یک کلاغ چهل کلاغ، که داستان در هربار تکرار تغییر پیدا می‌کنه
+	&mdash;
+	و بعضی مواقع نسخه‌ی تغییر یافته بیشتر از نسخه‌ی اصلی پخش میشه.
+	پس به مرور زمان ایده‌ها جوری تکامل پیدا می‌کنن که به یادماندنی‌تر، قابل تکرارتر و مسری تر بشن.
 
 	<div style="clear:both"></div>
 
@@ -1224,55 +1699,74 @@ Sorry, not done yet! These Bonus Boxes need you to TRANSLATE, too:
 
 </bonus>
 <bonus id="further_reading">
-	
+
 	<h3>
-	I wanna learn more! What else can I read and/or play?
+
+	<div style="text-align: right; font-size:18px;">
+		می‌خوام بیشتر یاد بگیرم! چه چیز بیشتری می‌تونم بخونم و/یا بازی کنم؟
+	</div>
 	</h3>
-	
+
 	<div>
-	
-	This explorable explanation was just a springboard for your curiosity,
-	so you can dive deeper into a vast pool of knowledge!
-	Here's more stuff on networks or social systems:
+
+		این "تفسیر اکتشافی" فقط یک سکوی پرتاب برای کنجکاوی شما بود،
+		تا بتونید شیرجه‌ی عمیقی در دریای پهناور دانش بزنید!
+		اینم از منابع مختلفی در مورد شبکه‌ها و سیستم‌های اجتماعی:
 
 	<br><br>
 
 	<img src="sprites/bonus/connected.png" width="200" height="200" style="float:left; margin-right:1em"/>
-	<b>Book:</b>
+	<b>كتاب:</b>
 	<a target="_blank" href="http://www.connectedthebook.com/">
-	Connected</a>
-	by Nicholas Christakis and James Fowler (2009).
-	An accessible tour of how our networks affect our lives, for good or ill.
+	"Connected"</a>
+ 	اثر Nicholas Christakis و James Fowler (۲۰۰۹).
+	یک تور در مورد چگونگی اثرگذاری شبکه‌ها بر زندگی ما، چه خوب و چه بد.
+
 	<a target="_blank" href="http://www.connectedthebook.com/pdf/excerpt.pdf">
-	Here's an excerpt: Preface &amp; Chapter 1
+		گلچینی از کتاب:
+	Preface &amp; Chapter 1 (English)
 	</a>
 
 	<div style="clear:both"></div>
 	<br>
 
 	<img src="sprites/bonus/trust.png" width="200" height="200" style="float:left; margin-right:1em"/>
-	<b>Interactive:</b>
+
+	<b>تعاملی:</b>
 	<a target="_blank" href="http://ncase.me/trust/">
-	The Evolution of Trust</a> by Nicky Case (me) (2017).
-	A game about the game theory of how cooperation is built... or destroyed.
+		"تکامل اعتماد"
+		The Evolution of Trust
+	</a> اثر Nicky Case (۲۰۱۷).
+
+	بازی‌ای در مورد نظریه‌ی بازی و چگونگی ساخته شدن و از بین رفتن تعاون اجتماعی.
+
+	<br>
+	(دارای ترجمه‌ی فارسی)
 
 	<div style="clear:both"></div>
 	<br>
 
 	<img src="sprites/bonus/polygons.png" width="200" height="200" style="float:left; margin-right:1em"/>
-	<b>Interactive:</b>
+	<b>تعاملی:</b>
 	<a target="_blank" href="http://ncase.me/polygons/">
-	Parable of the Polygons</a> by Vi Hart and Nicky Case (also me) (2014).
-	A story about how harmless choices can create a harmful world.
+	"حکایت چندضلعی‌ها"
+	Parable of the Polygons</a>
+	اثر
+		Vi Hart
+	و
+	Nicky Case (۲۰۱۴).
+	داستانی درمورد اینکه چطور انتخاب‌های بدون خطر می‌تونن دنیای خطرناکی رو بسازن.
+
 
 	<div style="clear:both"></div>
 	<br>
 
 	<img src="sprites/bonus/ee.png" width="200" height="200" style="float:left; margin-right:1em"/>
-	Or, if you just want to see a whole gallery of interactive edu-things, here's
+	یا اگه دوست‌ داری گالری تمامی این چیزای تعاملی رو ببینی:
 	<a target="_blank" href="http://explorabl.es/">
-	Explorable Explanations</a>,
-	a hub for learning through play!
+	"تفاسیر اکتشافی"
+	Explorable Explanations</a>
+	مرکز یادگیری از طریق بازی!
 
 	<div style="clear:both"></div>
 
@@ -1291,79 +1785,118 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="drunk">
 
 	<h3>
-	“virtually all [college] students reported that their friends drank more than they did.”
+
+	"تقریبا تمام دانشجوها عنوان کردن که دوستاشون بیشتر از خودشون مشروب خوردن."
+
 	</h3>
 
 	<div>
 	<a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/1758185">
-	“Biases in the perception of drinking norms among college students”</a> by Baer et al (1991)
+		"مشاهده‌ی جانبدارانه‌ از مصرف مشروب در بین دانشجویان دانشگاه"
+	</a>
+	اثر
+	Baer
+	و همکاران
+	(۱۹۹۱)
 	</div>
 
 </reference>
 <reference id="majority">
 
 	<h3>
-	“The Majority Illusion”
+
+	"توهم اکثریت"
+
 	</h3>
 
 	<div>
 	<a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147617">
-	“The Majority Illusion in Social Networks”</a> by Lerman et al (2016).
+
+	"توهم اکثریت در شبکه‌های اجتماعی"</a>
+	 اثر
+	 Lerman
+	و همکاران
+	(۲۰۱۶).
 	<br>
-	Related: <a target="_blank" href="https://en.wikipedia.org/wiki/Friendship_paradox">
-	The Friendship Paradox</a>.
+	مرتبط: <a target="_blank" href="https://en.wikipedia.org/wiki/Friendship_paradox">
+	("پارادوکس دوستی").</a>
 	</div>
 </reference>
 <reference id="contagion">
-	
+
 	<h3>
-	“strong statistical evidence that
-	smoking, health, happiness, voting patterns, and cooperation levels
-	are all contagious”
+	"شواهد آماری محکم در مورد اینکه
+	استعمال دخانیات، سلامتی، خوشحالی، الگوهای رای دادن و سطوح همکاری
+	همگی مسری هستند"
 	</h3>
 
 	<div>
-	
-	From Nicholas Christakis and James Fowler's
-	wonderfully-written, layperson-accessible book,
-	<a target="_blank" href="http://www.connectedthebook.com/">
-	Connected</a> (2009). 
+
+		از کتاب شیوا و قابل دسترس
+		<a target="_blank" href="http://www.connectedthebook.com/">
+		"Connected"</a>
+		اثر
+		Nicholas Christakis
+		و
+		James Fowler
+		سال ۲۰۰۹.
 
 	</div>
 </reference>
 <reference id="suicides">
 
 	<h3>
-	“some evidence that suicides are [contagious], too”
+
+	"شواهدی که خودکشی‌ها نیز مسری هستند"
+
 	</h3>
 
 	<div>
 	<a target="_blank" href="http://www.jstor.org/stable/42000514?seq=4#page_scan_tab_contents">
-	“Suicide Contagion and the Reporting of Suicide: Recommendations from a National Workshop”</a>
-	by O'Carroll et al (1994), endorsed by the frickin' Centers for Disease Control &amp; Prevention (CDC).
+
+	"سرایت و گزارش خودکشی: توصیه‌هایی از یک کارگاه ملی"
+	</a>
+	اثر
+	 O'Carroll
+	و همکاران
+	(۱۹۹۴)،
+
+	مورد تحسین مراکز کنترل و جلوگیری از بیماری‌ها.
 	</div>
 
 </reference>
 <reference id="shootings">
 
 	<h3>
-	“some evidence that mass shootings are [contagious], too”
+
+	"شواهدی که تیراندازی‌های کور نیز مسری هستند"
+
 	</h3>
 
 	<div>
 
 	<a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0117259">
-	“Contagion in Mass Killings and School Shootings”</a> by Towers et al (2015).
+
+		"سرایت تیراندازی کور و تیراندازی در مدارس"
+	</a>
+ 	اثر
+	Towers
+	و همکاران
+	(۲۰۱۵).
 
 	<br><br>
 
-	Also see: the
+	همچنین ببینید: پویش
 	<a target="_blank" href="http://www.dontnamethem.org/">
-	Don't Name Them</a> campaign,
-	which urges that news outlets <i>DO NOT</i> air mass murderers' names, manifestos, and social media feeds.
-	This spreads the contagion.
-	Instead, news outlets should focus on the victims, first responders, civilian heroes,
-	and the grieving, healing community.
+	اسمشون رو نبر Don't Name Them
+	</a>
+	که الزام میکنه که در رسانه‌های خبری اسامی، بیانیه و صفحات اجتماعی قاتلین دسته‌جمعی
+	<b>
+		اعلام نشن.
+	</b>
+	اینکار سبب افزایش سرایت میشه.
+	به جای اون، رسانه‌ها باید بر روی قربانیان، امدادگران،
+	 قهرمانان مدنی و جامعه‌ی عزادار و در حال ترمیم تمرکز کنن.
 
 	</div>
 
@@ -1371,140 +1904,215 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="subprime">
 
 	<h3>
-	“The world's financial institutions fell for such a cascade in 2008.”
+	"موسسات مالی جهانی هم در سال ۲۰۰۸ دچار همچنین آبشار اطلاعاتی‌ای شدند."
 	</h3>
 
 	<div>
 	<a target="_blank" href="https://newrepublic.com/article/63023/wall-streets-lemmings">
-	“Lemmings of Wall Street”</a> by Cass Sunstein, is a quick, non-technical read.
-	Published in Oct 2008, right in the wake of the crash.
+	"موش‌های وال استریت"
+	Lemmings of Wall Street</a>
+	اثر
+	Cass Sunstein
+	یک مقاله‌ی کوتاه و غیرفنی.
+ 	منتشر شده در اکتبر ۲۰۰۸، دقیقا پس از رکود.
+
 	</div>
 
 </reference>
 <reference id="complex">
 
 	<h3>
-	“the complex contagion theory.”
+
+	"نظریه‌ی سرایت‌های پیچیده"
+
 	</h3>
 
 	<div>
 
 	<a target="_blank" href="https://www.unc.edu/~fbaum/teaching/articles/Granovetter_AJS_1978.pdf">
-	“Threshold Models of Collective Behavior”</a> by Granovetter (1978)
-	was the first time, as far as I know, anyone described a "complex contagion" model.
-	(although he didn't use that specific name)
 
-	<br><br>
+		"مدل‌های آستانه‌ای برای رفتار جمعی"
+	</a>
+	اثر Granovetter
+	سال
+	۱۹۷۸،
 
-	<a target="_blank" href="http://www.jstor.org/stable/10.1086/521848?seq=1#page_scan_tab_contents">
-	“Complex Contagions and the Weakness of Long Ties”</a> by Centola &amp; Macy (2007)
-	coined the phrase "complex contagion", and
-	showed the important differences between that and "simple contagion".
+	تا جایی که می‌دونم اولین بار در این کتاب مدل "سرایت پیچیده" مطرح شد.
+	(هرچند که دقیقا از این عبارت استفاده نشد)
 
 	<br><br>
 
 	<a target="_blank" href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0180802">
-	“Evidence for complex contagion models of social contagion from observational data”</a>
-	by Sprague &amp; House (2017)
-	empirically showed that complex contagions do, in fact, exist. (at least, in the social media data they looked at)
+
+		"شواهد مدل‌های سرایت پیچیده در سرایت‌های اجتماعی طبق داده‌های مشاهده‌ای"
+	</a>
+	اثر Sprague
+	و
+	House (۲۰۱۷)
+
+	که به صورت تجربی نشون داد سرایت‌های پیچیده واقعا وجود دارن.
+	 (حداقل در داده‌های شبکه‌های اجتماعی مورد بررسی اونا)
 
 	<br><br>
 
-	Finally,
+	و در نهایت،
 	<a target="_blank" href="https://arxiv.org/pdf/cond-mat/0403699.pdf">
-	“Universal behavior in a generalized model of contagion”</a> by Dodds &amp; Watts (2004)
-	proposes a model that unifies <i>all</i> kinds of contagions: 
-	simple and complex, biological and social!
+
+		"رفتار جهانی در مدل عمومی سرایت"
+	</a>
+	 اثر
+	 Dodds
+	 و
+	  Watts (۲۰۰۴).
+	یک مدل
+
+	 <i>جامع</i>
+	 از تمام سرایت‌ها رو معرفی می‌کنه:
+	 ساده و پیچیده، بیولوژیکی و اجتماعی!
 
 	</div>
 
 </reference>
 <reference id="possum">
 	<h3>
-	“the possum has 13 nipples”
+
+		"۹۰% شکار بر عهده‌ی شیر ماده هستش."
+
 	</h3>
 	<div>
-	arranged in a ring of 12 nipples, plus one in the middle
+	شیر‌های ماده شکارچیان اصلی گروه هستند.
+	آن‌ها به صورت گروهی عمل می‌کنند و طعمه‌های مختلف را شکار می‌کنند.
 	</div>
 </reference>
 <reference id="groupthink">
 
 	<h3>
-	“groupthink”
+
+
+	"تفکر گروهی"
+
 	</h3>
 
 	<div>
-	This Orwell-inspired phrase was coined by Irving L. Janis in 1971.
+		این عبارت الهام گرفته از اورول (Orwell) توسط Irving L. Janis در سال
+		۱۹۷۱
+		پایه‌گذاری شد.
+
+
 	<a target="_blank" href="https://web.archive.org/web/20100401033524/http://apps.olin.wustl.edu/faculty/macdonald/GroupThink.pdf">
-	In his original article</a>,
-	Janis investigates cases of groupthink, lists its causes, and &mdash; thankfully &mdash;
-	some possible remedies.
+	Janis در مقاله‌ی اصلیش</a>
+	به بررسی موارد تفکر گروهی، لیستی از دلایل و (خداروشکر) درمان‌های ممکن پرداخت.
 	</div>
 
 </reference>
 <reference id="social_capital">
 
 	<h3>
-	“bonding and bridging social capital”
+
+	"سرمایه‌ی اجتماعی پیوند و اتصال"
+
 	</h3>
 
 	<div>
-	These two types of social capital &mdash; "bonding" and "bridging" &mdash;
-	were named by Robert Putnam in his insightful 2000 book,
+		این دو نوع سرمایه اجتماعی
+	 &mdash;
+
+	"پیوند"
+	و
+	"اتصال"
+	&mdash;
+	توسط
+	Robert Putnam
+	در کتاب آینده‌نگرانه‌اش
 	<a target="_blank" href="http://bowlingalone.com/">
-	Bowling Alone</a>. His discovery:
-	across almost <i>all</i> empirical measures of social connectiveness,
-	Americans are more alone than ever.
-	Golly.
+	"بولینگ تنها"
+	</a>
+	(۲۰۰۰) نام‌گذاری شد.
+	کشفیات او:
+	تقریبا بین
+	<i>
+		تمامی
+	</i>
+	اندازه‌های تجربی برای اتصال اجتماعی،
+	آمریکایی‌ها از همه بیشتر تنها هستن.
 	</div>
 
 </reference>
 <reference id="bridge">
 
 	<h3>
-	“bridging social capital has a sweet spot”
+	"سرمایه‌ی اجتماعی اتصالی یه حد مطلوب داره"
 	</h3>
 
 	<div>
 	<a target="_blank" href="https://sociology.stanford.edu/sites/default/files/publications/the_strength_of_weak_ties_and_exch_w-gans.pdf">
-	“The Strength of Weak Ties”</a> by Granovetter (1973)
-	showed that connections across groups helps spread simple contagions (like information),
-	but
+
+	"قدرت وابستگی‌های ضعیف"</a> اثر Granovetter
+	(۱۹۷۳)
+	نشون داد که ارتباطات بین گروه‌ها کمک می‌کنه تا سرایت ساده منتقل بشه (مثل اطلاعات)،
+	اما
 	<a target="_blank" href="http://www.jstor.org/stable/10.1086/521848?seq=1#page_scan_tab_contents">
-	“Complex Contagions and the Weakness of Long Ties”</a> by Centola &amp; Macy (2007)
-	showed that connections across groups may not help complex contagions,
-	and it fact, can hurt their spread!
+		"سرایت پیچیده و ضعف وابستگی‌های دور"
+	</a> اثر Centola
+	و
+	Macy (۲۰۰۷)
+	نشون داد که ارتباطات بین گروه‌ها احتمالا به سرایت‌های پیچیده کمکی نمی‌کنه،
+	و در واقع می‌تونه جلوی پخش شدنشون رو بگیره!
 	</div>
 
 </reference>
 <reference id="small_world">
 
 	<h3>
-	“the small world network”
+
+	"شبکه‌ی دنیای کوچک"
+
 	</h3>
 
 	<div>
-
-	The idea of the "small world" was popularized by
-	<a target="_blank" href="http://www.jstor.org/stable/2786545">Travers &amp; Milgram's 1969 experiment</a>,
-	which showed that, on average, any two random people in the United States
-	were just six friendships apart &mdash; "six degrees of separation"!
+		ایده‌ی "دنیای کوچک"
+		توسط
+	<a target="_blank" href="http://www.jstor.org/stable/2786545">
+		آزمایش
+		Travers
+		و
+		Milgram
+		در سال
+		۱۹۶۹</a> مورد توجه قرار گرفت،
+		که نشون داد هر دو آدم تصادفی در ایالات متحده
+		تنها به طور متوسط با شش ارتباط از هم فاصله دارن
+		&mdash;
+		"فاصله‌ی درجه شش"!
 
 	<br><br>
 
-	The small-world network got more mathematical meat on its bones with
+	شبکه‌ی دنیای کوچک با تحقیق
+
 	<a target="_blank" href="http://leonidzhukov.net/hse/2014/socialnetworks/papers/watts-collective_dynamics-nature_1998.pdf">
-	“Collective dynamics of small-world networks”</a> by Watts &amp; Strogatz (1998),
-	which proposed an algorithm for creating networks
-	with both low average path length (low degree of separation)
-	and high clustering (friends have lots of mutual friends) &mdash;
-	that is, a network that hits the sweet spot!
+
+		"دینامیک جمعی شبکه‌های دنیای کوچک"
+	</a>
+	توسط
+	Watts
+	و
+	Strogatz (۱۹۹۸)
+	بار ریاضیاتی بیشتری به خودش گرفت.
+	این تحقیق یک الگوریتم برای ساخت شبکه‌هایی
+	هم با فاصله‌ی مسیر متوسط کوتاه (فاصله‌ی درجه پایین)
+	و هم با خوشه‌های متراکم (دوستانی که دوستان مشترک زیادی دارن)
+	پیشنهاد کرد.
+	&mdash;
+	این شبکه‌ی مطلوب ماست!
 
 	<br><br>
 
-	You can also play with
+	همچنین می‌تونی با
 	<a target="_blank" href="http://worrydream.com/ScientificCommunicationAsSequentialArt/">
-	the visual, interactive adaptation of that paper</a> by Bret Victor (2011).
+		اقتباس بصری و تعاملی این مقاله
+	</a>
+	ساخته‌ی
+	Bret Victor (۲۰۱۱)
+	بازی کنی.
 
 	</div>
 
@@ -1512,27 +2120,48 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="swn_neurons">
 
 	<h3>
-	“[small world networks] describe how our neurons are connected”
+
+	"[شبکه‌های دنیای کوچک]
+	چگونگی ارتباطات نورون‌های مغز ما رو توصیف می‌کنه"
+
 	</h3>
 
 	<div>
 	<a target="_blank" href="https://www.ncbi.nlm.nih.gov/pubmed/17079517">
-	“Small-world brain networks”</a> by Bassett &amp; Bullmore (2006).
+
+		"شبکه‌های مغزی دنیای کوچک"
+	</a>
+	 اثر
+	 Bassett
+	و
+	Bullmore
+	(۲۰۰۶).
 	</div>
 
 </reference>
 <reference id="swn_creativity">
 
 	<h3>
-	“[small world networks] give rise to collective creativity”
+
+			"[شبکه‌های دنیای کوچک]
+			مسبب خلاقیت جمعی هستن"
+
 	</h3>
 
 	<div>
 
 	<a target="_blank" href="http://www.jstor.org/stable/10.1086/432782?seq=1#page_scan_tab_contents">
-	“Collaboration and Creativity: The Small World Problem”</a> by Uzzi &amp; Spiro (2005).
-	This paper analyzed the social network of the Broadway scene over time,
-	and discovered that, yup, the network's most creative when it's a "small world" network!
+		"همکاری و خلاقیت: مسئله‌ی دنیای کوچک"
+	</a>
+	توسط
+	Uzzi
+	و
+	Spiro
+	(۲۰۰۵).
+	این مقاله شبکه‌ی اجتماعی نمایش
+	Broadway
+	در طول زمان را تحلیل کرد و معلوم شد که بله، شبکه‌ای بیشترین خلاقیت رو داره که
+	شبکه‌ی "دنیای کوچک" باشه!
 
 	</div>
 
@@ -1540,73 +2169,107 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="swn_social_physics">
 
 	<h3>
-	“[small world networks] give rise to collective problem-solving”
+		"[شبکه‌های دنیای کوچک]
+		مسبب حل مسئله‌ی جمعی"
+
 	</h3>
 
 	<div>
-	See
+	برای یک رویکرد داده-محور برای هوش جمعی به
 	<a target="_blank" href="http://socialphysics.media.mit.edu/">
-	“Social Physics”</a> by MIT Professor Alex "Sandy" Pentland (2014)
-	for a data-based approach to collective intelligence.
+		"فیزیک اجتماعی"
+	</a>
+	توسط پروفسور
+	Alex "Sandy" Pentland
+	در دانشگاه
+	MIT
+	(۲۰۱۴)
+	رجوع کنید.
 	</div>
 
 </reference>
 <reference id="swn_jfk">
 
 	<h3>
-	“[small world networks] helped John F. Kennedy (barely) avoid nuclear war!”
+
+		"[شبکه‌های دنیای کوچک]
+		به جان اف. کندی کمک کرد تا (یه جورایی) جلوی جنگ هسته‌ای رو بگیره!"
+
 	</h3>
 
 	<div>
 
-	Besides the NASA Challenger explosion, the most notorious example of groupthink
-	was the Bay of Pigs fiasco.
-	In 1961, US President John F. Kennedy and his team of advisors thought
-	&mdash; for some reason &mdash;
-	it would be a good idea to secretly invade Cuba and overthrow Fidel Castro.
-	They failed.
-	Actually, worse than failed: it led to the Cuban Missile Crisis of 1962,
-	<i>the closest the world had ever been to full-scale nuclear war.</i>
+		علاوه بر انفجار چلنجر ناسا، بزرگترین مثال بارز تفکرگروهی
+		"فاجعه‌ی خلیج خوک‌ها"
+		هستش.
+		در سال ۱۹۶۱
+		رئیس‌جمهور ایالات متحده، جان اف. کندی و تیم مشاوره‌ی او
+		&mdash;
+		به دلایلی
+		&mdash;
+		فکر کردن فکر خوبیه که پنهانی به کوبا حمله کنن
+		و فیدل کاسترو رو برکنار کنن.
+		شکست خوردن.
+		در واقع از شکست هم بدتر بود:
+		اینکار منجر به بحران موشکی کوبا در سال ۱۹۶۲،
+	<i>
+		که نزدیک‌ترین شرایط تاریخ بشر به جنگ جهانی هسته‌ای بود
+	</i>
+		شد.
+	<br><br>
+
+		آره، جان اف. کندی این یکی رو گند زد.
 
 	<br><br>
 
-	Yup, JFK really screwed up on that one.
+		اما کندی چندتا درس مهم از فاجعه‌ی خلیج خوک‌ها گرفت که بهش کمک کرد
+		تا تیمش رو از تفکرگروهی دور نگه داره.
+		می‌شه به موارد زیر اشاره کرد:
+
+		۱- کندی به صورت فعالانه مردم رو تشویق به بیان انتقاد می‌کرد،
+		در نتیجه آستانه‌ی سرایت رو برای ایده‌های جایگزین پایین آورد.
+
+		۲- او قبل از جلسات، تیمش رو به چند زیرگروه تقسیم کرد که
+		باعث ایجاد یک طراحی مشابه "شبکه‌ی دنیای کوچک" در گروهش می‌شد.
+		همه‌ی اینا با هم منجر به یک تنوع سالمی از عقاید اما بدون شکاف بزرگ می‌شد
+		&mdash;
+		خرد جمعی.
 
 	<br><br>
 
-	But, having learnt some hard lessons from the Bay of Pigs fiasco,
-	JFK re-organized his team to avoid groupthink.
-	Among many things, he:
-	1) actively encouraged people to voice criticism,
-	thus lowering the "contagion threshold" for alternate ideas.
-	And
-	2) he broke his team up into sub-groups before reconvening,
-	which gave their group a "small world network"-like design!
-	Together, this arrangement allowed for a healthy diversity of opinion,
-	but without being too fractured &mdash; a wisdom of crowds.
+	و در نتیجه با
+	<i>
+		همون افراد
+	</i>
+	که برای خلیج خوک‌ها تصمیم گرفته بودن
+	اما با
+	<i>
+		چیدمان جمعی
+	</i>
+	برای بحران موشکی کوبا تصمیم گرفتن...
+
+	تیم کندی موفق به دستیابی به یک توافق صلح‌آمیز با رهبر شوروی،
+	نیکیتا کروشچف، شد.
+	شوروی موشک‌های خودش رو از کوبا خارج کرد و در عوض
+	ایالات متحده قول داد تا دوباره به کوبا حمله نکنه.
+	(همچنین در پشت پرده توافق کردن که ایالات متحده موشک‌هاشو از ترکیه خارج کنه)
 
 	<br><br>
 
-	And so, with the same <i>individuals</i> who decided the Bay of Pigs,
-	but re-arranged <i>collectively</i> to decide on the Cuban Missile Crisis...
-	JFK's team was able to reach a peaceful agreement with Soviet leader Nikita Khrushchev.
-	The Soviets would remove their missiles from Cuba, and in return,
-	the US would promise not to invade Cuba again.
-	(and also agreed, in secret, to remove the US missiles from Turkey)
+	و این داستان تقریبا نابودی کل بشر بود.
+	اما شبکه‌ی دنیای کوچک به کمکمون اومد! یه جورایی.
 
 	<br><br>
 
-	And that's the story of how all of humanity almost died.
-	But a small world network saved the day! Sort of.
-
-	<br><br>
-
-	You can read more about this
+	می‌تونی در این مورد در
 	<a target="_blank" href="https://hbr.org/2013/11/how-john-f-kennedy-changed-decision-making">
-	on Harvard Business Review</a>,
-	or from
+	مجله‌ی
+	Harvard Business Review</a>،
+	یا در
 	<a target="_blank" href="https://web.archive.org/web/20100401033524/http://apps.olin.wustl.edu/faculty/macdonald/GroupThink.pdf">
-	the original article on groupthink</a>.
+	مقاله‌ی اصلی تفکرگروهی
+	</a>
+	بیشتر بخونی.
 
 	</div>
 
@@ -1614,85 +2277,122 @@ Final thing! These references also need you to TRANSLATE:
 <reference id="three_degrees">
 
 	<h3>
-	“we influence [...] our friends' friends' friends!”
+	"ما بر روی
+	[...]
+	دوستان دوستان دوستانمان تاثیر می‌گذاریم!"
+
 	</h3>
 
 	<div>
-	Again, from Nicholas Christakis and James Fowler's
-	wonderful book,
+	مجدد، از کتاب
 	<a target="_blank" href="http://www.connectedthebook.com/">
-	Connected</a> (2009).
+	"متصل"
+	Connected</a>
+	از
+	Nicholas Christakis
+	و
+	James Fowler
+	سال ۲۰۰۹.
 	</div>
 
 </reference>
 <reference id="flatter">
 	<h3>
-	“be skeptical of ideas that flatter you”
+
+	"به ایده‌هایی که بهت حس خوبی می‌دن شک کن"
+
 	</h3>
 	<div>
-	yes, including the ideas in <i>this</i> explorable explanation.
+		بله، شامل ایده‌های
+		<i>
+			این
+		</i>
+		تفسیر اکتشافی هم می‌شه.
 	</div>
 </reference>
 <reference id="sandbox">
 
 	<h3>
-	★ Sandbox Mode ★
+	★ فضای تمرینی ★
 	</h3>
 
 	<div>
-	The keyboard shortcuts (1, 2, space, backspace)
-	work in <i>all</i> the puzzles, not just Sandbox Mode!
-	Seriously, you can go back to a different chapter,
-	and edit the simulation right there.
-	In fact, that's how <i>I</i> created all these puzzles. Have fun!
+		میانبر‌های صفحه‌کلید
+		(1, 2, space, backspace)
+		در
+		<i>
+		تمامی
+		</i>
+		معماها کار میکنن و فقط مختص به فضای تمرینی نیستن!
+		جدی میگم، می‌تونی به بخش‌های مختلف برگردی و
+		شبیه‌سازی‌ها رو ویراش کنی.
+	در حقیقت،
+	<i>
+	منم
+	</i>
+	همینطوری همه‌ی معماها رو ساختم. خوش بگذره!
+
 	</div>
 
 </reference>
 <reference id="supporters" hidden=yes large=yes>
 	<div>
-	Dear Patreon supporters:
-	Your generosity <i>literally</i> feeds me and pays my rent.
-	You give me the freedom to make these weird educational games,
-	so, from the bottom of my heart, thank you. &lt;3
-	<br>
-	<a target="_blank" href="https://www.patreon.com/ncase" style="text-decoration:none">
-		(want to support me in making more stuff like this? check out my Patreon!)</a>
+	<a target="_blank" href="https://www.patreon.com/ncase">
+
+		حامیان عزیز
+		Patreon</a>:
+	بخشندگی شما
+	<i>
+	به معنای واقعی کلمه
+	</i>
+	پول غذا و اجاره‌ی منو میده.
+	شما به من آزادی می‌دین تا این بازی‌های آموزشی عجیب رو درست کنم،
+	پس از صمیم قلبم میگم
+	<b>
+		ممنونم. 3>
+	</b>
 	</div>
 </reference>
 <reference id="playtesters" hidden=yes large=yes>
 	<div>
 
-	Thank you, everyone who playtested <i>Crowds</i>
-	during its many stages of life!
-	
-	<br><br>
-	<b>The Prototype:</b>
-	<br>
-	Maria ·
-	Monica Srivastava
+		مرسی از تمام کسایی که
+		<i>
+			جنون/خرد جمعی
+		</i>
+		رو در مراحل مختلف بازی و امتحان کردن!
 
-	<br><br>
-	<b>The Alpha:</b>
-	<br>
-	Glen Chiacchieri ·
-	Kalli Repzeti ·
-	Mali Akmanalp ·
-	Toph Tucker
+	<div style="direction: ltr; position: relative; top: -50px;">
 
-	<br><br>
-	<b>The Beta:</b>
-	<br>
-	Alex Dytrych ·
-	Amit Patel ·
-	Cassandra McClure ·
-	Catherine Ray ·
-	Josh Comeau ·
-	Kayle Sawyer ·
-	Matthew Conlen ·
-	Srini Kadamati ·
-	Vanessa Shen ·
-	Wick Perry
+		<br><br>
+		<b>The Prototype:</b>
+		<br>
+		Maria ·
+		Monica Srivastava
 
+		<br><br>
+		<b>The Alpha:</b>
+		<br>
+		Glen Chiacchieri ·
+		Kalli Repzeti ·
+		Mali Akmanalp ·
+		Toph Tucker
+
+		<br><br>
+		<b>The Beta:</b>
+		<br>
+		Alex Dytrych ·
+		Amit Patel ·
+		Cassandra McClure ·
+		Catherine Ray ·
+		Josh Comeau ·
+		Kayle Sawyer ·
+		Matthew Conlen ·
+		Srini Kadamati ·
+		Vanessa Shen ·
+		Wick Perry
+
+	</div>
 	</div>
 </reference>
 

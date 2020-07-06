@@ -244,13 +244,13 @@ SLIDES.push(
 		{
 			type:"box",
 			text:"complex_post_cascade",
-			x:50, y:390, w:600, h:150,
+			x:100, y:390, w:600, h:150,
 			align: "right"
 		},
 		{
 			type:"box",
 			text:"complex_post_cascade_end",
-			x:660, y:450, w:300, h:90
+			x:50, y:470, w:300, h:90
 		}
 	]
 },
@@ -317,7 +317,7 @@ SLIDES.push(
 		if(!state.ended){
 			if(Simulations.IS_RUNNING){
 
-				// if it's a new step... 
+				// if it's a new step...
 				if(sim.STEP > state.lastStep){
 
 					// ...but the infected count is the same as last step
@@ -381,7 +381,7 @@ SLIDES.push(
 		{
 			type:"box",
 			text:"complex_prevent_end",
-			x:660, y:450, w:300, h:90
+			x:1, y:450, w:300, h:90
 		}
 	]
 },
@@ -402,7 +402,7 @@ SLIDES.push(
 		{
 			type:"box",
 			text:"complex_groupthink",
-			x:460, y:0, w:500, h:540
+			x:1, y:0, w:500, h:540
 		},
 
 
@@ -411,5 +411,3 @@ SLIDES.push(
 }
 
 );
-
-
